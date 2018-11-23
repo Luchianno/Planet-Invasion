@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7183150ad3b084346807276feab04fe1, type: 3}
+  m_Name: First Landing
+  m_EditorClassIdentifier: 
+  Name: First Landing
+  Description: "<size=50><b>First Landing</b></size>\r\nLOG \u25AE\u25AE\u25AE\u25AE:\u25AE\u25AE:\u25AE\u25AE
+    - 23:55 - Synced to local rotation time\r\n    Doors of the craft open and soldiers
+    start to unload the equipment. The night is cold. But the view is caprivating."
+  Image: {fileID: 21300000, guid: 35af057da2730fe4aacbcac8b4e56a96, type: 3}
+  VarRequirements:
+    m_keys: []
+    m_values: 

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50677b00ad681694497e602d54d2cb09, type: 3}
+  m_Name: Game State Test 1
+  m_EditorClassIdentifier: 
+  Turn: 0
+  Player:
+    CardSlots: 3
+  AI:
+    CardSlots: 3
+    CountryStates:
+    - {fileID: 11400000, guid: 91ba5c8c5f2486946a0c926260e4fcee, type: 2}
+    - {fileID: 11400000, guid: 03f0b77f8ead90a4f864ae538adecaab, type: 2}
+    - {fileID: 11400000, guid: 63d16a71c8f4c824bb8ce667fead4766, type: 2}
