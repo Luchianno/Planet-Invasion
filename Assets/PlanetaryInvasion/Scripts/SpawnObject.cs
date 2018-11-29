@@ -10,6 +10,7 @@ public class SpawnObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        InvokeRepeating("SpawnAlien", 2.0f, 1.5f);
 	}
 	
 	// Update is called once per frame
@@ -20,7 +21,7 @@ public class SpawnObject : MonoBehaviour {
 	}
 
     public void SpawnAlien() {
-		Vector3 pos = transform.localPosition + center + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
+		Vector3 pos = transform.position + center + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
         int rotY;
         if(Random.value<0.5f)
             rotY=0;
