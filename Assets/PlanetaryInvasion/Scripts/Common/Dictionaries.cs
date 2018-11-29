@@ -5,7 +5,19 @@ using UnityEditor;
 using UnityEngine;
 
 [Serializable]
-public class ResourceDictionary : SerializableDictionary<Resource, int> { }
+public class ResourceDictionary : SerializableSortedDictionary<Resource, int>
+{
+    public ResourceDictionary() : base(new ResourceComparer()) { }
+
+    class ResourceComparer : IComparer<Resource>
+    {
+        public int Compare(Resource x, Resource y)
+        {
+            Debug.Log("${x.Name.CompareTo(y)} {x} + {y}");
+            return x.Name.CompareTo(y);
+        }
+    }
+}
 
 [Serializable]
 public class StringDictionary : SerializableDictionary<string, int> { }

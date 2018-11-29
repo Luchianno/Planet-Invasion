@@ -26,7 +26,7 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
 
     List<GameObject> placeholders = new List<GameObject>();
 
-    private void CardClicked(CardView cardView)
+    private void CardClicked(ICardView cardView)
     {
         stateManager.RemovePlayerAction(cardView.Card);
     }
@@ -64,7 +64,7 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
     public void AddCard(Card card)
     {
         var temp = Instantiate(CardPrefab, Vector3.zero, Quaternion.identity, parent);
-        var cardView = temp.GetComponent<CardView>();
+        var cardView = temp.GetComponent<ICardView>();
         // get outline and change color
         cardView.Card = card;
         cardView.UpdateView();

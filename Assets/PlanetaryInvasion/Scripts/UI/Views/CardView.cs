@@ -4,25 +4,26 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using Zenject;
+using TMPro;
 
 // [ExecuteInEditMode]
-public class CardView : MonoBehaviour, IUpdateableView
+public class CardView : MonoBehaviour, IUpdateableView, ICardView
 {
-    public Text Name;
-    public Text Description;
+    public TextMeshProUGUI Name;
+    public TextMeshProUGUI Description;
     public Transform RequirementsList;
     public GameObject RequirementPrefab;
 
-    public Text Energy, Metal, Population, AP;
+    public TextMeshProUGUI Energy, Metal, Population, AP;
 
-    public Color Good = Color.green, Bad = Color.red, Neutral = Color.black;
+    public Color Good = Color.green, Bad = Color.red;//, Neutral = Color.black;
 
-    public CardClickEvent CardClicked;// = new CardClickEvent();
+    public CardClickEvent CardClicked { get; private set; } = new CardClickEvent();
 
     [Inject]
     PlanetState gameState;
 
-    public Card Card;
+    public Card Card { get; set; }
 
     public void UpdateView()
     {
@@ -33,7 +34,7 @@ public class CardView : MonoBehaviour, IUpdateableView
         }
 
         this.Name.text = Card.Name;
-        this.Description.text = Card.Name;
+        // this.Description.text = Card.Name;
         this.AP.text = Card.APCost.ToString();
 
         // this.Energy.text = value.ResourceRequirements.TryGetValue(;
@@ -44,12 +45,21 @@ public class CardView : MonoBehaviour, IUpdateableView
         // {
         //     Destroy(RequirementsList.GetChild(0).gameObject);
         // }
-        foreach (var item in Card.TechRequirements)
+        // foreach (var item in Card.TechRequirements)
+        // {
+        //     var temp = Instantiate<GameObject>(RequirementPrefab, Vector3.zero, Quaternion.identity, RequirementsList);
+        //     var text = temp.GetComponentInChildren<Text>();
+        //     text.text = $"• Requires {item.Name}";
+        //     text.color = gameState.Player.Technologies.Contains(item) ? Color.green : Color.red;
+        // }
+
+        Description.text = string.Empty;
+        foreach (var item in Card.ResourceRequirements)
         {
-            var temp = Instantiate<GameObject>(RequirementPrefab, Vector3.zero, Quaternion.identity, RequirementsList);
-            var text = temp.GetComponentInChildren<Text>();
-            text.text = $"• Requires {item.Name}";
-            text.color = gameState.Player.Technologies.Contains(item) ? Color.green : Color.red;
+            Color color;
+            int temp;
+            color = gameState.Player.Resources.TryGetValue(item.Key, out temp) && temp >= item.Value ? Good : Bad;
+            Description.text += $"<color={ColorUtility.ToHtmlStringRGBA(color)}>{item.Key}: {item.Value}</color>\n";
         }
     }
 

@@ -23,7 +23,7 @@ public class AllActionsView : MonoBehaviour, IUpdateableView
 
     void Start() => UpdateView();
 
-    void CardClicked(CardView cardView)
+    void CardClicked(ICardView cardView)
     {
         stateManager.AddPlayerAction(cardView.Card);
         // Destroy(cache[cardView.Card]);
@@ -49,7 +49,7 @@ public class AllActionsView : MonoBehaviour, IUpdateableView
 
             // Debug.Log(item);
             var temp = Instantiate(CardPrefab, Vector3.zero, Quaternion.identity, parent); // TODO change
-            var cardView = temp.GetComponent<CardView>();
+            var cardView = temp.GetComponent<ICardView>();
             cardView.Card = item;
             cardView.UpdateView();
             cardView.CardClicked.AddListener(this.CardClicked);
