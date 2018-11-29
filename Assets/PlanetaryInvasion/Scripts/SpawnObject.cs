@@ -10,24 +10,29 @@ public class SpawnObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		SpawnAlien();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey(KeyCode.Q)) {
+		if (Input.GetKeyDown(KeyCode.Q)) {
             SpawnAlien();
         }
 	}
 
     public void SpawnAlien() {
 		Vector3 pos = transform.localPosition + center + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
+        int rotY;
+        if(Random.value<0.5f)
+            rotY=0;
+        else
+            rotY=180;
+        Quaternion rot = Quaternion.Euler(0, rotY, 0);
 
-        Instantiate(spawnable, pos, Quaternion.identity);
+        Instantiate(spawnable, pos, rot);
 	}
 
     void OnDrawGizmosSelected() {
         Gizmos.color = new Color(1,0,0,0.5f);
-        Gizmos.DrawCube(transform.localPosition + center, transform.localScale + size);
+        Gizmos.DrawCube(transform.position + center, transform.localScale + size);
     }
 }
