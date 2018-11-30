@@ -12,11 +12,12 @@ public class GatherResourceCard : Card
     public Resource GatheredResource;
     public int Amount;
 
-    public string CompletionText = "{Resource} Gathered";
+    [TextArea]
+    public string CompletionText = "{amount} {resource} Gathered";
 
     public string GetCompletionText()
     {
-        return CompletionText.Replace("{Resource}", GatheredResource.Name);
+        return CompletionText.Replace("{resource}", GatheredResource.Name).Replace("{amount}", this.Amount.ToString());
     }
 
     public override ActionResult Process(TurnState turn, PlanetState state)

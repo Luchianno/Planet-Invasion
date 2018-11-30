@@ -16,10 +16,26 @@ public class TabletView : MonoBehaviour, IUpdateableView, ICardView
 
     public CardClickEvent CardClicked { get; private set; } = new CardClickEvent();
 
-    [Inject]
     PlanetState gameState;
 
     public Card Card { get; set; }
+
+    [Inject]
+    public void Construct(PlanetState state)
+    {
+        gameState = state;
+    }
+
+    public void Init(Card card, Transform parent)
+    {
+        this.Card = card;
+        this.transform.SetParent(parent);
+        UpdateView();
+    }
+
+    public class Factory : PlaceholderFactory<TabletView>
+    {
+    }
 
     public void UpdateView()
     {
@@ -52,10 +68,4 @@ public class TabletView : MonoBehaviour, IUpdateableView, ICardView
         CardClicked.Invoke(this);
     }
 
-#if EDITOR
-    private void Update()
-    {
-		
-    }
-#endif
 }

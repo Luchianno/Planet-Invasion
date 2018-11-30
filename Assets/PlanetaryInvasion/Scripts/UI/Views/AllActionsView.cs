@@ -19,6 +19,9 @@ public class AllActionsView : MonoBehaviour, IUpdateableView
     [Inject]
     PlanetState gameState;
 
+    [Inject]
+    TabletView.Factory tabletFactory;
+
     Dictionary<Card, GameObject> cache = new Dictionary<Card, GameObject>();
 
     void Start() => UpdateView();
@@ -26,8 +29,6 @@ public class AllActionsView : MonoBehaviour, IUpdateableView
     void CardClicked(ICardView cardView)
     {
         stateManager.AddPlayerAction(cardView.Card);
-        // Destroy(cache[cardView.Card]);
-        // cache.Remove(cardView.Card);
     }
 
     public void UpdateView()
@@ -48,12 +49,11 @@ public class AllActionsView : MonoBehaviour, IUpdateableView
             }
 
             // Debug.Log(item);
-            var temp = Instantiate(CardPrefab, Vector3.zero, Quaternion.identity, parent); // TODO change
-            var cardView = temp.GetComponent<ICardView>();
-            cardView.Card = item;
-            cardView.UpdateView();
+
+            var cardView = tabletFactory.Create();
+            cardView.Init(item, parent);
             cardView.CardClicked.AddListener(this.CardClicked);
-            cache[item] = temp;
+            cache[item] = cardView.gameObject;
         }
     }
 }

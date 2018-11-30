@@ -22,6 +22,9 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
     [Inject]
     PlanetState state;
 
+    [Inject]
+    TabletView.Factory tabletFactory;
+
     Dictionary<Card, GameObject> cache = new Dictionary<Card, GameObject>();
 
     List<GameObject> placeholders = new List<GameObject>();
@@ -63,12 +66,11 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
 
     public void AddCard(Card card)
     {
-        var temp = Instantiate(CardPrefab, Vector3.zero, Quaternion.identity, parent);
-        var cardView = temp.GetComponent<ICardView>();
+        var cardView = tabletFactory.Create();
+        cardView.Init(card, parent);
         // get outline and change color
-        cardView.Card = card;
         cardView.UpdateView();
         cardView.CardClicked.AddListener(this.CardClicked);
-        cache[card] = temp;
+        cache[card] = cardView.gameObject;
     }
 }

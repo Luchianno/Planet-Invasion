@@ -15,6 +15,11 @@ public class MainInstaller : MonoInstaller<MainInstaller>
     [SerializeField]
     PlanetState startingState;
 
+    [Space]
+    [Header("Prefabs to factories")]
+    [SerializeField]
+    GameObject tabletPrefab;
+
     public override void InstallBindings()
     {
         Container.BindInstance<GameSettings>(settings);
@@ -31,5 +36,7 @@ public class MainInstaller : MonoInstaller<MainInstaller>
         Container.Bind<IUpdateableView>().To<TechView>().FromComponentsInHierarchy(includeInactive: true);
 
         Container.BindInstance<TabPanelView>(storyView).WithId("story").AsSingle();
+
+        Container.BindFactory<TabletView, TabletView.Factory>().FromComponentInNewPrefab(tabletPrefab);
     }
 }

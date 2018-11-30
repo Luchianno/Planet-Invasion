@@ -846,7 +846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0.00018310547, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &197485439
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 875296450}
   m_HandleRect: {fileID: 875296449}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1107,9 +1107,9 @@ RectTransform:
   m_Father: {fileID: 701495231}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 10.000004, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 10.000004, y: -56}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.000000016763806, y: 1}
 --- !u!114 &250730068
@@ -1863,7 +1863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Label: {fileID: 965628282}
-  CardPrefab: {fileID: 1768876688613546, guid: fd989a608de48aa4d8f19169996880a3, type: 2}
+  CardPrefab: {fileID: 1587738107276014, guid: 56143ce41b5592a418aaa949859624b0, type: 2}
   PlaceHolderPrefab: {fileID: 1050599742392988, guid: ac0ceaf0ffdb00b48a5bac10d42ccf27,
     type: 2}
   parent: {fileID: 250730067}
@@ -3655,7 +3655,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 10
   field of view: 60
   orthographic: 1
   orthographic size: 5
@@ -4460,9 +4460,9 @@ RectTransform:
   m_Father: {fileID: 1715304503}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 10, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 10, y: -26.5}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295198761
@@ -5735,7 +5735,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000021178199}
+  m_AnchoredPosition: {x: 0, y: -0.0000089446785}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1715304504
@@ -6989,7 +6989,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1108068619}
   m_HandleRect: {fileID: 1108068618}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -7077,7 +7077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7201e8371caa8b942af5f168c3df70bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardPrefab: {fileID: 1768876688613546, guid: fd989a608de48aa4d8f19169996880a3, type: 2}
+  CardPrefab: {fileID: 1587738107276014, guid: 56143ce41b5592a418aaa949859624b0, type: 2}
   parent: {fileID: 197485438}
 --- !u!1 &2056146243
 GameObject:
