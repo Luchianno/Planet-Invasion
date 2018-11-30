@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224525901017621658}
   - component: {fileID: 222237924748213486}
-  - component: {fileID: 114575506363221752}
+  - component: {fileID: 114955188140958330}
   - component: {fileID: 114919437236476462}
   - component: {fileID: 114775319286894076}
   - component: {fileID: 114147687641301502}
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114955188140958330}
         m_MethodName: OnCardClicked
         m_Mode: 1
         m_Arguments:
@@ -579,22 +579,6 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
---- !u!114 &114575506363221752
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1587738107276014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a4fe8211b32fb14886ba1bdd2582d28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: {fileID: 114171413911510784}
-  Description: {fileID: 114362500256323152}
-  AP: {fileID: 114313709549557348}
-  ResourceAvailableColor: {r: 0, g: 1, b: 0, a: 1}
-  NoResourcesColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &114775319286894076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -679,6 +663,22 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114955188140958330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1587738107276014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4fe8211b32fb14886ba1bdd2582d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: {fileID: 114171413911510784}
+  Description: {fileID: 114362500256323152}
+  AP: {fileID: 114313709549557348}
+  ResourceAvailableColor: {r: 0, g: 1, b: 0, a: 1}
+  NoResourcesColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!222 &222237924748213486
 CanvasRenderer:
   m_ObjectHideFlags: 1

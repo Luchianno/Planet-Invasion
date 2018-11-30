@@ -29,7 +29,7 @@ public class TabletView : MonoBehaviour, IUpdateableView, ICardView
     public void Init(Card card, Transform parent)
     {
         this.Card = card;
-        this.transform.SetParent(parent);
+        this.transform.SetParent(parent, false);
         UpdateView();
     }
 
@@ -54,7 +54,7 @@ public class TabletView : MonoBehaviour, IUpdateableView, ICardView
             Color color;
             int temp;
             color = gameState.Player.Resources.TryGetValue(item.Key, out temp) && temp >= item.Value ? ResourceAvailableColor : NoResourcesColor;
-            Description.text += $"<color={ColorUtility.ToHtmlStringRGBA(color)}>{item.Key}: {item.Value}</color>\n";
+            Description.text += $"<color=#{ColorUtility.ToHtmlStringRGBA(color)}>{item.Key}: {item.Value}</color>\n";
         }
     }
 

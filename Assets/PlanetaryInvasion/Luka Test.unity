@@ -846,7 +846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00018310547, y: 0}
+  m_AnchoredPosition: {x: 0.000061035156, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &197485439
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 875296450}
   m_HandleRect: {fileID: 875296449}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1107,9 +1107,9 @@ RectTransform:
   m_Father: {fileID: 701495231}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10.000004, y: -56}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 10.000004, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.000000016763806, y: 1}
 --- !u!114 &250730068
@@ -4460,9 +4460,9 @@ RectTransform:
   m_Father: {fileID: 1715304503}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -26.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 10, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295198761
@@ -5670,6 +5670,8 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 7883cfa6270555246a863ada007b744c, type: 2}
   storyView: {fileID: 1431316968}
   startingState: {fileID: 11400000, guid: 9aec8aa803f3e684e9d84ebb75b3f65e, type: 2}
+  tabletPrefab: {fileID: 1587738107276014, guid: 56143ce41b5592a418aaa949859624b0,
+    type: 2}
 --- !u!114 &1642414915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5735,7 +5737,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0000089446785}
+  m_AnchoredPosition: {x: 0, y: 0.000017402761}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1715304504
@@ -6989,7 +6991,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1108068619}
   m_HandleRect: {fileID: 1108068618}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
