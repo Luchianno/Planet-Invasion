@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ship
   - asteroid
+  - alien_spawner
   layers:
   - Default
   - TransparentFX

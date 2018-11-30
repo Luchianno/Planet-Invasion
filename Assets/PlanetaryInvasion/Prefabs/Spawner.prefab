@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114196721053930196}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: alien_spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,11 +46,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1106868879629656}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destinationPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnable: {fileID: 100000, guid: 4b6adcc4726f3454ab99f02529501b7b, type: 3}
   center: {x: 0, y: 0, z: 0}
   size: {x: 1, y: 0.11, z: 1}
