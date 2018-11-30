@@ -12,7 +12,7 @@ public class SpawnObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        InvokeRepeating("SpawnAlien", 2.0f, 5.5f);
+        InvokeRepeating("SpawnAlien", 2.0f, 2.5f);
 	}
 	
 	// Update is called once per frame
@@ -26,14 +26,15 @@ public class SpawnObject : MonoBehaviour {
         if (Random.value < 0.9f) {
             Transform randomTransform = destinationPoints[Random.Range(0, destinationPoints.Length-1) % destinationPoints.Length];
 		    Vector3 pos = randomTransform.position + center + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
-            int rotY;
-            if(Random.value<0.5f)
+            int rotY = 0;
+            /*f(Random.value<0.5f)
                 rotY=0;
             else
-                rotY=180;
+                rotY=180;*/
             Quaternion rot = Quaternion.Euler(0, rotY, 0);
 
-        Instantiate(spawnable, pos, rot);
+            GameObject spawned = Instantiate(spawnable, pos, rot);
+            spawned.GetComponent("");
         }
 	}
 
