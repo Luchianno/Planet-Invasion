@@ -14,7 +14,6 @@ public class PlanetStateController : MonoBehaviour
 
     public ReadOnlyCollection<Card> AISelectedCards { get { return state.AI.SelectedCards.AsReadOnly(); } }
 
-
     [Inject]
     StoryController storyController;
     [Inject]
@@ -29,6 +28,11 @@ public class PlanetStateController : MonoBehaviour
 
     public void AddPlayerAction(Card card)
     {
+        if (!state.Player.Resources.RemoveResources(card.ResourceRequirements))
+        {
+            Debug.LogWarning("Not enough Resources");
+            return;
+        }
         state.Player.SelectedCards.Add(card);
         viewsManager.UpdateViews();
     }
@@ -36,6 +40,7 @@ public class PlanetStateController : MonoBehaviour
     public void RemovePlayerAction(Card card)
     {
         state.Player.SelectedCards.Remove(card);
+        state.Player.Resources.AddResources(card.ResourceRequirements);
         viewsManager.UpdateViews();
     }
 

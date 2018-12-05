@@ -12,6 +12,8 @@ public partial class Card : ScriptableObject
 
     [TextArea(3, 10)]
     public string Description;
+    [TextArea]
+    public string ResultDescription;
 
     [Header("Needs a target country")]
     public bool RequiresTarget = false;

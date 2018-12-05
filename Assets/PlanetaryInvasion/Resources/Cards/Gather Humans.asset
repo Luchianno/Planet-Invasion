@@ -13,17 +13,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Gather Humans
   Description: Gather Human Specimen
+  ResultDescription: 
   RequiresTarget: 1
   TurnsRequired: 1
+  APCost: 1
   ResourceRequirements:
     m_keys:
     - {fileID: 11400000, guid: 370bb49a719ffd942bd161ef85214859, type: 2}
-    - {fileID: 11400000, guid: c84e5d607d6b99443b7d719d9ac7e130, type: 2}
-    m_values: 1400000001000000
+    m_values: 14000000
   VarRequirements:
     m_keys: []
     m_values: 
   TechRequirements: []
   GatheredResource: {fileID: 11400000, guid: 3d1b4f820bf6151438c8bf87e223cc0d, type: 2}
   Amount: 10
-  CompletionText: '[[Resource]] Gathered'
+  CompletionText: 

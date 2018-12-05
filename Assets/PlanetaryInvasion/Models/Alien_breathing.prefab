@@ -86,6 +86,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 129c1ae0eb0edac49a44e308911b36a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 95998773075881754}
+  agent: {fileID: 195102157028428244}
+  spriteRenderer: {fileID: 212996417415714496}
+  mognitud: {x: 0, y: 0}
+  mognitud2: {x: 0, y: 0}
 --- !u!114 &114825925352792360
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -14,5 +14,4 @@ public class PlayerState
     public List<Card> SelectedCards = new List<Card>();
 
     public int CardSlots = 3;
-
 }
