@@ -1079,13 +1079,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4245597627844240}
   - component: {fileID: 114207928295646560}
+  - component: {fileID: 65444324748788124}
   m_Layer: 0
-  m_Name: Spawner
-  m_TagString: alien_spawner
+  m_Name: Navigatable_Area
+  m_TagString: alien_navigatables
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1266374091982998
 GameObject:
   m_ObjectHideFlags: 1
@@ -4747,7 +4748,7 @@ Transform:
   m_GameObject: {fileID: 1261298316375992}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.3, y: 1.12, z: 1.09}
-  m_LocalScale: {x: 1, y: 2.07, z: 1}
+  m_LocalScale: {x: 52, y: 2, z: 33}
   m_Children: []
   m_Father: {fileID: 4775834563038228}
   m_RootOrder: 12
@@ -14154,6 +14155,18 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: f10d73f7dc239d840945c91152b4f2e8, type: 3}
+--- !u!65 &65444324748788124
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1261298316375992}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95002623219895548
 Animator:
   serializedVersion: 3
@@ -17207,7 +17220,6 @@ MonoBehaviour:
   - {fileID: 4178076297836012}
   - {fileID: 4435956271254992}
   spawnable: {fileID: 100000, guid: 4b6adcc4726f3454ab99f02529501b7b, type: 3}
-  center: {x: 0, y: 0, z: 0}
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!114 &114186969972825044
 MonoBehaviour:
@@ -17242,7 +17254,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   spawnable: {fileID: 1107327234398772, guid: b7e63d5f60089624f8c468c490e44e54, type: 2}
-  center: {x: 0, y: 0, z: 0}
   size: {x: 1, y: 0.11, z: 1}
 --- !u!114 &114266250846976984
 MonoBehaviour:
@@ -17277,7 +17288,6 @@ MonoBehaviour:
   - {fileID: 4435956271254992}
   - {fileID: 4310428348762160}
   spawnable: {fileID: 100000, guid: 4b6adcc4726f3454ab99f02529501b7b, type: 3}
-  center: {x: 0, y: 0, z: 0}
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!114 &114527439500252364
 MonoBehaviour:
@@ -17312,7 +17322,6 @@ MonoBehaviour:
   - {fileID: 4435956271254992}
   - {fileID: 4310428348762160}
   spawnable: {fileID: 100000, guid: 4b6adcc4726f3454ab99f02529501b7b, type: 3}
-  center: {x: 0, y: 0, z: 0}
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!114 &114643837928614824
 MonoBehaviour:
@@ -17362,7 +17371,6 @@ MonoBehaviour:
   - {fileID: 4435956271254992}
   - {fileID: 4310428348762160}
   spawnable: {fileID: 100000, guid: 4b6adcc4726f3454ab99f02529501b7b, type: 3}
-  center: {x: 0, y: 0, z: 0}
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!114 &114762556542692074
 MonoBehaviour:
@@ -17398,7 +17406,6 @@ MonoBehaviour:
   - {fileID: 4435956271254992}
   - {fileID: 4310428348762160}
   spawnable: {fileID: 1107327234398772, guid: b7e63d5f60089624f8c468c490e44e54, type: 2}
-  center: {x: 0, y: 0, z: 0}
   size: {x: 0, y: 0, z: 0}
 --- !u!114 &114794848226930144
 MonoBehaviour:
@@ -17418,7 +17425,6 @@ MonoBehaviour:
   - {fileID: 4435956271254992}
   - {fileID: 4310428348762160}
   spawnable: {fileID: 100000, guid: 4b6adcc4726f3454ab99f02529501b7b, type: 3}
-  center: {x: 0, y: 0, z: 0}
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!114 &114951768596960672
 MonoBehaviour:
@@ -17438,7 +17444,6 @@ MonoBehaviour:
   - {fileID: 4178076297836012}
   - {fileID: 4310428348762160}
   spawnable: {fileID: 100000, guid: 4b6adcc4726f3454ab99f02529501b7b, type: 3}
-  center: {x: 0, y: 0, z: 0}
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!212 &212569428408545034
 SpriteRenderer:

@@ -8,8 +8,9 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class NavigationController : MonoBehaviour
 {
-    //public Transform[] destinationPoints; 
-    private Transform goal;
+    private Vector3 pos;
+    private bool reached_mid = false;
+    private bool left_mid = false;
 
     [SerializeField]
     Animator anim;
@@ -21,21 +22,68 @@ public class NavigationController : MonoBehaviour
     Vector2 smoothDeltaPosition = Vector2.zero;
     Vector2 velocity = Vector2.zero;
 
-    public Vector2 mognitud;
-    public Vector2 mognitud2;
-
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+    
 
-    void Start()
-    {
-        GameObject[] destinationPoints = GameObject.FindGameObjectsWithTag("alien_spawner");
-        goal = destinationPoints[Random.Range(0, destinationPoints.Length)].transform;
-        agent.destination = goal.position;
+    void Start() {
+        GameObject[] midPoint = GameObject.FindGameObjectsWithTag("alien_navigatables");
+        Transform goal = midPoint[Random.Range(0, midPoint.Length)].transform;
+        
+        //Vector3 s = goal.position;
+        pos = RandomizedPos(goal);
+
+        agent.destination = pos;
         agent.updatePosition = false;
+
     }
 
     void Update()
     {
+        ProcessStep();
+
+        if (Vector3.Distance(this.pos, this.gameObject.transform.position) < 1 && !reached_mid) {
+            agent.destination = this.gameObject.transform.position;
+            reached_mid = true;
+        }
+        if (reached_mid && !left_mid) {
+            StartCoroutine("Fade");
+        }
+        if (Vector3.Distance(this.pos, this.gameObject.transform.position) < 1 && left_mid) {
+            DestroyObject(); // does not destroy the object, makes a check as well
+        }
+    }
+
+    IEnumerator Fade() {
+        yield return new WaitForSeconds(1.03f * Random.Range(5, 10));
+        if (Random.value < 0.5f) {
+            GameObject[] midPoint = GameObject.FindGameObjectsWithTag("alien_navigatables");
+            Transform goal = midPoint[Random.Range(0, midPoint.Length)].transform;
+            pos = RandomizedPos(goal);
+            agent.destination = pos;
+            left_mid = false;
+        }
+        else {
+            GameObject[] destinationPoints = GameObject.FindGameObjectsWithTag("alien_spawner");
+            Transform goal = destinationPoints[Random.Range(0, destinationPoints.Length)].transform;
+            pos = goal.position;
+            agent.destination = pos;
+            left_mid = true;
+        }
+    }
+
+    void OnAnimatorMove() {
+        // Update position to agent position
+        this.gameObject.transform.position = agent.nextPosition;
+    }
+
+    private void Flip() {
+        // Switch the way the player is labelled as facing.
+        m_FacingRight = !m_FacingRight;
+
+        spriteRenderer.flipX = !spriteRenderer.flipX;
+    }
+
+    private void ProcessStep() {
         Vector3 worldDeltaPosition = agent.nextPosition - transform.position;
 
         // Map 'worldDeltaPosition' to local space
@@ -57,32 +105,24 @@ public class NavigationController : MonoBehaviour
         if (velocity.x < 0f && !m_FacingRight) Flip();
         else if (velocity.x > 0f && m_FacingRight) Flip();
 
-        mognitud = velocity;
-        mognitud2 = smoothDeltaPosition;
-
         bool shouldMove = velocity.magnitude > 0.1f && agent.remainingDistance > agent.radius;
 
         // Update animation parameters
         anim.SetBool("move", shouldMove);
+    }
 
-        if (Vector3.Distance(this.goal.position, this.gameObject.transform.position) < 1)
+    private void DestroyObject() {
+        if (Vector3.Distance(this.pos, this.gameObject.transform.position) < 1)
         {
             Destroy(this.gameObject);
         }
-        //this.GetComponent<LookAt>().lookAtTargetPosition = agent.steeringTarget + transform.forward;
     }
 
-    void OnAnimatorMove()
-    {
-        // Update position to agent position
-        this.gameObject.transform.position = agent.nextPosition;
-    }
-
-    private void Flip()
-    {
-        // Switch the way the player is labelled as facing.
-        m_FacingRight = !m_FacingRight;
-
-        spriteRenderer.flipX = !spriteRenderer.flipX;
+    private Vector3 RandomizedPos(Transform goal) {
+        Bounds goal_bounds = goal.GetComponent<BoxCollider>().bounds;
+		pos = goal.position + new Vector3(Random.Range(-goal_bounds.size.x / 2, goal_bounds.size.x / 2),
+                                                  Random.Range(-goal_bounds.size.y / 2, goal_bounds.size.y / 2),
+                                                  Random.Range(-goal_bounds.size.z / 2, goal_bounds.size.z / 2));
+        return pos;
     }
 }

@@ -188,8 +188,7 @@ Prefab:
       propertyPath: m_Radius
       value: 0.25
       objectReference: {fileID: 0}
-    - target: {fileID: 114825925352792360, guid: b7e63d5f60089624f8c468c490e44e54,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -197,9 +196,27 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b7e63d5f60089624f8c468c490e44e54, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &337097090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1261298316375992, guid: 3f2411844ce18154b8d99d8459a9d11f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1480737959}
+--- !u!65 &337097091
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 337097090}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &492482234
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +317,18 @@ Prefab:
     - target: {fileID: 4775834563038228, guid: 3f2411844ce18154b8d99d8459a9d11f, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245597627844240, guid: 3f2411844ce18154b8d99d8459a9d11f, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245597627844240, guid: 3f2411844ce18154b8d99d8459a9d11f, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245597627844240, guid: 3f2411844ce18154b8d99d8459a9d11f, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f2411844ce18154b8d99d8459a9d11f, type: 2}
