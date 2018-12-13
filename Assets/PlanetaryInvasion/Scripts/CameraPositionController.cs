@@ -37,6 +37,7 @@ public class CameraPositionController : MonoBehaviour
             default:
                 break;
         }
+
     }
 
     // void Interpolate(Vector3 start, Vector3 end)
