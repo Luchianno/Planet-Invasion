@@ -35,6 +35,11 @@ public class CanvasGroupController : MonoBehaviour
         StartCoroutine(fadeOffRoutine());
     }
 
+    public void SwitchRendering()
+    {
+        this.RenderingEnabled = !this.RenderingEnabled;
+    }
+
     IEnumerator fadeOffRoutine()
     {
         float elapsed = 0;

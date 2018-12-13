@@ -6,7 +6,9 @@ using UnityEngine.Events;
 public class CameraPositionController : MonoBehaviour
 {
     [SerializeField]
-    Transform missionControl, map, hangar;
+    Transform missionControl;
+    Transform map;
+    Transform hangar;
 
     [SerializeField]
     new Transform camera;
@@ -22,7 +24,7 @@ public class CameraPositionController : MonoBehaviour
         Hangar
     }
 
-    void ChangePos(CameraPosition pos)
+    public void ChangePos(CameraPosition pos)
     {
         switch (pos)
         {

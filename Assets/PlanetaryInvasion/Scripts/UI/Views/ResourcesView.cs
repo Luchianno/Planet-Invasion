@@ -8,7 +8,7 @@ using Zenject;
 public class ResourcesView : MonoBehaviour, IUpdateableView
 {
     [SerializeField]
-    Text label;
+    TMPro.TextMeshProUGUI label;
 
     [Inject]
     PlanetState gameState;

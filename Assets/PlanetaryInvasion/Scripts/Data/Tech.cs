@@ -22,7 +22,7 @@ public class Tech : Card
         {
             Type = ActionResultType.Success,
             Message = StudyResult,
-            MessageType = StoryLog.StoryLogEntryType.TechResult,
+            MessageType = GameEventLog.StoryLogEntryType.TechResult,
             FinalState = state
         };
     }

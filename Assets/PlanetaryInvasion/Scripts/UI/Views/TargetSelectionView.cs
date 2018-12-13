@@ -8,10 +8,11 @@ using Zenject;
 
 public class TargetSelectionView : MonoBehaviour
 {
+    public CountrySelectedEvent OnCountrySelected;
+
     [SerializeField]
     List<Pair> Countries;
 
-    public CountrySelectedEvent OnCountrySelected;
     [SerializeField]
     Button closeButton;
 
@@ -20,6 +21,10 @@ public class TargetSelectionView : MonoBehaviour
 
     [Inject]
     PlanetState state;
+
+
+    public CountryState SelectedCountry;
+    bool selected;
 
     void Start()
     {
@@ -40,7 +45,19 @@ public class TargetSelectionView : MonoBehaviour
     {
         // canvasGroup.RenderingEnabled = false;
         canvasGroup.FadeOff();
+        selected = true;
+        SelectedCountry = country;
         this.OnCountrySelected.Invoke(country);
+    }
+
+    // TODO remove IEnumerator here
+    public IEnumerator OpenAndAwaitForSelection(Action<CountryState> onSelected)
+    {
+        this.canvasGroup.RenderingEnabled = true;
+
+        selected = false;
+        yield return new WaitUntil(() => selected);
+        onSelected.Invoke(this.SelectedCountry);
     }
 
     [Serializable]

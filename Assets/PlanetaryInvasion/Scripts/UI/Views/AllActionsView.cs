@@ -1,8 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI.Extensions;
 using Zenject;
+using System.Linq;
 
 public class AllActionsView : MonoBehaviour, IUpdateableView
 {
@@ -22,13 +25,34 @@ public class AllActionsView : MonoBehaviour, IUpdateableView
     [Inject]
     TabletView.Factory tabletFactory;
 
+    // TODO change to the state change, this should not communicate with other view directly
+    [Inject]
+    TargetSelectionView targetSelection;
+
     Dictionary<Card, GameObject> cache = new Dictionary<Card, GameObject>();
+
+    Card selectedCard;
 
     void Start() => UpdateView();
 
     void CardClicked(ICardView cardView)
     {
-        stateManager.AddPlayerAction(cardView.Card);
+        selectedCard = cardView.Card;
+        if (cardView.Card.RequiresTarget)
+        {
+            StartCoroutine(targetSelection.OpenAndAwaitForSelection(countrySelected));
+        }
+        else
+        {
+            stateManager.AddPlayerAction(new SelectedAction() { Country = null, Card = selectedCard });
+        }
+    }
+
+    void countrySelected(CountryState country)
+    {
+        if (country == null)
+            return;
+        stateManager.AddPlayerAction(new SelectedAction() { Country = country, Card = selectedCard });
     }
 
     public void UpdateView()
@@ -43,7 +67,7 @@ public class AllActionsView : MonoBehaviour, IUpdateableView
         foreach (var item in Card.AllCards)
         {
             if (!item.CheckIfUsable(gameState.Player).Allowed
-                || gameState.Player.SelectedCards.Contains(item)) // TODO allowed only one card of same kind?
+                || gameState.Player.SelectedCards.Exists(x => x.Country == item)) // TODO allowed only one card of same kind?
             {
                 continue;
             }

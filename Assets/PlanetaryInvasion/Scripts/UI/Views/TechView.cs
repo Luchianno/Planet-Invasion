@@ -11,7 +11,7 @@ public class TechView : MonoBehaviour, IUpdateableView
     PlanetState state;
 
     [SerializeField]
-    Text label;
+    TMPro.TextMeshProUGUI label;
 
     StringBuilder builder = new StringBuilder();
 

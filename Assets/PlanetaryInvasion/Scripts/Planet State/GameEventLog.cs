@@ -5,7 +5,7 @@ using System;
 using System.Collections.ObjectModel;
 
 [Serializable]
-public class StoryLog
+public class GameEventLog
 {
     // public ReadOnlyCollection<StoryLogEntry> Stories { get { return stories.AsReadOnly(); } }
     public List<StoryLogEntry> Stories = new List<StoryLogEntry>();

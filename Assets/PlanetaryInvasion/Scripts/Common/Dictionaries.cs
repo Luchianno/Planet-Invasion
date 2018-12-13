@@ -14,7 +14,7 @@ public class ResourceDictionary : SerializableSortedDictionary<Resource, int>
         public int Compare(Resource x, Resource y)
         {
             // Debug.Log("${x.Name.CompareTo(y)} {x} + {y}");
-            return x?.Name.CompareTo(y?.Name) ?? 0;
+            return x?.Name?.CompareTo(y?.Name) ?? 0;
         }
     }
 

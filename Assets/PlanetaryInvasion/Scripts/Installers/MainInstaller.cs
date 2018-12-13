@@ -34,6 +34,8 @@ public class MainInstaller : MonoInstaller<MainInstaller>
         Container.Bind<IUpdateableView>().To<SelectedActionsView>().FromComponentsInHierarchy(includeInactive: true);
         Container.Bind<IUpdateableView>().To<ResourcesView>().FromComponentsInHierarchy(includeInactive: true);
         Container.Bind<IUpdateableView>().To<TechView>().FromComponentsInHierarchy(includeInactive: true);
+        Container.Bind<IUpdateableView>().To<EventLogView>().FromComponentsInHierarchy(includeInactive: true);
+        Container.Bind<TargetSelectionView>().FromComponentsInHierarchy(includeInactive: true);
 
         Container.BindInstance<TabPanelView>(storyView).WithId("story").AsSingle();
 

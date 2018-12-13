@@ -11,7 +11,8 @@ public class PlayerState
 
     public List<Tech> Technologies = new List<Tech>();
 
-    public List<Card> SelectedCards = new List<Card>();
+    public List<SelectedAction> SelectedCards = new List<SelectedAction>();
 
     public int CardSlots = 3;
+
 }

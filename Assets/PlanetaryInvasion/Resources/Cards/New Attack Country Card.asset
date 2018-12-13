@@ -8,12 +8,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b6eb10421a7c9c4cb6a1f1409902d46, type: 3}
-  m_Name: Attack Country
+  m_Script: {fileID: 11500000, guid: 455439c4882cb4148847bef0c0d742d0, type: 3}
+  m_Name: New Attack Country Card
   m_EditorClassIdentifier: 
   Name: Attack Country
-  Description: Adds damage and Terror to the Country
-  ResultDescription: 'Your ships wreak hawok '
+  Description: 
   RequiresTarget: 1
   TurnsRequired: 1
   APCost: 1
@@ -25,3 +24,9 @@ MonoBehaviour:
     m_keys: []
     m_values: 
   TechRequirements: []
+  Damage:
+    Min: 0
+    Max: 0
+  SuccessText: 
+  FailText: 
+  TargetCountry: 

@@ -8,10 +8,10 @@ using Zenject;
 public class EventLogView : MonoBehaviour, IUpdateableView
 {
     [SerializeField]
-    Text label;
+    TMPro.TextMeshProUGUI label;
 
-    [SerializeField]
-    Transform parent;
+    // [SerializeField]
+    // Transform parent;
 
     [Inject]
     PlanetState state;

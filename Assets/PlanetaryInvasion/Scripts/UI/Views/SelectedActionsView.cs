@@ -7,8 +7,6 @@ using Zenject;
 
 public class SelectedActionsView : MonoBehaviour, IUpdateableView
 {
-    public Text Label;
-
     public GameObject CardPrefab;
     public GameObject PlaceHolderPrefab;
 
@@ -25,14 +23,14 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
     [Inject]
     TabletView.Factory tabletFactory;
 
+    // TODO change to the state change, this should not communicate with other view directly
+    [Inject]
+    TargetSelectionView targetSelection;
+
     Dictionary<Card, GameObject> cache = new Dictionary<Card, GameObject>();
+    Dictionary<Card, CountryState> SelectedParams = new Dictionary<Card, CountryState>(); // TODO it's bad approach
 
     List<GameObject> placeholders = new List<GameObject>();
-
-    private void CardClicked(ICardView cardView)
-    {
-        stateManager.RemovePlayerAction(cardView.Card);
-    }
 
     public void UpdateView()
     {
@@ -50,7 +48,7 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
 
         foreach (var item in stateManager.PlayerSelectedCards)
         {
-            AddCard(item);
+            AddCard(item.Card);
         }
 
         if (stateManager.PlayerSelectedCards.Count < state.Player.CardSlots)
@@ -63,7 +61,6 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
         }
     }
 
-
     public void AddCard(Card card)
     {
         var cardView = tabletFactory.Create();
@@ -73,4 +70,24 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
         cardView.CardClicked.AddListener(this.CardClicked);
         cache[card] = cardView.gameObject;
     }
+
+    void Start()
+    {
+        foreach (Transform item in parent)
+        {
+            if (parent != item)
+                Destroy(item.gameObject);
+        }
+    }
+
+    void CardClicked(ICardView cardView)
+    {
+        if (cardView.Card.RequiresTarget)
+        {
+            targetSelection.GetComponent<CanvasGroupController>().RenderingEnabled = true;
+            this.targetSelection.OnCountrySelected.AddListener(x => SelectedParams[cardView.Card] = x);
+        }
+        stateManager.RemovePlayerAction(cardView.Card);
+    }
+
 }

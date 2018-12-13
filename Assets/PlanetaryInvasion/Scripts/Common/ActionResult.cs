@@ -8,7 +8,7 @@ public struct ActionResult
     public string Message { get; set; }
     public PlanetState FinalState { get; set; }
 
-    public StoryLog.StoryLogEntryType MessageType { get; set; }
+    public GameEventLog.StoryLogEntryType MessageType { get; set; }
 }
 
 public enum ActionResultType
