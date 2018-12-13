@@ -6,9 +6,7 @@ public class SpawnObject : MonoBehaviour {
 
     public Transform[] destinationPoints;
     public GameObject spawnable;
-    public Vector3 center;
     public Vector3 size;
-    private int units = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +23,7 @@ public class SpawnObject : MonoBehaviour {
     public void SpawnAlien() {
         if (Random.value < 0.9f) {
             Transform randomTransform = destinationPoints[Random.Range(0, destinationPoints.Length-1) % destinationPoints.Length];
-		    Vector3 pos = randomTransform.position + center + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
+		    Vector3 pos = randomTransform.position + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
             int rotY = 0;
             /*f(Random.value<0.5f)
                 rotY=0;
@@ -40,6 +38,6 @@ public class SpawnObject : MonoBehaviour {
 
     void OnDrawGizmosSelected() {
         Gizmos.color = new Color(1,0,0,0.5f);
-        Gizmos.DrawCube(transform.position + center, transform.localScale + size);
+        Gizmos.DrawCube(transform.position, transform.localScale + size);
     }
 }
