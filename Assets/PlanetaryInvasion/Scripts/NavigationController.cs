@@ -55,7 +55,7 @@ public class NavigationController : MonoBehaviour
 
     IEnumerator Fade() {
         yield return new WaitForSeconds(1.03f * Random.Range(5, 10));
-        if (Random.value < 0.5f) {
+        if (Random.value < 0.4f) {
             GameObject[] midPoint = GameObject.FindGameObjectsWithTag("alien_navigatables");
             Transform goal = midPoint[Random.Range(0, midPoint.Length)].transform;
             pos = RandomizedPos(goal);
