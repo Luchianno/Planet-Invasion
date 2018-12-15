@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114657082421788038}
   m_Layer: 0
   m_Name: alien
-  m_TagString: Untagged
+  m_TagString: alien_hangar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,6 +85,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 129c1ae0eb0edac49a44e308911b36a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner_Tag: alien_spawner_Hangar
+  wander_tag: alien_nav_Hang
   anim: {fileID: 95998773075881754}
   agent: {fileID: 195102157028428244}
   spriteRenderer: {fileID: 212996417415714496}

@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 114074159799633364}
   m_Layer: 0
   m_Name: Spawner (5)
-  m_TagString: alien_spawner
+  m_TagString: alien_spawner_HQ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 114951768596960672}
   m_Layer: 0
   m_Name: Spawner (4)
-  m_TagString: alien_spawner
+  m_TagString: alien_spawner_HQ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 114675714160302894}
   m_Layer: 0
   m_Name: Spawner (1)
-  m_TagString: alien_spawner
+  m_TagString: alien_spawner_HQ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 65444324748788124}
   m_Layer: 0
   m_Name: Navigatable_Area
-  m_TagString: alien_navigatables
+  m_TagString: alien_nav_HQ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1257,7 +1257,7 @@ GameObject:
   - component: {fileID: 114509153216321560}
   m_Layer: 0
   m_Name: Spawner (2)
-  m_TagString: alien_spawner
+  m_TagString: alien_spawner_HQ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1372,7 +1372,7 @@ GameObject:
   - component: {fileID: 114615331417151364}
   m_Layer: 0
   m_Name: Spawner (3)
-  m_TagString: alien_spawner
+  m_TagString: alien_spawner_HQ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1428,23 +1428,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!1 &1344877099166452
+--- !u!1 &1346242491291642
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4952725240100880}
-  - component: {fileID: 33367260113320958}
-  - component: {fileID: 23332518468596408}
-  - component: {fileID: 95857113571116194}
+  - component: {fileID: 4952041330438856}
+  - component: {fileID: 33637060846911478}
+  - component: {fileID: 23073750565170822}
+  - component: {fileID: 95295005051189594}
   m_Layer: 0
-  m_Name: interior_1
+  m_Name: control_room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1349516202836978
 GameObject:
@@ -3233,6 +3233,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1 &1792099586313380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4451567956022618}
+  - component: {fileID: 212470547427237990}
+  m_Layer: 0
+  m_Name: world_map_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1795174980652042
 GameObject:
   m_ObjectHideFlags: 1
@@ -3451,7 +3467,7 @@ GameObject:
   - component: {fileID: 114794848226930144}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: alien_spawner
+  m_TagString: alien_spawner_HQ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3508,22 +3524,6 @@ GameObject:
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!1 &1886426097883218
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4463259079707024}
-  - component: {fileID: 212569428408545034}
-  m_Layer: 0
-  m_Name: world_map_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!1 &1889510556137938
 GameObject:
   m_ObjectHideFlags: 1
@@ -3928,7 +3928,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4209077239055238}
-  - component: {fileID: 114768182624187536}
   m_Layer: 0
   m_Name: Spawners
   m_TagString: Untagged
@@ -5288,6 +5287,19 @@ Transform:
   m_Father: {fileID: 4115449393355352}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!4 &4451567956022618
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1792099586313380}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.02999878, y: 7.53, z: 17.76}
+  m_LocalScale: {x: 8.2, y: 8.2, z: 8.2}
+  m_Children: []
+  m_Father: {fileID: 4775834563038228}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4457821997920972
 Transform:
   m_ObjectHideFlags: 1
@@ -5303,19 +5315,6 @@ Transform:
   m_Father: {fileID: 4440184313307666}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 199.603}
---- !u!4 &4463259079707024
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1886426097883218}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.58, z: 17.73}
-  m_LocalScale: {x: 8.1, y: 8.1, z: 8.1}
-  m_Children: []
-  m_Father: {fileID: 4775834563038228}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4467032679684862
 Transform:
   m_ObjectHideFlags: 1
@@ -6086,7 +6085,7 @@ Transform:
   - {fileID: 4928160089727012}
   - {fileID: 4857815202377810}
   m_Father: {fileID: 4775834563038228}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4721507834377272
 Transform:
@@ -6463,10 +6462,10 @@ Transform:
   - {fileID: 4158966332274688}
   - {fileID: 4768689279533512}
   - {fileID: 4115449393355352}
-  - {fileID: 4463259079707024}
+  - {fileID: 4451567956022618}
   - {fileID: 4518350437584886}
-  - {fileID: 4952725240100880}
   - {fileID: 4721078248482296}
+  - {fileID: 4952041330438856}
   - {fileID: 4874036177652404}
   - {fileID: 4702707127621530}
   - {fileID: 4149205579353826}
@@ -7083,18 +7082,18 @@ Transform:
   m_Father: {fileID: 4674510893100468}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 20.041}
---- !u!4 &4952725240100880
+--- !u!4 &4952041330438856
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1344877099166452}
+  m_GameObject: {fileID: 1346242491291642}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.99943}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4775834563038228}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 180}
 --- !u!4 &4957710333777324
 Transform:
@@ -7716,6 +7715,42 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1249bf798d6de244bbfc8940578201eb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!23 &23073750565170822
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1346242491291642}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: db0db7e738f123242803e81974109e1b, type: 2}
+  - {fileID: 2100002, guid: 130b11ed0fd33fe4b9a9733273b7aa05, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9256,42 +9291,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8e1a0ed7f41ee8e4991f73d4b3d72ec7, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!23 &23332518468596408
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1344877099166452}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 2100000, guid: db0db7e738f123242803e81974109e1b, type: 2}
-  - {fileID: 2100000, guid: 15f7f0daceb4e1a4da1d0d02107d52ff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12846,13 +12845,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1641519587392882}
   m_Mesh: {fileID: 4300000, guid: f10d73f7dc239d840945c91152b4f2e8, type: 3}
---- !u!33 &33367260113320958
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1344877099166452}
-  m_Mesh: {fileID: 4300000, guid: 130b11ed0fd33fe4b9a9733273b7aa05, type: 3}
 --- !u!33 &33369457359225674
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -13119,6 +13111,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1559224632789144}
   m_Mesh: {fileID: 4300000, guid: f10d73f7dc239d840945c91152b4f2e8, type: 3}
+--- !u!33 &33637060846911478
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1346242491291642}
+  m_Mesh: {fileID: 4300000, guid: 130b11ed0fd33fe4b9a9733273b7aa05, type: 3}
 --- !u!33 &33639263305551938
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -14887,6 +14886,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95295005051189594
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1346242491291642}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 130b11ed0fd33fe4b9a9733273b7aa05, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95325007778652114
 Animator:
   serializedVersion: 3
@@ -16327,24 +16344,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &95857113571116194
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1344877099166452}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 130b11ed0fd33fe4b9a9733273b7aa05, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95858289161808712
 Animator:
   serializedVersion: 3
@@ -17208,18 +17207,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150485302752860}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationPoints:
-  - {fileID: 4580583623352808}
-  - {fileID: 4253519152988694}
-  - {fileID: 4026046734289692}
-  - {fileID: 4178076297836012}
-  - {fileID: 4435956271254992}
-  spawnable: {fileID: 100000, guid: 4b6adcc4726f3454ab99f02529501b7b, type: 3}
+  spawner_Tag: alien_spawner_HQ
+  wander_tag: alien_nav_HQ
+  spawnables: []
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!114 &114186969972825044
 MonoBehaviour:
@@ -17247,13 +17242,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  spawnable: {fileID: 1107327234398772, guid: b7e63d5f60089624f8c468c490e44e54, type: 2}
+  spawner_Tag: 
+  wander_tag: 
+  spawnables: []
   size: {x: 1, y: 0.11, z: 1}
 --- !u!114 &114266250846976984
 MonoBehaviour:
@@ -17276,18 +17267,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1310132285565622}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationPoints:
-  - {fileID: 4580583623352808}
-  - {fileID: 4253519152988694}
-  - {fileID: 4178076297836012}
-  - {fileID: 4435956271254992}
-  - {fileID: 4310428348762160}
-  spawnable: {fileID: 100000, guid: 4b6adcc4726f3454ab99f02529501b7b, type: 3}
+  spawner_Tag: alien_spawner_HQ
+  wander_tag: alien_nav_HQ
+  spawnables: []
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!114 &114527439500252364
 MonoBehaviour:
@@ -17310,18 +17297,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1332916077222958}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationPoints:
-  - {fileID: 4580583623352808}
-  - {fileID: 4253519152988694}
-  - {fileID: 4026046734289692}
-  - {fileID: 4435956271254992}
-  - {fileID: 4310428348762160}
-  spawnable: {fileID: 100000, guid: 4b6adcc4726f3454ab99f02529501b7b, type: 3}
+  spawner_Tag: alien_spawner_HQ
+  wander_tag: alien_nav_HQ
+  spawnables: []
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!114 &114643837928614824
 MonoBehaviour:
@@ -17359,18 +17342,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1183066223556270}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationPoints:
-  - {fileID: 4580583623352808}
-  - {fileID: 4026046734289692}
-  - {fileID: 4178076297836012}
-  - {fileID: 4435956271254992}
-  - {fileID: 4310428348762160}
-  spawnable: {fileID: 100000, guid: 4b6adcc4726f3454ab99f02529501b7b, type: 3}
+  spawner_Tag: alien_spawner_HQ
+  wander_tag: alien_nav_HQ
+  spawnables: []
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!114 &114762556542692074
 MonoBehaviour:
@@ -17387,44 +17366,21 @@ MonoBehaviour:
   intensityMax: 5.3
   frequencyMin: 20.9
   frequencyMax: 40.7
---- !u!114 &114768182624187536
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1981887668309918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destinationPoints:
-  - {fileID: 4580583623352808}
-  - {fileID: 4253519152988694}
-  - {fileID: 4026046734289692}
-  - {fileID: 4178076297836012}
-  - {fileID: 4435956271254992}
-  - {fileID: 4310428348762160}
-  spawnable: {fileID: 1107327234398772, guid: b7e63d5f60089624f8c468c490e44e54, type: 2}
-  size: {x: 0, y: 0, z: 0}
 --- !u!114 &114794848226930144
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1863679971524112}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationPoints:
-  - {fileID: 4253519152988694}
-  - {fileID: 4026046734289692}
-  - {fileID: 4178076297836012}
-  - {fileID: 4435956271254992}
-  - {fileID: 4310428348762160}
-  spawnable: {fileID: 100000, guid: 4b6adcc4726f3454ab99f02529501b7b, type: 3}
+  spawner_Tag: alien_spawner_HQ
+  wander_tag: alien_nav_HQ
+  spawnables:
+  - {fileID: 0}
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!114 &114951768596960672
 MonoBehaviour:
@@ -17432,25 +17388,21 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1176988441017494}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationPoints:
-  - {fileID: 4580583623352808}
-  - {fileID: 4253519152988694}
-  - {fileID: 4026046734289692}
-  - {fileID: 4178076297836012}
-  - {fileID: 4310428348762160}
-  spawnable: {fileID: 100000, guid: 4b6adcc4726f3454ab99f02529501b7b, type: 3}
+  spawner_Tag: alien_spawner_HQ
+  wander_tag: alien_nav_HQ
+  spawnables: []
   size: {x: 2.32, y: 0.11, z: 3}
---- !u!212 &212569428408545034
+--- !u!212 &212470547427237990
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1886426097883218}
+  m_GameObject: {fileID: 1792099586313380}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

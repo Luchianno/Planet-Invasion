@@ -8,6 +8,9 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class NavigationController : MonoBehaviour
 {
+    public string spawner_Tag;
+    public string wander_tag;
+
     private Vector3 pos;
     private bool reached_mid = false;
     private bool left_mid = false;
@@ -26,7 +29,7 @@ public class NavigationController : MonoBehaviour
     
 
     void Start() {
-        GameObject[] midPoint = GameObject.FindGameObjectsWithTag("alien_navigatables");
+        GameObject[] midPoint = GameObject.FindGameObjectsWithTag(wander_tag);
         Transform goal = midPoint[Random.Range(0, midPoint.Length)].transform;
         
         //Vector3 s = goal.position;
@@ -43,9 +46,9 @@ public class NavigationController : MonoBehaviour
 
         if (Vector3.Distance(this.pos, this.gameObject.transform.position) < 1 && !reached_mid) {
             agent.destination = this.gameObject.transform.position;
+            agent.isStopped = true;
+            ProcessStep();
             reached_mid = true;
-        }
-        if (reached_mid && !left_mid) {
             StartCoroutine("Fade");
         }
         if (Vector3.Distance(this.pos, this.gameObject.transform.position) < 1 && left_mid) {
@@ -54,18 +57,21 @@ public class NavigationController : MonoBehaviour
     }
 
     IEnumerator Fade() {
-        yield return new WaitForSeconds(1.03f * Random.Range(5, 10));
+        yield return new WaitForSeconds(1.03f * Random.Range(1, 3));
         if (Random.value < 0.4f) {
-            GameObject[] midPoint = GameObject.FindGameObjectsWithTag("alien_navigatables");
+            GameObject[] midPoint = GameObject.FindGameObjectsWithTag(wander_tag);
             Transform goal = midPoint[Random.Range(0, midPoint.Length)].transform;
             pos = RandomizedPos(goal);
-            agent.destination = pos;
             left_mid = false;
+            reached_mid = false;
+            agent.isStopped = false;
+            agent.destination = pos;
         }
         else {
-            GameObject[] destinationPoints = GameObject.FindGameObjectsWithTag("alien_spawner");
+            GameObject[] destinationPoints = GameObject.FindGameObjectsWithTag(spawner_Tag);
             Transform goal = destinationPoints[Random.Range(0, destinationPoints.Length)].transform;
             pos = goal.position;
+            agent.isStopped = false;
             agent.destination = pos;
             left_mid = true;
         }
