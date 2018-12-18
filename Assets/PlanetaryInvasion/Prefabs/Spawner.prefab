@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1106868879629656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -99.99, y: 1.12, z: 1.09}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,12 +64,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  spawnable: {fileID: 100000, guid: 4b6adcc4726f3454ab99f02529501b7b, type: 3}
-  center: {x: 0, y: 0, z: 0}
+  spawner_Tag: alien_spawner_HQ
+  wander_tag: alien_nav_HQ
+  spawner_id: 
+  spawnables:
+  - {fileID: 1107327234398772, guid: b7e63d5f60089624f8c468c490e44e54, type: 2}
+  spawn_limit: 15
   size: {x: 1, y: 0.11, z: 1}

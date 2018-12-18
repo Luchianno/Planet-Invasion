@@ -6,8 +6,15 @@ TagManager:
   tags:
   - ship
   - asteroid
+  - alien_spawner_HQ
+  - alien_nav_HQ
+  - alien_spawner_Hangar
+  - alien_nav_Hang
   - alien_spawner
-  - alien_navigatables
+  - Undefined
+  - alien
+  - alien_hq
+  - alien_hangar
   layers:
   - Default
   - TransparentFX

@@ -4,12 +4,28 @@ using UnityEngine;
 
 public class SpawnObject : MonoBehaviour {
 
-    public Transform[] destinationPoints;
-    public GameObject spawnable;
+    //alien_navigatables
+    [TagSelector]
+    public string spawner_Tag;
+    //alien_spawner
+    [TagSelector]
+    public string wander_tag;
+    [TagSelector]
+    public string spawner_id;
+
+    public GameObject[] spawnables;
+
+    public int spawn_limit = 15;
+
+
+    private GameObject[] destinationPoints;
+    private GameObject spawnable;
     public Vector3 size;
 
 	// Use this for initialization
 	void Start () {
+        spawnable = spawnables[Random.Range(0, spawnables.Length)];
+        if (spawner_id.Length == 0) spawner_id = spawnable.tag;
         InvokeRepeating("SpawnAlien", 2.0f, 2.5f);
 	}
 	
@@ -21,20 +37,26 @@ public class SpawnObject : MonoBehaviour {
 	}
 
     public void SpawnAlien() {
-        if (Random.value < 0.3f) {
-            Transform randomTransform = destinationPoints[Random.Range(0, destinationPoints.Length-1) % destinationPoints.Length];
+        StartCoroutine("Fade");
+	}
+
+    IEnumerator Fade() {
+        yield return new WaitForSeconds(Random.Range(1, 3));
+        if (Random.value < 0.4f && GameObject.FindGameObjectsWithTag(spawnable.tag).Length< spawn_limit) {
+            destinationPoints = GameObject.FindGameObjectsWithTag(spawner_Tag);
+            Transform randomTransform = destinationPoints[Random.Range(0, destinationPoints.Length-1) % destinationPoints.Length].transform;
 		    Vector3 pos = randomTransform.position + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
             int rotY = 0;
-            /*f(Random.value<0.5f)
-                rotY=0;
-            else
-                rotY=180;*/
             Quaternion rot = Quaternion.Euler(0, rotY, 0);
 
-            GameObject spawned = Instantiate(spawnable, pos, rot);
-            spawned.GetComponent("");
+            NavigationController s = spawnable.GetComponent<NavigationController>();
+            s.spawner_Tag = spawner_Tag;
+            s.wander_tag = wander_tag;
+            s.tag = spawner_id;
+            Instantiate(spawnable, pos, rot);
         }
-	}
+    }
+
 
     void OnDrawGizmosSelected() {
         Gizmos.color = new Color(1,0,0,0.5f);
