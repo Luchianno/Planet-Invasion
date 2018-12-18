@@ -3928,6 +3928,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4209077239055238}
+  - component: {fileID: 114503566701159754}
+  - component: {fileID: 114522271616167904}
   m_Layer: 0
   m_Name: Spawners
   m_TagString: Untagged
@@ -17207,14 +17209,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150485302752860}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawner_Tag: alien_spawner_HQ
   wander_tag: alien_nav_HQ
-  spawnables: []
+  spawner_id: 
+  spawnables:
+  - {fileID: 1107327234398772, guid: b7e63d5f60089624f8c468c490e44e54, type: 2}
+  spawn_limit: 15
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!114 &114186969972825044
 MonoBehaviour:
@@ -17244,7 +17249,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner_Tag: 
   wander_tag: 
+  spawner_id: 
   spawnables: []
+  spawn_limit: 15
   size: {x: 1, y: 0.11, z: 1}
 --- !u!114 &114266250846976984
 MonoBehaviour:
@@ -17261,12 +17268,12 @@ MonoBehaviour:
   intensityMax: 5.3
   frequencyMin: 1.89
   frequencyMax: 15
---- !u!114 &114509153216321560
+--- !u!114 &114503566701159754
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1310132285565622}
+  m_GameObject: {fileID: 1981887668309918}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
@@ -17274,8 +17281,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner_Tag: alien_spawner_HQ
   wander_tag: alien_nav_HQ
-  spawnables: []
+  spawner_id: alien_hq
+  spawnables:
+  - {fileID: 1107327234398772, guid: b7e63d5f60089624f8c468c490e44e54, type: 2}
+  spawn_limit: 15
+  size: {x: 0, y: 0, z: 0}
+--- !u!114 &114509153216321560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1310132285565622}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner_Tag: alien_spawner_HQ
+  wander_tag: alien_nav_HQ
+  spawner_id: 
+  spawnables:
+  - {fileID: 1107327234398772, guid: b7e63d5f60089624f8c468c490e44e54, type: 2}
+  spawn_limit: 15
   size: {x: 2.32, y: 0.11, z: 3}
+--- !u!114 &114522271616167904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1981887668309918}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner_Tag: alien_spawner_HQ
+  wander_tag: alien_nav_HQ
+  spawner_id: alien_hq
+  spawnables:
+  - {fileID: 1107327234398772, guid: b7e63d5f60089624f8c468c490e44e54, type: 2}
+  spawn_limit: 15
+  size: {x: 0, y: 0, z: 0}
 --- !u!114 &114527439500252364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17297,14 +17343,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1332916077222958}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawner_Tag: alien_spawner_HQ
   wander_tag: alien_nav_HQ
-  spawnables: []
+  spawner_id: 
+  spawnables:
+  - {fileID: 1107327234398772, guid: b7e63d5f60089624f8c468c490e44e54, type: 2}
+  spawn_limit: 15
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!114 &114643837928614824
 MonoBehaviour:
@@ -17342,14 +17391,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1183066223556270}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawner_Tag: alien_spawner_HQ
   wander_tag: alien_nav_HQ
-  spawnables: []
+  spawner_id: 
+  spawnables:
+  - {fileID: 1107327234398772, guid: b7e63d5f60089624f8c468c490e44e54, type: 2}
+  spawn_limit: 15
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!114 &114762556542692074
 MonoBehaviour:
@@ -17372,15 +17424,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1863679971524112}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawner_Tag: alien_spawner_HQ
   wander_tag: alien_nav_HQ
+  spawner_id: 
   spawnables:
-  - {fileID: 0}
+  - {fileID: 1107327234398772, guid: b7e63d5f60089624f8c468c490e44e54, type: 2}
+  spawn_limit: 15
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!114 &114951768596960672
 MonoBehaviour:
@@ -17388,14 +17442,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1176988441017494}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2f1a78c962bca48b6aa26a97f6f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawner_Tag: alien_spawner_HQ
   wander_tag: alien_nav_HQ
-  spawnables: []
+  spawner_id: 
+  spawnables:
+  - {fileID: 1107327234398772, guid: b7e63d5f60089624f8c468c490e44e54, type: 2}
+  spawn_limit: 15
   size: {x: 2.32, y: 0.11, z: 3}
 --- !u!212 &212470547427237990
 SpriteRenderer:
