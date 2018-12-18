@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -17,5 +18,6 @@ MonoBehaviour:
     start to unload the equipment. The night is cold. But the view is caprivating."
   Image: {fileID: 21300000, guid: 35af057da2730fe4aacbcac8b4e56a96, type: 3}
   VarRequirements:
-    m_keys: []
-    m_values: 
+    m_keys:
+    - lalala
+    m_values: 00000000

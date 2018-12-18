@@ -6,12 +6,16 @@ using UnityEngine.Events;
 public class CameraPositionController : MonoBehaviour
 {
     [SerializeField]
+    new Transform camera;
+
+    [Space]
+    [SerializeField]
     Transform missionControl;
+    [SerializeField]
     Transform map;
+    [SerializeField]
     Transform hangar;
 
-    [SerializeField]
-    new Transform camera;
 
     public float lerpTime = 0.3f;
 

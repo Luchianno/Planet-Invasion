@@ -64,7 +64,7 @@ public class AllActionsView : MonoBehaviour, IUpdateableView
         }
         cache.Clear();
 
-        foreach (var item in Card.AllCards)
+        foreach (var item in Card.AllPlayerCards)
         {
             if (!item.CheckIfUsable(gameState.Player).Allowed
                 || gameState.Player.SelectedCards.Exists(x => x.Country == item)) // TODO allowed only one card of same kind?

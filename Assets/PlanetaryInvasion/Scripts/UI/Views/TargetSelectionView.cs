@@ -22,6 +22,8 @@ public class TargetSelectionView : MonoBehaviour
     [Inject]
     PlanetState state;
 
+    [Inject]
+    GameStateMachine sm;
 
     public CountryState SelectedCountry;
     bool selected;
@@ -48,11 +50,13 @@ public class TargetSelectionView : MonoBehaviour
         selected = true;
         SelectedCountry = country;
         this.OnCountrySelected.Invoke(country);
+        sm.ChangeState<MissionControlGameState>();
     }
 
     // TODO remove IEnumerator here
     public IEnumerator OpenAndAwaitForSelection(Action<CountryState> onSelected)
     {
+        sm.ChangeState<TargetSelectionGameState>();
         this.canvasGroup.RenderingEnabled = true;
 
         selected = false;

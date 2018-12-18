@@ -88,27 +88,44 @@ public partial class Card : ScriptableObject
         return result;
     }
 
-    public static void LoadAllCards()
+    // TODO rework loading of cards. store path in settings
+    public static void LoadAllPlayerCards()
     {
-        var list = new List<Card>(Resources.LoadAll<Card>("Cards"));
-        list.AddRange(Resources.LoadAll<Card>("Tech"));
-        allCards = new ReadOnlyCollection<Card>(list);
-        Debug.Log($"Loading All Cards. {allCards.Count} Loaded");
-        // foreach (var item in allCards)
-        // {
-        //     Debug.Log(item);
-        // }
+        var list = new List<Card>(Resources.LoadAll<Card>("Player/Cards"));
+        list.AddRange(Resources.LoadAll<Card>("Player/Tech"));
+        allPlayerCards = new ReadOnlyCollection<Card>(list);
+        // Debug.Log($"Loading All Cards. {allPlayerCards.Count} Loaded");
     }
-    static ReadOnlyCollection<Card> allCards;
+
+    public static void LoadAllAICards()
+    {
+        var list = new List<Card>(Resources.LoadAll<Card>("AI/Cards"));
+        list.AddRange(Resources.LoadAll<Card>("AI/Tech"));
+        allAICards = new ReadOnlyCollection<Card>(list);
+        // Debug.Log($"Loading All Cards. {allPlayerCards.Count} Loaded");
+    }
+
+    static ReadOnlyCollection<Card> allPlayerCards;
+    static ReadOnlyCollection<Card> allAICards;
 
     // cache stuff
-    public static ReadOnlyCollection<Card> AllCards
+    public static ReadOnlyCollection<Card> AllPlayerCards
     {
         get
         {
-            if (allCards == null)
-                LoadAllCards();
-            return allCards;
+            if (allPlayerCards == null)
+                LoadAllPlayerCards();
+            return allPlayerCards;
+        }
+    }
+
+    public static ReadOnlyCollection<Card> AllAICards
+    {
+        get
+        {
+            if (allPlayerCards == null)
+                LoadAllAICards();
+            return allPlayerCards;
         }
     }
 }

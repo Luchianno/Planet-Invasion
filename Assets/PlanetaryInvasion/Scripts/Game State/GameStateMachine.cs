@@ -11,10 +11,10 @@ public class GameStateMachine : IInitializable, ITickable
 
     GameState currentState;
 
-
     public void Initialize()
     {
-        this.ChangeState<MenuGameState>();
+        // this.ChangeState<MenuGameState>();
+        this.ChangeState<MissionControlGameState>();
     }
 
     public void Tick()
@@ -32,7 +32,7 @@ public class GameStateMachine : IInitializable, ITickable
             Debug.LogWarning("State not Found");
             return;
         }
-        
+
         Debug.Log($"exiting current state: {currentState?.GetType().ToString()}");
         currentState?.OnExit();
         currentState = state;

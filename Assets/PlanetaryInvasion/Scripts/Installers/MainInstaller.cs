@@ -20,6 +20,16 @@ public class MainInstaller : MonoInstaller<MainInstaller>
     [SerializeField]
     GameObject tabletPrefab;
 
+    [Space]
+    [SerializeField]
+    Canvas inGameCanvas;
+    [SerializeField]
+    Canvas mapCanvas;
+    // [Space]
+    // [SerializeField]
+    // Canvas inGameCanvas;
+
+
     public override void InstallBindings()
     {
         Container.BindInstance<GameSettings>(settings);
@@ -30,15 +40,29 @@ public class MainInstaller : MonoInstaller<MainInstaller>
         Container.BindInstance<PlanetStateController>(stateController);
         Container.Bind<UpdateableViewManager>().AsSingle();
 
+        // views
         Container.Bind<IUpdateableView>().To<AllActionsView>().FromComponentsInHierarchy(includeInactive: true);
         Container.Bind<IUpdateableView>().To<SelectedActionsView>().FromComponentsInHierarchy(includeInactive: true);
         Container.Bind<IUpdateableView>().To<ResourcesView>().FromComponentsInHierarchy(includeInactive: true);
         Container.Bind<IUpdateableView>().To<TechView>().FromComponentsInHierarchy(includeInactive: true);
         Container.Bind<IUpdateableView>().To<EventLogView>().FromComponentsInHierarchy(includeInactive: true);
         Container.Bind<TargetSelectionView>().FromComponentsInHierarchy(includeInactive: true);
-
         Container.BindInstance<TabPanelView>(storyView).WithId("story").AsSingle();
 
+        // canvases 
+        Container.BindInstance<Canvas>(inGameCanvas).WithId("inGame");
+        Container.BindInstance<Canvas>(mapCanvas).WithId("map");
+
+        // game states
+        Container.BindInterfacesAndSelfTo<GameStateMachine>().AsSingle();
+
+        // Container.Bind(typeof(IInitializable), typeof(GameState)).To<MenuGameState>().AsSingle();
+        Container.Bind(typeof(IInitializable), typeof(GameState)).To<MissionControlGameState>().AsSingle();
+        Container.Bind(typeof(IInitializable), typeof(GameState)).To<TargetSelectionGameState>().AsSingle();
+
+        Container.Bind<CameraPositionController>().FromComponentsInHierarchy(includeInactive: true);
+
+        // factories
         Container.BindFactory<TabletView, TabletView.Factory>().FromComponentInNewPrefab(tabletPrefab);
     }
 }
