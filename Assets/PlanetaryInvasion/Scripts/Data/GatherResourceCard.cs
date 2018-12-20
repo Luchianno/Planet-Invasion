@@ -30,6 +30,6 @@ public class GatherResourceCard : Card
             temp.Resources.Add(GatheredResource, 0);
         }
         temp.Resources[GatheredResource] += Amount;
-        return new ActionResult() { Type = ActionResultType.Success, FinalState = state, Message = CompletionText };
+        return new ActionResult() { Type = ActionResultType.Success, FinalState = state, Message = GetCompletionText() };
     }
 }

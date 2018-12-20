@@ -25,9 +25,10 @@ public class MainInstaller : MonoInstaller<MainInstaller>
     Canvas inGameCanvas;
     [SerializeField]
     Canvas mapCanvas;
-    // [Space]
-    // [SerializeField]
-    // Canvas inGameCanvas;
+    [SerializeField]
+    Canvas endGameCanvas;
+    [SerializeField]
+    Canvas hangarCanvas;
 
 
     public override void InstallBindings()
@@ -46,12 +47,17 @@ public class MainInstaller : MonoInstaller<MainInstaller>
         Container.Bind<IUpdateableView>().To<ResourcesView>().FromComponentsInHierarchy(includeInactive: true);
         Container.Bind<IUpdateableView>().To<TechView>().FromComponentsInHierarchy(includeInactive: true);
         Container.Bind<IUpdateableView>().To<EventLogView>().FromComponentsInHierarchy(includeInactive: true);
+        Container.Bind<IUpdateableView>().To<EventLogView>().FromComponentsInHierarchy(includeInactive: true);
+        Container.Bind<EndGameView>().FromComponentsInHierarchy(includeInactive: true);
+
         Container.Bind<TargetSelectionView>().FromComponentsInHierarchy(includeInactive: true);
         Container.BindInstance<TabPanelView>(storyView).WithId("story").AsSingle();
 
         // canvases 
         Container.BindInstance<Canvas>(inGameCanvas).WithId("inGame");
         Container.BindInstance<Canvas>(mapCanvas).WithId("map");
+        Container.BindInstance<Canvas>(endGameCanvas).WithId("endgame");
+        Container.BindInstance<Canvas>(hangarCanvas).WithId("hangar");
 
         // game states
         Container.BindInterfacesAndSelfTo<GameStateMachine>().AsSingle();
@@ -59,10 +65,14 @@ public class MainInstaller : MonoInstaller<MainInstaller>
         // Container.Bind(typeof(IInitializable), typeof(GameState)).To<MenuGameState>().AsSingle();
         Container.Bind(typeof(IInitializable), typeof(GameState)).To<MissionControlGameState>().AsSingle();
         Container.Bind(typeof(IInitializable), typeof(GameState)).To<TargetSelectionGameState>().AsSingle();
+        Container.Bind(typeof(IInitializable), typeof(GameState)).To<EndGameState>().AsSingle();
+        Container.Bind(typeof(IInitializable), typeof(GameState)).To<HangarGameState>().AsSingle();
 
         Container.Bind<CameraPositionController>().FromComponentsInHierarchy(includeInactive: true);
 
         // factories
         Container.BindFactory<TabletView, TabletView.Factory>().FromComponentInNewPrefab(tabletPrefab);
+
+        Application.targetFrameRate = 60;
     }
 }

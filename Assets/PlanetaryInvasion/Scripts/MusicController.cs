@@ -14,6 +14,14 @@ public class MusicController : MonoBehaviour
 
     public void SetAudioVolume(float volume)
     {
-		musicBackground.volume = volume;
+        musicBackground.volume = volume;
+    }
+
+    // TODO use crossfade
+    public void ChangeMusic(AudioClip clip)
+    {
+        musicBackground.Stop();
+        musicBackground.clip = clip;
+        musicBackground.Play();
     }
 }

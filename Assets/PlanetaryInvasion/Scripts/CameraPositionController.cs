@@ -17,7 +17,8 @@ public class CameraPositionController : MonoBehaviour
     Transform hangar;
 
 
-    public float lerpTime = 0.3f;
+    public float mapLerpTime = 0.4f;
+    public float hangarLerpTime = 1;
 
     public UnityEvent CameraMovementComplete;
 
@@ -33,10 +34,13 @@ public class CameraPositionController : MonoBehaviour
         switch (pos)
         {
             case CameraPosition.MissionControl:
-                StartCoroutine(InterpolateLerp(camera.position, missionControl.position));
+                StartCoroutine(InterpolateLerp(camera.position, missionControl.position, mapLerpTime));
                 break;
             case CameraPosition.Map:
-                StartCoroutine(InterpolateLerp(camera.position, map.position));
+                StartCoroutine(InterpolateLerp(camera.position, map.position, mapLerpTime));
+                break;
+            case CameraPosition.Hangar:
+                StartCoroutine(InterpolateLerp(camera.position, hangar.position, mapLerpTime));
                 break;
             default:
                 break;
@@ -48,12 +52,13 @@ public class CameraPositionController : MonoBehaviour
     // {
     // }
 
-    IEnumerator InterpolateLerp(Vector3 start, Vector3 end)
+    IEnumerator InterpolateLerp(Vector3 start, Vector3 end, float time)
     {
         float elapsed = 0;
+
         while (camera.position != end)
         {
-            camera.position = Vector3.Lerp(start, end, elapsed / this.lerpTime);
+            camera.position = Vector3.Lerp(start, end, elapsed / time);
             elapsed += Time.deltaTime;
             yield return null;
         }

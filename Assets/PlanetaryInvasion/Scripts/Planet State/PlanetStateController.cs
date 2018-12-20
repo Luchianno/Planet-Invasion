@@ -21,6 +21,8 @@ public class PlanetStateController : MonoBehaviour
     PlanetState state;
     [Inject]
     UpdateableViewManager viewsManager;
+    [Inject]
+    List<IGameRule> gameRules;
 
     void Start()
     {
@@ -111,6 +113,8 @@ public class PlanetStateController : MonoBehaviour
             if (item.ShouldActivate(state.Player))
                 storyController.AddStory(item);
         }
+
+        gameRules.ForEach(x => x.Check(state));
 
         state.Player.SelectedCards.Clear();
         state.AI.SelectedCards.Clear();

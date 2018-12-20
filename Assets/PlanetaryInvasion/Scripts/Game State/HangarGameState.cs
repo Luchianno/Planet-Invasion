@@ -1,18 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
-public class HangarGameState : MonoBehaviour
+public class HangarGameState : GameState
 {
-    // Start is called before the first frame update
-    void Start()
+    [Inject(Id = "hangar")]
+    Canvas canvas;
+
+    [Inject]
+    CameraPositionController cameraPositionController;
+
+    public override void Initialize()
     {
-        
+        canvas.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OnEnter()
     {
-        
+        canvas.enabled = true;
+        cameraPositionController.ChangePos(CameraPositionController.CameraPosition.Hangar);
     }
+
+    public override void OnExit()
+    {
+        canvas.enabled = false;
+    }
+
 }
