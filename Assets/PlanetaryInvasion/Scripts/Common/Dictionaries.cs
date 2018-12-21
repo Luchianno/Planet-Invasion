@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using System.Linq;
 
 [Serializable]
 public class ResourceDictionary : SerializableSortedDictionary<Resource, int>
@@ -26,7 +27,8 @@ public class ResourceDictionary : SerializableSortedDictionary<Resource, int>
             {
                 this.Add(item.Key, 0);
             }
-            this[item.Key] += item.Value;
+            var temp = this[item.Key] + item.Value;
+            this[item.Key] = Mathf.Clamp(temp, 0, int.MaxValue);
         }
     }
 

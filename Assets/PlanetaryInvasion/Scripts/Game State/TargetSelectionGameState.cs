@@ -5,15 +5,20 @@ using Zenject;
 
 public class TargetSelectionGameState : GameState
 {
-    [Inject(Id = "map")]
-    Canvas canvas;
+    // [Inject(Id = "map")]
+    TargetSelectionView view;
 
     [Inject]
     CameraPositionController cameraPositionController;
 
+    public override void Initialize()
+    {
+        // view.enabled = false;
+    }
+
     public override void OnEnter()
     {
-        canvas.enabled = true;
+        // canvas.enabled = true;
         cameraPositionController.ChangePos(CameraPositionController.CameraPosition.Map);
     }
 
@@ -21,7 +26,7 @@ public class TargetSelectionGameState : GameState
 
     public override void OnExit()
     {
-        canvas.enabled = false;
+        // canvas.enabled = false;
     }
 
 }

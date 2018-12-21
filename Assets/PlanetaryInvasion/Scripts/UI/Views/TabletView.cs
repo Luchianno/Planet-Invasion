@@ -48,13 +48,13 @@ public class TabletView : MonoBehaviour, IUpdateableView, ICardView
         this.Name.text = Card.Name;
         this.AP.text = Card.APCost.ToString();
 
-        Description.text = string.Empty;
+        Description.text = string.IsNullOrEmpty(this.Card.Description) ? "" : Card.Description + "\n";
         foreach (var item in Card.ResourceRequirements)
         {
             Color color;
             int temp;
             color = gameState.Player.Resources.TryGetValue(item.Key, out temp) && temp >= item.Value ? ResourceAvailableColor : NoResourcesColor;
-            Description.text += $"<color=#{ColorUtility.ToHtmlStringRGBA(color)}>{item.Key}: {item.Value}</color>\n";
+            Description.text += $"<color=#{ColorUtility.ToHtmlStringRGBA(color)}>{item.Key.Name}: {item.Value}</color>\n";
         }
     }
 
