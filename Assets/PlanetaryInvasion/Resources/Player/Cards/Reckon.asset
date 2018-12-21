@@ -18,12 +18,18 @@ MonoBehaviour:
   TurnsRequired: 1
   APCost: 1
   ResourceRequirements:
-    m_keys: []
-    m_values: 
+    m_keys:
+    - {fileID: 11400000, guid: 370bb49a719ffd942bd161ef85214859, type: 2}
+    m_values: 05000000
   VarRequirements:
     m_keys: []
     m_values: 
-  TechRequirements: []
-  GatheredResource: {fileID: 11400000, guid: ef618ef67780cdc40bf4f3df485172da, type: 2}
-  Amount: 2
-  CompletionText: '{amount} {resource} Gathered'
+  TechRequirements:
+  - {fileID: 11400000, guid: b3117501e554b5c4f85cfb99020ebdf0, type: 2}
+  PlayerResourceChange:
+    m_keys: []
+    m_values: 
+  AIResourceChange:
+    m_keys: []
+    m_values: 
+  CompletionText: '{amount} Intel gathered'

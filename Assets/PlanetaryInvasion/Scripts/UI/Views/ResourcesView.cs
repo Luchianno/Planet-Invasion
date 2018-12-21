@@ -23,7 +23,7 @@ public class ResourcesView : MonoBehaviour, IUpdateableView
         StringBuilder builder = new StringBuilder();
         foreach (var item in gameState.Player.Resources)
         {
-            builder.AppendLine($"{item.Key.Name} {item.Value}");
+            builder.AppendLine($"{item.Key.Name}: {item.Value}");
         }
         label.text = builder.ToString();
     }

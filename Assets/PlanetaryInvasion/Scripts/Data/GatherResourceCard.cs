@@ -14,6 +14,7 @@ public class GatherResourceCard : Card
     [Space]
     public ResourceDictionary AIResourceChange;
 
+    [Header("{amount} {resource}")]
     [TextArea]
     public string CompletionText = "{amount} {resource} Gathered";
 
@@ -24,7 +25,7 @@ public class GatherResourceCard : Card
         {
             builder.AppendLine(CompletionText.Replace("{resource}", item.Key.Name).Replace("{amount}", item.Value.ToString()));
         }
-        return builder.ToString(); 
+        return builder.ToString();
     }
 
     public override ActionResult Process(TurnState turn, PlanetState state)

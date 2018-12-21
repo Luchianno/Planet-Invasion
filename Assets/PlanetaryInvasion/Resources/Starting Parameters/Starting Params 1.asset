@@ -4,36 +4,37 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50677b00ad681694497e602d54d2cb09, type: 3}
-  m_Name: Game State Test 1
+  m_Name: Starting Params 1
   m_EditorClassIdentifier: 
-  Turn: 0
+  Turn: 5
   Player:
     Resources:
       m_keys:
+      - {fileID: 11400000, guid: 3d1b4f820bf6151438c8bf87e223cc0d, type: 2}
+      - {fileID: 11400000, guid: 29dde566633ffdf4bb3a2f5702eceb0c, type: 2}
       - {fileID: 11400000, guid: 370bb49a719ffd942bd161ef85214859, type: 2}
-      m_values: 64000000
+      - {fileID: 11400000, guid: ef618ef67780cdc40bf4f3df485172da, type: 2}
+      m_values: 0000000000000000460000000a000000
     Vars:
       m_keys: []
       m_values: 
     Technologies: []
-    SelectedCards: []
     CardSlots: 3
   AI:
     Resources:
       m_keys:
       - {fileID: 11400000, guid: 0b270bcff724601429539f9df8c4b92c, type: 2}
-      - {fileID: 11400000, guid: 8d5050b554946df4a89347b4eecdc317, type: 2}
-      m_values: 6400000058020000
+      m_values: 32000000
     Vars:
       m_keys: []
       m_values: 
     Technologies: []
-    SelectedCards: []
     CardSlots: 3
     CountryStates:
     - {fileID: 11400000, guid: 91ba5c8c5f2486946a0c926260e4fcee, type: 2}

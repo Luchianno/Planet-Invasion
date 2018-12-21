@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: First Landing
   m_EditorClassIdentifier: 
   Name: First Landing
-  Description: "<size=50><b>First Landing</b></size>\r\nLOG \u25AE\u25AE\u25AE\u25AE:\u25AE\u25AE:\u25AE\u25AE
+  Description: "<size=30><b>First Landing</b></size>\r\nLOG \u25AE\u25AE\u25AE\u25AE:\u25AE\u25AE:\u25AE\u25AE
     - 23:55 - Synced to local rotation time\r\n    Doors of the craft open and soldiers
     start to unload the equipment. The night is cold. But the view is caprivating."
   Image: {fileID: 21300000, guid: 35af057da2730fe4aacbcac8b4e56a96, type: 3}

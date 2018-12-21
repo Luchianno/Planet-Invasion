@@ -4,14 +4,15 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 455439c4882cb4148847bef0c0d742d0, type: 3}
   m_Name: New Attack Country Card
   m_EditorClassIdentifier: 
-  Name: Attack Country
+  Name: Attack
   Description: 
   RequiresTarget: 1
   TurnsRequired: 1

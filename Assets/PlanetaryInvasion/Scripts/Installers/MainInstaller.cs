@@ -48,6 +48,8 @@ public class MainInstaller : MonoInstaller<MainInstaller>
         Container.Bind<IUpdateableView>().To<TechView>().FromComponentsInHierarchy(includeInactive: true);
         Container.Bind<IUpdateableView>().To<EventLogView>().FromComponentsInHierarchy(includeInactive: true);
         Container.Bind<IUpdateableView>().To<EventLogView>().FromComponentsInHierarchy(includeInactive: true);
+        Container.Bind<IUpdateableView>().To<CountryView>().FromComponentsInHierarchy(includeInactive: true);
+
         Container.Bind<EndGameView>().FromComponentsInHierarchy(includeInactive: true);
 
         Container.Bind<TargetSelectionView>().FromComponentsInHierarchy(includeInactive: true);
