@@ -50,7 +50,7 @@ public class TargetSelectionView : MonoBehaviour
         selected = true;
         SelectedCountry = country;
         this.OnCountrySelected.Invoke(country);
-        sm.ChangeState<MissionControlGameState>();
+        sm.ChangeState<HQGameState>();
     }
 
     // TODO remove IEnumerator here

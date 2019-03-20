@@ -23,6 +23,8 @@ public class PlanetStateController : MonoBehaviour
     UpdateableViewManager viewsManager;
     [Inject]
     List<IGameRule> gameRules;
+    [Inject]
+    GameStateMachine sm;
 
     void Start()
     {
@@ -77,10 +79,15 @@ public class PlanetStateController : MonoBehaviour
 
         foreach (var item in state.Player.SelectedCards)
         {
+            var temp = item.Card as AttackCountryCard;
+            if (temp!=null)
+            {
+                temp.TargetCountry = item.Country.Name;
+            }
             var diff = item.Card.Process(TurnState.PlayerTurn, this.state);
             if (!string.IsNullOrEmpty(diff.Message))
             {
-                state.Story.Stories.Add(new GameEventLog.StoryLogEntry()
+                state.EventLog.Entries.Add(new GameEventLog.StoryLogEntry()
                 {
                     Turn = state.Turn,
                     Text = diff.Message,
@@ -122,6 +129,7 @@ public class PlanetStateController : MonoBehaviour
         state.Turn++;
         StepProcessCompleted.Invoke();
         viewsManager.UpdateViews();
+        this.sm.ChangeState<HangarGameState>();
     }
 
 }

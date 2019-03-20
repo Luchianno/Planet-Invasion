@@ -4,6 +4,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
+using System.Linq;
 
 public class EventLogView : MonoBehaviour, IUpdateableView
 {
@@ -22,18 +23,15 @@ public class EventLogView : MonoBehaviour, IUpdateableView
 
     public void UpdateView()
     {
-        var stories = state.Story.Stories;
-        
-        if (lastCount != stories.Count)
-        {
-            StringBuilder builder = new StringBuilder();
+        var stories = state.EventLog.Entries;
 
-            for (int i = lastCount; i < stories.Count; i++)
-            {
-                var entry = stories[lastCount];
-                builder.AppendLine($"{(entry.Type.ToString() + ":").PadRight(20)} {entry.Text}");
-            }
-            label.text += builder.ToString();
+        label.text = "";
+        var entries = state.EventLog.Entries;//state.EventLog.Entries.Where(x => x.Turn == state.Turn);
+
+        var builder = new StringBuilder();
+        foreach (var item in entries)
+        {
+            builder.AppendLine($"{(item.Type.ToString() + ":").PadRight(20)} {item.Text}");
         }
     }
 }

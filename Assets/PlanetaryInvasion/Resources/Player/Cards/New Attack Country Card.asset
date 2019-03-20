@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: New Attack Country Card
   m_EditorClassIdentifier: 
   Name: Attack
-  Description: 
+  Description: Attack the country
   RequiresTarget: 1
   TurnsRequired: 1
   APCost: 1
@@ -25,9 +25,15 @@ MonoBehaviour:
     m_keys: []
     m_values: 
   TechRequirements: []
-  Damage:
-    Min: 0
-    Max: 0
-  SuccessText: 
+  StrengthDamage:
+    Min: 2
+    Max: 5
+  PopDamage:
+    Min: 1
+    Max: 2
+  TerrorDamage:
+    Min: 1
+    Max: 1
+  SuccessText: Country Attacked!
   FailText: 
   TargetCountry: 

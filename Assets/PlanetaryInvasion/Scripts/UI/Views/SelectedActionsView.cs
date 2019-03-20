@@ -27,6 +27,9 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
     [Inject]
     TargetSelectionView targetSelection;
 
+    [Inject]
+    GameSettings settings;
+
     Dictionary<Card, GameObject> cache = new Dictionary<Card, GameObject>();
     Dictionary<Card, CountryState> SelectedParams = new Dictionary<Card, CountryState>(); // TODO it's bad approach
 
@@ -63,6 +66,9 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
 
     public void AddCard(Card card)
     {
+        if (SelectedParams.Count >= settings.CardSelectionLimit)
+            return;
+            
         var cardView = tabletFactory.Create();
         cardView.Init(card, parent);
         // get outline and change color
@@ -77,6 +83,12 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
         {
             if (parent != item)
                 Destroy(item.gameObject);
+        }
+
+        for (int i = 0; i < settings.CardSelectionLimit; i++)
+        {
+            var temp = Instantiate(PlaceHolderPrefab, Vector3.zero, Quaternion.identity, parent);
+            placeholders.Add(temp);
         }
     }
 

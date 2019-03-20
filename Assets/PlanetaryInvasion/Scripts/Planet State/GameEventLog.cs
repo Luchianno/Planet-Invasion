@@ -8,7 +8,7 @@ using System.Collections.ObjectModel;
 public class GameEventLog
 {
     // public ReadOnlyCollection<StoryLogEntry> Stories { get { return stories.AsReadOnly(); } }
-    public List<StoryLogEntry> Stories = new List<StoryLogEntry>();
+    public List<StoryLogEntry> Entries = new List<StoryLogEntry>();
 
     public class StoryLogEntry
     {

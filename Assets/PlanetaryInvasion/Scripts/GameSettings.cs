@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameSettings : ScriptableObject
 {
     public bool ShowAllCards = false;
-    public bool CardSelectionLimit;
+    public int CardSelectionLimit = 3;
     public string SavePath = "StreamingAssets/Saves";
     public int SaveFileVersion = 1;
 }

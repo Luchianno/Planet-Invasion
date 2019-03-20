@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using UnityEngine;
+using System.Linq;
 
 // partial, because we may add some stuff?..
 [CreateAssetMenu(menuName = "PI/Card")]
 public partial class Card : ScriptableObject
 {
+    public bool Active = true;
+
     public string Name;
 
     [TextArea(3, 10)]
@@ -91,16 +94,16 @@ public partial class Card : ScriptableObject
     // TODO rework loading of cards. store path in settings
     public static void LoadAllPlayerCards()
     {
-        var list = new List<Card>(Resources.LoadAll<Card>("Player/Cards"));
-        list.AddRange(Resources.LoadAll<Card>("Player/Tech"));
+        var list = new List<Card>(Resources.LoadAll<Card>("Player/Cards").Where(x => x.Active));
+        list.AddRange(Resources.LoadAll<Card>("Player/Tech").Where(x => x.Active));
         allPlayerCards = new ReadOnlyCollection<Card>(list);
         // Debug.Log($"Loading All Cards. {allPlayerCards.Count} Loaded");
     }
 
     public static void LoadAllAICards()
     {
-        var list = new List<Card>(Resources.LoadAll<Card>("AI/Cards"));
-        list.AddRange(Resources.LoadAll<Card>("AI/Tech"));
+        var list = new List<Card>(Resources.LoadAll<Card>("AI/Cards").Where(x => x.Active));
+        list.AddRange(Resources.LoadAll<Card>("AI/Tech").Where(x => x.Active));
         allAICards = new ReadOnlyCollection<Card>(list);
         // Debug.Log($"Loading All Cards. {allPlayerCards.Count} Loaded");
     }

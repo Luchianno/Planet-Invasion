@@ -62,10 +62,11 @@ public class MainInstaller : MonoInstaller<MainInstaller>
         Container.BindInstance<Canvas>(hangarCanvas).WithId("hangar");
 
         // game states
-        Container.BindInterfacesAndSelfTo<GameStateMachine>().AsSingle();
+        Container.Bind<IUpdateableView>().To<CountryView>().FromComponentsInHierarchy(includeInactive: true);
+        Container.Bind<GameStateMachine>().FromComponentInHierarchy(includeInactive: true).AsSingle();
 
         // Container.Bind(typeof(IInitializable), typeof(GameState)).To<MenuGameState>().AsSingle();
-        Container.Bind(typeof(IInitializable), typeof(GameState)).To<MissionControlGameState>().AsSingle();
+        Container.Bind(typeof(IInitializable), typeof(GameState)).To<HQGameState>().AsSingle();
         Container.Bind(typeof(IInitializable), typeof(GameState)).To<TargetSelectionGameState>().AsSingle();
         Container.Bind(typeof(IInitializable), typeof(GameState)).To<EndGameState>().AsSingle();
         Container.Bind(typeof(IInitializable), typeof(GameState)).To<HangarGameState>().AsSingle();

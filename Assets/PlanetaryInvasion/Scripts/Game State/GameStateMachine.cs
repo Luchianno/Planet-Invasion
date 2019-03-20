@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-public class GameStateMachine : IInitializable, ITickable
+public class GameStateMachine : MonoBehaviour, IInitializable, ITickable
 {
     [Inject]
     List<GameState> states;
@@ -13,8 +13,7 @@ public class GameStateMachine : IInitializable, ITickable
 
     public void Initialize()
     {
-        // this.ChangeState<MenuGameState>();
-        this.ChangeState<MissionControlGameState>();
+        this.ChangeState<HQGameState>();
     }
 
     public void Tick()
@@ -38,5 +37,31 @@ public class GameStateMachine : IInitializable, ITickable
         currentState = state;
         Debug.Log($"entering to state: {typeof(T)}");
         state.OnEnter();
+    }
+
+    public void ChangeState(State state)
+    {
+        switch (state)
+        {
+            case State.HQ:
+                this.ChangeState<HQGameState>();
+                break;
+            case State.Hangar:
+                this.ChangeState<HangarGameState>();
+                break;
+            case State.TargetSelection:
+                this.ChangeState<TargetSelectionGameState>();
+                break;
+            case State.Map:
+                this.ChangeState<MapOverviewGameState>();
+                break;
+            default:
+                throw new NotImplementedException();
+        }
+    }
+
+    public enum State
+    {
+        HQ, Hangar, TargetSelection, Map
     }
 }

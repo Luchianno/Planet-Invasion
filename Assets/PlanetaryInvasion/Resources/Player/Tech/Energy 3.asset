@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Energy 3
   m_EditorClassIdentifier: 
   Name: Energy III
-  Description: 
+  Description: Study Energy generation
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1

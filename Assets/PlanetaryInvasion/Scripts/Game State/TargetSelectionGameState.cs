@@ -13,7 +13,7 @@ public class TargetSelectionGameState : GameState
 
     public override void Initialize()
     {
-        // view.enabled = false;
+        
     }
 
     public override void OnEnter()

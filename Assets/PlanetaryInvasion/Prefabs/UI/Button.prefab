@@ -67,8 +67,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Hangar
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6acc5835ca03dfb43bd702c125d56f79, type: 2}
-  m_sharedMaterial: {fileID: 21696108750990750, guid: 6acc5835ca03dfb43bd702c125d56f79,
+  m_fontAsset: {fileID: 11400000, guid: 98c8d80962fed704cbb4d2a3c3514327, type: 2}
+  m_sharedMaterial: {fileID: 21787830686939196, guid: 98c8d80962fed704cbb4d2a3c3514327,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -94,8 +94,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 46
-  m_fontSizeBase: 46
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

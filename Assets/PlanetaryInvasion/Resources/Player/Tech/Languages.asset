@@ -23,7 +23,8 @@ MonoBehaviour:
   VarRequirements:
     m_keys: []
     m_values: 
-  TechRequirements: []
+  TechRequirements:
+  - {fileID: 11400000, guid: 3c4565a2ffb56e2448d43ea518d9dd27, type: 2}
   StudyResult: You have performed analysis of all major languages around present on
     the planet. This will prove useful if we try to analyse their information channels
     or interrogate locals.

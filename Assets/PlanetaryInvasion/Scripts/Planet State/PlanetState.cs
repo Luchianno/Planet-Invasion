@@ -25,7 +25,7 @@ public class PlanetState : ScriptableObject
 
     public AIState AI = new AIState();
 
-    public GameEventLog Story = new GameEventLog();
+    public GameEventLog EventLog = new GameEventLog();
 
     public void SaveGameData()
     {

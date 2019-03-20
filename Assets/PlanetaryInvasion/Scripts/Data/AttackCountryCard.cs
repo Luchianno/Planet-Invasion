@@ -6,7 +6,9 @@ using System.Linq;
 [CreateAssetMenu(menuName = "PI/Actions/Attack Country")]
 public class AttackCountryCard : Card
 {
-    public IntRange Damage;
+    public IntRange StrengthDamage;
+    public IntRange PopDamage;
+    public IntRange TerrorDamage;
 
     [TextArea]
     public string SuccessText;
@@ -17,7 +19,12 @@ public class AttackCountryCard : Card
 
     public override ActionResult Process(TurnState turn, PlanetState state)
     {
-        state.AI.CountryStates.Find(x => x.Name == TargetCountry);
+        var temp = state.AI.CountryStates.Find(x => x.Name == TargetCountry);
+        temp.MilitaryStrength -= StrengthDamage.GetRandom();
+        temp.Population -= PopDamage.GetRandom();
+        temp.Terror += TerrorDamage.GetRandom();
+
+        // state.
         return new ActionResult()
         {
             FinalState = state,

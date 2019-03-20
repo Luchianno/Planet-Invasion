@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12,7 +13,7 @@ MonoBehaviour:
   m_Name: Geography 2
   m_EditorClassIdentifier: 
   Name: Geography 2
-  Description: 
+  Description: Perform flyover over the planet and create crude map of the terrain
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1
@@ -26,3 +27,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b3117501e554b5c4f85cfb99020ebdf0, type: 2}
   StudyResult: "We've performed analysis of main land masses and created more detailed
     maps of interesting areas. \n"
+  ResultImage: {fileID: 0}
