@@ -15,7 +15,7 @@ MonoBehaviour:
   Active: 1
   Name: Gather Local Population
   Description: Gather human specimen from rural areas.
-  RequiresTarget: 1
+  RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1
   ResourceRequirements:
@@ -27,8 +27,9 @@ MonoBehaviour:
     m_values: 
   TechRequirements: []
   PlayerResourceChange:
-    m_keys: []
-    m_values: 
+    m_keys:
+    - {fileID: 11400000, guid: 3d1b4f820bf6151438c8bf87e223cc0d, type: 2}
+    m_values: 0a000000
   AIResourceChange:
     m_keys: []
     m_values: 

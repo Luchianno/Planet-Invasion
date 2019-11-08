@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gather Metals
   m_EditorClassIdentifier: 
   Active: 1
-  Name: Gather
+  Name: Gather Metal
   Description: Gather metal
   RequiresTarget: 0
   TurnsRequired: 1

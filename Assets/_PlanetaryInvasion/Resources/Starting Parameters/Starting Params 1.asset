@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50677b00ad681694497e602d54d2cb09, type: 3}
   m_Name: Starting Params 1
   m_EditorClassIdentifier: 
-  Turn: 26
+  Turn: 1
   Player:
     Resources:
       m_keys:

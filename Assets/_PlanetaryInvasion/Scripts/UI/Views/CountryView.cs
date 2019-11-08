@@ -15,7 +15,7 @@ public class CountryView : MonoBehaviour, IUpdateableView
 
     public void UpdateView()
     {
-        this.Title.text = $"Strength: {Country.Name}";
+        this.Title.text = $"{Country.Name}";
 
         this.Label.text = $"Strength: {Country.MilitaryStrength}\n";
         this.Label.text += $"Population: {Country.Population}\n";
