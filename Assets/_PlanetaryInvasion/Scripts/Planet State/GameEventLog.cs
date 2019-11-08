@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 [Serializable]
 public class GameEventLog
@@ -10,17 +11,8 @@ public class GameEventLog
     // public ReadOnlyCollection<StoryLogEntry> Stories { get { return stories.AsReadOnly(); } }
     public List<StoryLogEntry> Entries = new List<StoryLogEntry>();
 
-    public class StoryLogEntry
+    public IEnumerable<StoryLogEntry> FromTurn(int turn)
     {
-        public string Text;
-        public int Turn;
-        public StoryLogEntryType Type;
-    }
-
-    public enum StoryLogEntryType
-    {
-        CardResult,
-        TechResult,
-        RandomNews
+        return Entries.Where(x => x.Turn == turn);
     }
 }

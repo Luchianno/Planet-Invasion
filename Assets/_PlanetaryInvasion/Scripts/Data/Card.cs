@@ -94,7 +94,11 @@ public partial class Card : ScriptableObject
     // TODO rework loading of cards. store path in settings
     public static void LoadAllPlayerCards()
     {
-        var list = new List<Card>(Resources.LoadAll<Card>("Player/Cards").Where(x => x.Active));
+        var list = new List<Card>();
+        var cards = Resources.LoadAll<Card>("Player/Cards").Where(x => x.Active);
+        if (cards != null)
+            list.AddRange(cards);
+
         list.AddRange(Resources.LoadAll<Card>("Player/Tech").Where(x => x.Active));
         allPlayerCards = new ReadOnlyCollection<Card>(list);
         // Debug.Log($"Loading All Cards. {allPlayerCards.Count} Loaded");

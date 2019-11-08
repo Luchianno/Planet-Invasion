@@ -1,3 +1,4 @@
+using ScreenMgr;
 using UnityEngine;
 using Zenject;
 
@@ -35,7 +36,7 @@ public class MainInstaller : MonoInstaller<MainInstaller>
     {
         Container.BindInstance<GameSettings>(settings);
 
-        Container.BindInterfacesAndSelfTo<PlanetState>().FromInstance(startingState).AsSingle();
+        Container.BindInterfacesAndSelfTo<PlanetState>().FromInstance(Instantiate(startingState)).AsSingle();
         Container.BindInterfacesAndSelfTo<StoryController>().AsSingle();
 
         Container.BindInstance<PlanetStateController>(stateController);
@@ -63,14 +64,9 @@ public class MainInstaller : MonoInstaller<MainInstaller>
 
         // game states
         Container.Bind<IUpdateableView>().To<CountryView>().FromComponentsInHierarchy(includeInactive: true);
-        Container.Bind<GameStateMachine>().FromComponentInHierarchy(includeInactive: true).AsSingle();
 
-        // Container.Bind(typeof(IInitializable), typeof(GameState)).To<MenuGameState>().AsSingle();
-        Container.Bind(typeof(IInitializable), typeof(GameState)).To<HQGameState>().AsSingle();
-        Container.Bind(typeof(IInitializable), typeof(GameState)).To<TargetSelectionGameState>().AsSingle();
-        Container.Bind(typeof(IInitializable), typeof(GameState)).To<EndGameState>().AsSingle();
-        Container.Bind(typeof(IInitializable), typeof(GameState)).To<HangarGameState>().AsSingle();
 
+        Container.Bind<ScreenManager>().FromComponentInHierarchy(true).AsSingle();
         Container.Bind<CameraPositionController>().FromComponentsInHierarchy(includeInactive: true);
 
         // factories

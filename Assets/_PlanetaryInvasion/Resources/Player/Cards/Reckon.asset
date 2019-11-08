@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e89af25935c74d44ac8e8f14f9f4f91, type: 3}
   m_Name: Reckon
   m_EditorClassIdentifier: 
+  Active: 1
   Name: Passive Observation
   Description: Gather some intel
   RequiresTarget: 0
@@ -27,8 +28,9 @@ MonoBehaviour:
   TechRequirements:
   - {fileID: 11400000, guid: b3117501e554b5c4f85cfb99020ebdf0, type: 2}
   PlayerResourceChange:
-    m_keys: []
-    m_values: 
+    m_keys:
+    - {fileID: 11400000, guid: ef618ef67780cdc40bf4f3df485172da, type: 2}
+    m_values: 0a000000
   AIResourceChange:
     m_keys: []
     m_values: 

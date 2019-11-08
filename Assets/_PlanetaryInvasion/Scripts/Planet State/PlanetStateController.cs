@@ -5,11 +5,12 @@ using UnityEngine.Events;
 using Zenject;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System;
 
 public class PlanetStateController : MonoBehaviour
 {
-    public UnityEvent StepProcessStarted;
-    public UnityEvent StepProcessCompleted;
+    public event Action StepProcessStarted;
+    public event Action StepProcessCompleted;
 
     public ReadOnlyCollection<SelectedAction> PlayerSelectedCards { get { return state.Player.SelectedCards.AsReadOnly(); } }
 
@@ -23,8 +24,6 @@ public class PlanetStateController : MonoBehaviour
     UpdateableViewManager viewsManager;
     [Inject]
     List<IGameRule> gameRules;
-    [Inject]
-    GameStateMachine sm;
 
     void Start()
     {
@@ -49,9 +48,15 @@ public class PlanetStateController : MonoBehaviour
         viewsManager.UpdateViews();
     }
 
+    public void AddAIAction(SelectedAction selectedAction)
+    {
+        state.AI.SelectedCards.Add(selectedAction);
+        viewsManager.UpdateViews();
+    }
+
     public void Step()
     {
-        StepProcessStarted.Invoke();
+        StepProcessStarted?.Invoke();
 
         #region Pre Process
 
@@ -80,21 +85,25 @@ public class PlanetStateController : MonoBehaviour
         foreach (var item in state.Player.SelectedCards)
         {
             var temp = item.Card as AttackCountryCard;
-            if (temp!=null)
+
+            if (temp != null)
             {
                 temp.TargetCountry = item.Country.Name;
             }
-            var diff = item.Card.Process(TurnState.PlayerTurn, this.state);
-            if (!string.IsNullOrEmpty(diff.Message))
-            {
-                state.EventLog.Entries.Add(new GameEventLog.StoryLogEntry()
-                {
-                    Turn = state.Turn,
-                    Text = diff.Message,
-                    Type = diff.MessageType
-                });
-            }
-            state = diff.FinalState;
+
+            var actionResult = item.Card.Process(TurnState.PlayerTurn, this.state);
+
+            // if (!string.IsNullOrEmpty(actionResult.Message))
+            // {
+            //     state.EventLog.Entries.Add(new StoryLogEntry()
+            //     {
+            //         Turn = state.Turn,
+            //         Text = actionResult.Message,
+            //         Type = actionResult.MessageType,
+            //         SuccessType = actionResult.Type,
+            //     });
+            // }
+            state = actionResult.FinalState;
         }
 
         #endregion
@@ -127,9 +136,8 @@ public class PlanetStateController : MonoBehaviour
         state.AI.SelectedCards.Clear();
 
         state.Turn++;
-        StepProcessCompleted.Invoke();
+        StepProcessCompleted?.Invoke();
         viewsManager.UpdateViews();
-        this.sm.ChangeState<HangarGameState>();
     }
 
 }

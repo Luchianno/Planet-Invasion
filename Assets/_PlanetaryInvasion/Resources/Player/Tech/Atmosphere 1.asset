@@ -12,17 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef934092e255ed34ebf123bb55269e19, type: 3}
   m_Name: Atmosphere 1
   m_EditorClassIdentifier: 
-  Name: Atmospheric Studies
-  Description: Study composition of planet atmosphere.
+  Active: 1
+  Name: Atmospheric Probing
+  Description: We should examine constitution of local atmosphere as soon as possible
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1
   ResourceRequirements:
-    m_keys: []
-    m_values: 
+    m_keys:
+    - {fileID: 11400000, guid: 370bb49a719ffd942bd161ef85214859, type: 2}
+    - {fileID: 11400000, guid: e04c70afb0580054791c4503f602f805, type: 2}
+    m_values: 0a0000000a000000
   VarRequirements:
     m_keys: []
     m_values: 
   TechRequirements: []
-  StudyResult: You Have conducted studies about planet atmospere
+  StudyResult: "Probing of local atmosphere is finished. Atmosphere is dense enough
+    that we can conduct flyovers with standard planetary shuttles. However each use
+    will require some maintenance after, since they weren\u2019t designed for this
+    specific atmospheric density/constitution"
   ResultImage: {fileID: 0}

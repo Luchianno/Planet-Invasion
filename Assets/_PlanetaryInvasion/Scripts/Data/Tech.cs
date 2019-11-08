@@ -18,11 +18,21 @@ public class Tech : Card
     public override ActionResult Process(TurnState turn, PlanetState state)
     {
         state.Player.Technologies.Add(this);
+
+        state.EventLog.Entries.Add(new StoryLogEntry()
+        {
+            Card = this,
+            SuccessType = ActionResultType.Undefined,
+            Turn = state.Turn,
+            Text = this.StudyResult,
+            Type = StoryLogEntryType.TechResult
+        });
+
         return new ActionResult()
         {
             Type = ActionResultType.Success,
             Message = StudyResult,
-            MessageType = GameEventLog.StoryLogEntryType.TechResult,
+            MessageType = StoryLogEntryType.TechResult,
             FinalState = state
         };
     }

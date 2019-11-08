@@ -12,19 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef934092e255ed34ebf123bb55269e19, type: 3}
   m_Name: Comms 1
   m_EditorClassIdentifier: 
+  Active: 1
   Name: Communications I
-  Description: Study Communications of the planet
+  Description: Our sensors have picked up multiple noisy signals on broad spectrum
+    of radio frequencies. We should perform more detailed analysis to reveal what
+    kind communication methods native population uses for civilian and military purposes
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1
   ResourceRequirements:
     m_keys:
     - {fileID: 11400000, guid: 370bb49a719ffd942bd161ef85214859, type: 2}
-    m_values: 1e000000
+    m_values: 14000000
   VarRequirements:
     m_keys: []
     m_values: 
   TechRequirements:
   - {fileID: 11400000, guid: 8298f37eb7f1cf24eb35407210609877, type: 2}
-  StudyResult: 
+  StudyResult: "We have analyzed wide spectrum of radio frequencies to identify possible
+    communication methods. Amazingly, local population has already discovered radio
+    communications and apparently uses it widely for communication purposes. Besides
+    using basically unencrypted channels, they use planets ionosphere for bouncing
+    low-frequency radio waves for high-distance communication. We\u2019ve also detected
+    unusual frequency-modulated bursts of signals. Further studies might reveal more
+    about these signals, however we will need more time and resources for that"
   ResultImage: {fileID: 0}

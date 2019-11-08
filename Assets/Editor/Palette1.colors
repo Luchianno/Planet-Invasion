@@ -43,3 +43,5 @@ MonoBehaviour:
     m_Color: {r: 0, g: 0.431, b: 0.2, a: 1}
   - m_Name: Third5
     m_Color: {r: 0, g: 0.584, b: 0.271, a: 1}
+  - m_Name: Temp Red
+    m_Color: {r: 0.4392157, g: 0.02, b: 0.173, a: 1}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Hiiumaa
   Description: Distant Island of the northern seas
-  Population: 40
+  Population: 20
   MilitaryStrength: 10
   Friendliness: 0
   Terror: 0

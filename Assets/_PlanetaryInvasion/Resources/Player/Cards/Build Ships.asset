@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e89af25935c74d44ac8e8f14f9f4f91, type: 3}
   m_Name: Build Ships
   m_EditorClassIdentifier: 
+  Active: 0
   Name: Build Ships
   Description: Build some ships from metal
   RequiresTarget: 0

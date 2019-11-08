@@ -4,27 +4,32 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef934092e255ed34ebf123bb55269e19, type: 3}
   m_Name: Geography 1
   m_EditorClassIdentifier: 
+  Active: 1
   Name: Geography 1
   Description: Perform flyover over the planet and create crude map of the terrain
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1
   ResourceRequirements:
-    m_keys: []
-    m_values: 
+    m_keys:
+    - {fileID: 11400000, guid: 370bb49a719ffd942bd161ef85214859, type: 2}
+    m_values: 0a000000
   VarRequirements:
     m_keys: []
     m_values: 
-  TechRequirements: []
+  TechRequirements:
+  - {fileID: 11400000, guid: 8298f37eb7f1cf24eb35407210609877, type: 2}
   StudyResult: "We have performed initial observations of the planet landscape.\n\nThis
     planet has one major landmass centered around the south pole area.  It has an
     average surface temperature of about 44\xB0 Kelvin.  Its average temperature has
     been rising over the last millennium, and it experiences high levels of geological
     activity all over the planet.  Easily-mined metals are limited to a few good spots."
+  ResultImage: {fileID: 0}

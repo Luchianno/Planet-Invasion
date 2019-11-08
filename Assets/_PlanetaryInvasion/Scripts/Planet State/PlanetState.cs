@@ -27,6 +27,8 @@ public class PlanetState : ScriptableObject
 
     public GameEventLog EventLog = new GameEventLog();
 
+    // public List<Report> Reports = new List<Report>();
+
     public void SaveGameData()
     {
         string dataAsJson = JsonUtility.ToJson(this, true);

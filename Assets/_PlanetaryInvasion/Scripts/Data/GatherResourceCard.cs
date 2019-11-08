@@ -34,6 +34,15 @@ public class GatherResourceCard : Card
 
         state.AI.Resources.AddResources(AIResourceChange);
         state.Player.Resources.AddResources(PlayerResourceChange);
+        state.EventLog.Entries.Add(new StoryLogEntry()
+        {
+            Card = this,
+            SuccessType = ActionResultType.Success,
+            Turn = state.Turn,
+            Text = GetCompletionText(),
+            Type = StoryLogEntryType.CardResult
+        });
+
         // TODO Failsafe?..
         // if (!temp.Resources.ContainsKey(GatheredResource))
         // {
