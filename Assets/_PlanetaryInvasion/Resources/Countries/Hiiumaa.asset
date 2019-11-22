@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Hiiumaa
   Description: Distant Island of the northern seas
   Population: 20
-  MilitaryStrength: 10
+  MilitaryStrength: 4
   Friendliness: 0
   Terror: 0
   Money: 10

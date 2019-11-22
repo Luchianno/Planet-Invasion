@@ -17,7 +17,7 @@ MonoBehaviour:
     uses beer as a currency. They don't like privacy invasion, we must proceed with
     causion.
   Population: 40
-  MilitaryStrength: 30
+  MilitaryStrength: 4
   Friendliness: 1
   Terror: 1
   Money: 20
