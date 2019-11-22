@@ -2,30 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System;
 
+[RequireComponent(typeof(Toggle))]
 public class TabToggleView : MonoBehaviour
 {
     [SerializeField]
-    Text label;
+    protected Toggle Toggle;
     [SerializeField]
-    Toggle toggle;
+    protected TextMeshProUGUI Label;
 
-    public Toggle Toggle => toggle; // just discovered this, so FUCKING satisfying 
+    public event Action<TabToggleView, bool> OnValueChanged;
 
-    public Toggle.ToggleEvent OnValueChanged;
-
-    public void SetLabel(string content)
+    void Awake()
     {
-        label.text = content;
+        Toggle = GetComponent<Toggle>();
+        Toggle.onValueChanged.AddListener((value) => OnValueChanged?.Invoke(this, value));
     }
 
-    void Start()
+    public void Init(string value, ToggleGroup group)
     {
-        toggle.onValueChanged.AddListener(OnToggleValueChanged);
-    }
+        Label.text = value;
 
-    void OnToggleValueChanged(bool value)
-    {
-        OnValueChanged.Invoke(value);
+        Toggle.isOn = false;
+        Toggle.group = group;
     }
 }

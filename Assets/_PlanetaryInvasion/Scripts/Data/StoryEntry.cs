@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PI/Story Entry")]
 public class StoryEntry : ScriptableObject
 {
+    public bool Active = true;
+
     public string Name;
 
     [TextArea(3, 10)]
@@ -35,5 +38,29 @@ public class StoryEntry : ScriptableObject
             }
         }
         return result;
+    }
+
+    public static ReadOnlyCollection<StoryEntry> AllStories
+    {
+        get
+        {
+            if (allStories == null)
+                allStories = LoadAllAICards();
+
+            return allStories.AsReadOnly();
+        }
+    }
+
+    public static List<StoryEntry> UnlockedStories(PlanetState state)
+    {
+        return AllStories.Where(x => x.ShouldActivate(state.Player)).ToList();
+    }
+
+
+    static List<StoryEntry> allStories;
+
+    static List<StoryEntry> LoadAllAICards()
+    {
+        return Resources.LoadAll<StoryEntry>("Story")?.Where(x => x.Active).ToList();
     }
 }

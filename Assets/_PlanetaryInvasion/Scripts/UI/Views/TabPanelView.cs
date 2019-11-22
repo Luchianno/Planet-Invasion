@@ -9,42 +9,87 @@ using TMPro;
 public class TabPanelView : MonoBehaviour
 {
     [SerializeField]
-    List<TabPanelViewElement> Tabs;
+    protected List<TabPanelViewElement> Tabs;
     [SerializeField]
-    ToggleGroup toggleGroup;
+    protected ToggleGroup toggleGroup;
 
     [SerializeField]
-    Image ContentImage;
+    protected Image ContentImage;
     [SerializeField]
-    TextMeshProUGUI ContentText;
+    protected TextMeshProUGUI ContentText;
 
     [SerializeField]
-    RectTransform togglesParent;
+    protected RectTransform storiesParent;
+    [SerializeField]
+    protected RectTransform techParent;
 
     [SerializeField]
-    GameObject tabTogglePrefab;
+    protected GameObject tabTogglePrefab;
 
-    Dictionary<Toggle, TabPanelViewElement> dict = new Dictionary<Toggle, TabPanelViewElement>();
+    Dictionary<TabToggleView, TabPanelViewElement> dict = new Dictionary<TabToggleView, TabPanelViewElement>();
 
     void Start()
     {
+        // clean stuff from editor mode
+        foreach (Transform child in storiesParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (Transform child in techParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
         // Tabs.ForEach(x => AddElement(x)); // for testing
     }
 
-    public void AddElement(TabPanelViewElement element)
+    public void Init(IEnumerable<StoryEntry> stories, IEnumerable<Tech> research)
     {
-        var temp = Instantiate(tabTogglePrefab, Vector3.zero, Quaternion.identity, togglesParent);
+        foreach (var item in stories)
+        {
+            var element = new TabPanelView.TabPanelViewElement()
+            {
+                Name = item.Name,
+                Content = item.Description,
+                Image = item.Image
+            };
+
+            AddElement(element, storiesParent);
+        }
+
+        foreach (var item in research)
+        {
+            var element = new TabPanelView.TabPanelViewElement()
+            {
+                Name = item.Name,
+                Content = item.Description,
+                // Image = item. // TODO add pics to Tech
+            };
+
+            AddElement(element, techParent);
+        }
+
+        // toggleView.Toggle.isOn = toggleGroup.ActiveToggles().Count() == 0;
+        // toggleChanged();
+    }
+
+    public void SwitchTo(StoryEntry entry)
+    {
+        var key = dict.FirstOrDefault(x => x.Value.Name == entry.Name).Key;
+        // key
+    }
+
+    public void AddElement(TabPanelViewElement element, RectTransform parent)
+    {
+        var temp = Instantiate(tabTogglePrefab, Vector3.zero, Quaternion.identity, parent);
         var toggleView = temp.GetComponent<TabToggleView>();
-        toggleView.SetLabel(element.Name);
 
-        toggleView.OnValueChanged.AddListener(x => toggleChanged());
-        this.toggleGroup.RegisterToggle(toggleView.Toggle);
+        toggleView.Init(element.Name, toggleGroup);
+        toggleView.OnValueChanged += ToggleChanged;
 
-        dict.Add(toggleView.Toggle, element);
+        dict.Add(toggleView, element);
         temp.SetActive(true);
-
-        toggleView.Toggle.isOn = toggleGroup.ActiveToggles().Count() == 0;
-        toggleChanged();
     }
 
     public void Clear()
@@ -54,17 +99,18 @@ public class TabPanelView : MonoBehaviour
 
         foreach (var item in dict)
         {
-            this.toggleGroup.UnregisterToggle(item.Key);
             Destroy(item.Key);
         }
         dict.Clear();
     }
 
-    void toggleChanged()
+    void ToggleChanged(TabToggleView sender, bool value)
     {
-        var active = this.toggleGroup.ActiveToggles().FirstOrDefault();
-        ContentImage.sprite = dict?[active].Image;
-        ContentText.text = dict?[active].Content;
+        if (!value)
+            return;
+
+        ContentImage.sprite = dict?[sender].Image;
+        ContentText.text = dict?[sender].Content;
     }
 
     [Serializable]

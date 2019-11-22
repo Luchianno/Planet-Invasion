@@ -6,7 +6,6 @@ using Zenject;
 public class StoryController : IInitializable
 {
     HashSet<StoryEntry> activeStoryEntries = new HashSet<StoryEntry>();
-    // HashSet<StoryEntry> StoryEntries;
 
     // public IList<StoryEntry> ActiveStoryEntries => activeStoryEntries;
 
@@ -21,17 +20,14 @@ public class StoryController : IInitializable
     public void AddStory(StoryEntry entry)
     {
         if (activeStoryEntries.Contains(entry)) // TODO change this later?
+        {
+            Debug.Log("Story entry already exists");
             return;
+        }
+
         activeStoryEntries.Add(entry);
 
-        var temp = new TabPanelView.TabPanelViewElement()
-        {
-            Name = entry.Name,
-            Content = entry.Description,
-            Image = entry.Image
-        };
-
-        view.AddElement(temp);
+        // view.AddElement(entry);
     }
 
 }

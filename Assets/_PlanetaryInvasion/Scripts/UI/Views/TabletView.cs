@@ -11,6 +11,7 @@ public class TabletView : MonoBehaviour, IUpdateableView, ICardView
     public TextMeshProUGUI Name;
     public TextMeshProUGUI Description;
     public TextMeshProUGUI AP;
+    public TextMeshProUGUI PopupDescription;
 
     public Color ResourceAvailableColor = Color.green, NoResourcesColor = Color.red;
 
@@ -48,13 +49,19 @@ public class TabletView : MonoBehaviour, IUpdateableView, ICardView
         this.Name.text = Card.Name;
         this.AP.text = Card.APCost.ToString();
 
-        Description.text = string.IsNullOrEmpty(this.Card.Description) ? "" : Card.Description + "\n";
+        Description.text = "";
+        PopupDescription.text = string.IsNullOrEmpty(this.Card.Description) ? "" : Card.Description + "\n";
         foreach (var item in Card.ResourceRequirements)
         {
             Color color;
             int temp;
             color = gameState.Player.Resources.TryGetValue(item.Key, out temp) && temp >= item.Value ? ResourceAvailableColor : NoResourcesColor;
             Description.text += $"<color=#{ColorUtility.ToHtmlStringRGBA(color)}>{item.Key.Name}: {item.Value}</color>\n";
+        }
+
+        if (Description.text == "")
+        {
+            Description.text = $"<color=#{ColorUtility.ToHtmlStringRGBA(ResourceAvailableColor)}>FREE</color>";
         }
     }
 
@@ -68,4 +75,13 @@ public class TabletView : MonoBehaviour, IUpdateableView, ICardView
         CardClicked.Invoke(this);
     }
 
+    public void ShowPopup()
+    {
+
+    }
+
+    public void HidePopup()
+    {
+
+    }
 }

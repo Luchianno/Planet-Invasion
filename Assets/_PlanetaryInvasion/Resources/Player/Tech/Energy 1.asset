@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef934092e255ed34ebf123bb55269e19, type: 3}
   m_Name: Energy 1
   m_EditorClassIdentifier: 
+  Active: 1
   Name: Energy I
   Description: Research energy generation
   RequiresTarget: 0
@@ -24,5 +25,7 @@ MonoBehaviour:
     m_keys: []
     m_values: 
   TechRequirements: []
-  StudyResult: 
+  StudyResult: Senior engineer with help of several interns was able to isolate the
+    techniques of converting our FTL drive generators into usable portable source
+    of power. However this method requires certain amount of manpower and time.
   ResultImage: {fileID: 0}
