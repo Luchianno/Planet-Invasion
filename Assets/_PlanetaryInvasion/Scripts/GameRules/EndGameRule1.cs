@@ -13,16 +13,13 @@ public class EndGameRule1 : ScriptableGameRule
     public Sprite EndGameImage;
     public int MinPopulation = 2;
 
-    [Inject]
-    EndGameView view;
-
     public override bool Check(PlanetState state)
     {
         var ai = state.AI;
         var result = ai.CountryStates.TrueForAll(x => x.Population <= MinPopulation);
         if (result)
         {
-            view.Init("You Won", this.Description, this.EndGameImage);
+            // view.Init("You Won", this.Description, this.EndGameImage);
         }
         return result;
     }

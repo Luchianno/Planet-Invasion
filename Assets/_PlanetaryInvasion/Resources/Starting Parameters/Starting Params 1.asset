@@ -33,7 +33,4 @@ MonoBehaviour:
       m_values: 
     Technologies: []
     CardSlots: 3
-    CountryStates:
-    - {fileID: 11400000, guid: 91ba5c8c5f2486946a0c926260e4fcee, type: 2}
-    - {fileID: 11400000, guid: 03f0b77f8ead90a4f864ae538adecaab, type: 2}
-    - {fileID: 11400000, guid: 63d16a71c8f4c824bb8ce667fead4766, type: 2}
+    CountryStates: []

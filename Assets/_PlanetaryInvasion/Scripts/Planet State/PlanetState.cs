@@ -20,6 +20,15 @@ public class PlanetState : ScriptableObject
         this.version = settings.SaveFileVersion;
     }
 
+    void OnEnable()
+    {
+        // var countries = AI.CountryStates;
+        // for (int i = 0; i < countries.Count; i++)
+        // {
+        //     countries[i] = Instantiate(countries[i]);
+        // }
+    }
+
     [Header("Careful, don't mess this up")]
     public int Turn = 0;
 

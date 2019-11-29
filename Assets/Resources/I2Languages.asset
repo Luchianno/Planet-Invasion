@@ -16,21 +16,255 @@ MonoBehaviour:
     UserAgreesToHaveItOnTheScene: 0
     UserAgreesToHaveItInsideThePluginsFolder: 0
     GoogleLiveSyncIsUptoDate: 1
-    mTerms: []
+    mTerms:
+    - Term: labels/back
+      TermType: 0
+      Description: 
+      Languages:
+      - Back
+      - Tagasi
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/close
+      TermType: 0
+      Description: 
+      Languages:
+      - Close
+      - Sulge
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/hangar
+      TermType: 0
+      Description: 
+      Languages:
+      - Hangar
+      - Angaar
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/select_action
+      TermType: 0
+      Description: 
+      Languages:
+      - Select Action
+      - Vali tegevus
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/launch
+      TermType: 0
+      Description: 
+      Languages:
+      - Launch
+      - Alusta
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/select_actions
+      TermType: 0
+      Description: 
+      Languages:
+      - Select Actions
+      - Vali tegevused
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/map
+      TermType: 0
+      Description: 
+      Languages:
+      - Map
+      - Kaart
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: resources/energy
+      TermType: 0
+      Description: 
+      Languages:
+      - Energy
+      - Energia
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: resources/metal
+      TermType: 0
+      Description: 
+      Languages:
+      - Metal
+      - Metall
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: resources/intel
+      TermType: 0
+      Description: 
+      Languages:
+      - Intel
+      - Teave
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/archive
+      TermType: 0
+      Description: 
+      Languages:
+      - Archive
+      - "S\xFCndmuste ajalugu"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/event_log
+      TermType: 0
+      Description: 
+      Languages:
+      - Event Log
+      - "Hiljutised s\xFCndmused"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/turn
+      TermType: 0
+      Description: 
+      Languages:
+      - Turn
+      - "K\xE4ik"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/mission_control
+      TermType: 0
+      Description: 
+      Languages:
+      - Mission Control
+      - Juhtimiskeskus
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/strength
+      TermType: 0
+      Description: 
+      Languages:
+      - Strength
+      - "S\xF5jaline j\xF5ud"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/population
+      TermType: 0
+      Description: 
+      Languages:
+      - Population
+      - Rahvastik
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/terror
+      TermType: 0
+      Description: 
+      Languages:
+      - Terror
+      - Hirm
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/overview
+      TermType: 0
+      Description: 
+      Languages:
+      - Overview
+      - "\xDClevaade"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/success
+      TermType: 0
+      Description: 
+      Languages:
+      - Success
+      - "\xD5nnestumine"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/fail
+      TermType: 0
+      Description: 
+      Languages:
+      - Fail
+      - "L\xE4bikukkumine"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: labels/reports
+      TermType: 0
+      Description: 
+      Languages:
+      - Reports
+      - Aruanded
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: resources/humans
+      TermType: 0
+      Description: 
+      Languages:
+      - Humans
+      - Inimesed
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: resources/specimen
+      TermType: 0
+      Description: 
+      Languages:
+      - Specimen
+      - "N\xE4idised"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: resources/abducted_humans
+      TermType: 0
+      Description: 
+      Languages:
+      - Abducted Humans
+      - "R\xF6\xF6vitud inimesed"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: resources/human_resources
+      TermType: 0
+      Description: 
+      Languages:
+      - Human Resources
+      - 'Inimressurss '
+      - 
+      Flags: 000000
+      Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
     mTerm_AppName: 
-    mLanguages: []
+    mLanguages:
+    - Name: English
+      Code: en
+      Flags: 0
+    - Name: Estonian
+      Code: et
+      Flags: 0
+    - Name: Description
+      Code: 
+      Flags: 0
     IgnoreDeviceLanguage: 0
     _AllowUnloadingLanguages: 0
-    Google_WebServiceURL: 
-    Google_SpreadsheetKey: 
-    Google_SpreadsheetName: 
-    Google_LastUpdatedVersion: 
-    Google_Password: change_this
+    Google_WebServiceURL: https://script.google.com/macros/s/AKfycbxAQeoMokcSU_FzKY2LYjWCbEYnGWURwYy5xLd4DD1cSa6kJsKr/exec
+    Google_SpreadsheetKey: 1osEHl1pwofLkON9l1nfwF6UH3MjXkF8NpeiuBWA8KLg
+    Google_SpreadsheetName: I2Loc Planet Invasion Localization
+    Google_LastUpdatedVersion: 1575029939234
+    Google_Password: planetInvasion!
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2
-    GoogleUpdateSynchronization: 1
+    GoogleUpdateSynchronization: 0
     GoogleUpdateDelay: 0
     Assets: []
     Spreadsheet_LocalFileName: 

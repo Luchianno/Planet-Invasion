@@ -276,7 +276,6 @@ GameObject:
   - component: {fileID: 5235566827014799724}
   - component: {fileID: 5235566827014799726}
   - component: {fileID: 5235566827014799725}
-  - component: {fileID: 5235566827014799727}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -340,21 +339,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5235566827014799727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5235566827014799723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93b9aa63954910a47955dc0a0cbccbba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 5235566826262417085}
-  description: {fileID: 0}
-  title: {fileID: 0}
 --- !u!1 &5235566827080902388
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,13 +778,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generateNavigation: 1
   cancelSelection: {fileID: 0}
-  hideCurrent: 1
+  hideCurrent: 0
   keepOnTopWhenHiding: 1
   layerPriority: 0
   defaultSelection: {fileID: 0}
   isInit: 0
   selectedObject: {fileID: 0}
   Restart: {fileID: 6608143181665987919}
+  image: {fileID: 0}
+  description: {fileID: 0}
+  title: {fileID: 0}
 --- !u!225 &4297009832130815441
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -878,8 +865,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You Won!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6acc5835ca03dfb43bd702c125d56f79, type: 2}
-  m_sharedMaterial: {fileID: 21696108750990750, guid: 6acc5835ca03dfb43bd702c125d56f79,
+  m_fontAsset: {fileID: 11400000, guid: 98c8d80962fed704cbb4d2a3c3514327, type: 2}
+  m_sharedMaterial: {fileID: 21787830686939196, guid: 98c8d80962fed704cbb4d2a3c3514327,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -905,8 +892,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

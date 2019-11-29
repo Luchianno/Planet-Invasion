@@ -9,9 +9,15 @@ public class GameRulesInstaller : MonoInstaller<GameRulesInstaller>
 
     public override void InstallBindings()
     {
-        foreach (var item in gameRules)
-        {
-            Container.BindInstance<IGameRule>(item);
-        }
+        var temp1 = Container.InstantiateScriptableObjectResource<ScriptableGameRule>(@"Rules/EnGame Strength");
+        var temp2 = Container.InstantiateScriptableObjectResource<ScriptableGameRule>(@"Rules/EndGame Population");
+        Debug.Log(temp1);
+        Debug.Log(temp2);
+        Container.BindInstance<IGameRule>(temp1);
+        Container.BindInstance<IGameRule>(temp2);
+        // foreach (var item in gameRules)
+        // {
+        //     Container.BindInstance<IGameRule>(temp);
+        // }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using System.Linq;
 using Zenject;
+using ScreenMgr;
 
 [CreateAssetMenu(menuName = "PI/Rules/Win Game by Destruction")]
 public class EndGameRule2 : ScriptableGameRule
@@ -14,14 +15,16 @@ public class EndGameRule2 : ScriptableGameRule
     public int MinStrength = 1;
 
     [Inject]
-    EndGameView view;
+    ScreenManager screenManager;
+
     public override bool Check(PlanetState state)
     {
         var ai = state.AI;
         var result = ai.CountryStates.TrueForAll(x => x.MilitaryStrength <= MinStrength);
         if (result)
         {
-            view.Init("You Won", this.Description, this.EndGameImage);
+            screenManager.ShowScreen("EndgameScreen");
+            // view.Init("You Won", this.Description, this.EndGameImage);
         }
         return result;
     }

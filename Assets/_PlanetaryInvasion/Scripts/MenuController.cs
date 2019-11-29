@@ -21,8 +21,8 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     AnyKeyDownDetector keyListener;
 
-    [SerializeField]
-    UniGifImage gifImage;
+    // [SerializeField]
+    // UniGifImage gifImage;
 
     void Start()
     {
@@ -35,11 +35,11 @@ public class MenuController : MonoBehaviour
     IEnumerator FadeIn()
     {
         yield return new WaitForSeconds(waitTime);
-        while (gifImage.nowState != UniGifImage.State.Playing)
-        {
-            // Debug.Log(gifImage.nowState);
-            yield return null;
-        }
+        // while (gifImage.nowState != UniGifImage.State.Playing)
+        // {
+        //     // Debug.Log(gifImage.nowState);
+        //     yield return null;
+        // }
 
         // Debug.Log("lalala");
         fadeImage.CrossFadeAlpha(0f, fadeInTime, false);
