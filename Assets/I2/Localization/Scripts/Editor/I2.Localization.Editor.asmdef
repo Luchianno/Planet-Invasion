@@ -1,0 +1,16 @@
+{
+    "name": "I2.Localization.Editor",
+    "references": [
+        "GUID:d7d9e128a340b264cb7df98ceba6a8fa"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}
