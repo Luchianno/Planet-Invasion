@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine.EventSystems;
 using System.Linq;
+using Zenject;
 
 namespace ScreenMgr {
 
@@ -12,6 +13,10 @@ namespace ScreenMgr {
     /// Manages screens and their transitions
     /// </summary>
     public class ScreenManager: MonoBehaviour {
+
+        [Inject]
+        BaseScreen.Factory factory;
+
         public class ScreenNavigationData
         {
             public BaseScreen screen;
@@ -228,12 +233,11 @@ namespace ScreenMgr {
                 throw new KeyNotFoundException("ScreenManager: Show failed. Screen with name '" + screenName + "' does not exist.");
             }
 
-            GameObject newDupeScreen = GameObject.Instantiate(screensList[screenName].gameObject);
-            newDupeScreen.transform.SetParent(transform, false);
-            BaseScreen baseScreen = newDupeScreen.GetComponent<BaseScreen>();
+            BaseScreen baseScreen =  factory.Create(screensList[screenName].gameObject);
+            baseScreen.gameObject.transform.SetParent(transform, false);
             baseScreen.Initialize(this, true);
 
-            newDupeScreen.name = screenName + " (" + (baseScreen.ID) + ")";
+            baseScreen.gameObject.name = screenName + " (" + (baseScreen.ID) + ")";
 
 
             return ShowScreen(baseScreen,true) as T;
