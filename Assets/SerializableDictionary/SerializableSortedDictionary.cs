@@ -43,6 +43,12 @@ public class SerializableSortedDictionary<TKey, TValue> : SortedDictionary<TKey,
             int n = m_keys.Length;
             for (int i = 0; i < n; ++i)
             {
+                if (m_keys[i] == null)
+                {
+                    Debug.Log(typeof(TKey));
+                    Debug.Log(typeof(TValue));
+                    
+                }
                 this[m_keys[i]] = m_values[i];
             }
 
