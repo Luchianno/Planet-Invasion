@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapView : MonoBehaviour
+[CreateAssetMenu(menuName = "PI/Actions/Attack Country")]
+public class AIAttack : Card
 {
+    
+
     void Start()
     {
         

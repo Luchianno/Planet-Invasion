@@ -20,20 +20,28 @@ public class CardSelectionScreen : BaseScreen
     void Start()
     {
         ToHangar.onClick.AddListener(() => screenManager.ShowScreen("HangarScreen"));
-        ToMap.onClick.AddListener(() => screenManager.ShowScreen("MapScreen"));
+        ToMap.onClick.AddListener(() => screenManager.Hide());//ShowScreen("MapScreen"));
         Launch.onClick.AddListener(OnLaunch);
+        // I2.Loc.LocalizationManager.GetTermData("").
     }
 
     public override void OnAnimationIn()
     {
         cameraPositionController.ChangePos(CameraPositionController.CameraPosition.MissionControl);
+        cameraPositionController.CameraMovementComplete.AddListener(OnComplete);
+    }
+
+    void OnComplete()
+    {
+        cameraPositionController.CameraMovementComplete.RemoveListener(OnComplete);
         OnAnimationInEnd();
     }
 
     void OnLaunch()
     {
         planetStateController.Step();
-        screenManager.ShowScreen("ReportsScreen");
+        screenManager.ShowPopup<ReportsScreen>("ReportsScreen");
+        // screenManager.HideAllAndShow("MapScreen");
     }
 
 }

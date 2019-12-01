@@ -32,6 +32,11 @@ public class PlanetStateController : MonoBehaviour
 
     public void AddPlayerAction(SelectedAction selectedAction)
     {
+        if (state.Player.SelectedCards.Count >= 3)
+        {
+            Debug.LogWarning("All action slots taken");
+            return;
+        }
         if (!state.Player.Resources.RemoveResources(selectedAction.Card.ResourceRequirements))
         {
             Debug.LogWarning("Not enough Resources");

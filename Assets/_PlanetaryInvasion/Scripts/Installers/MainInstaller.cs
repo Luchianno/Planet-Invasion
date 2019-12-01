@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using ScreenMgr;
 using UnityEngine;
 using Zenject;
@@ -31,29 +33,36 @@ public class MainInstaller : MonoInstaller<MainInstaller>
     [SerializeField]
     Canvas hangarCanvas;
 
+    [SerializeField]
+    protected List<CountryState> Countries;
 
     public override void InstallBindings()
     {
         Container.BindInstance<GameSettings>(settings);
 
-        Container.BindInterfacesAndSelfTo<PlanetState>().FromInstance(Instantiate(startingState)).AsSingle();
+        var PlanetState = Instantiate(startingState);
+        PlanetState.AI.CountryStates.Clear();
+        PlanetState.AI.CountryStates.AddRange(Countries.Select(x => Instantiate(x)));
+
+        Container.BindInterfacesAndSelfTo<PlanetState>().FromInstance(PlanetState).AsSingle();
+
+
         Container.BindInterfacesAndSelfTo<StoryController>().AsSingle();
 
-        Container.BindInstance<PlanetStateController>(stateController);
+        Container.BindInstance<PlanetStateController>(stateController).AsSingle();
         Container.Bind<UpdateableViewManager>().AsSingle();
 
         // views
-        Container.Bind<IUpdateableView>().To<AllActionsView>().FromComponentsInHierarchy(includeInactive: true);
-        Container.Bind<IUpdateableView>().To<SelectedActionsView>().FromComponentsInHierarchy(includeInactive: true);
-        Container.Bind<IUpdateableView>().To<ResourcesView>().FromComponentsInHierarchy(includeInactive: true);
-        Container.Bind<IUpdateableView>().To<TechView>().FromComponentsInHierarchy(includeInactive: true);
-        Container.Bind<IUpdateableView>().To<EventLogView>().FromComponentsInHierarchy(includeInactive: true);
-        Container.Bind<IUpdateableView>().To<EventLogView>().FromComponentsInHierarchy(includeInactive: true);
-        Container.Bind<IUpdateableView>().To<CountryView>().FromComponentsInHierarchy(includeInactive: true);
+        Container.Bind<IUpdateableView>().To<AllActionsView>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
+        Container.Bind<IUpdateableView>().To<SelectedActionsView>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
+        Container.Bind<IUpdateableView>().To<ResourcesView>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
+        Container.Bind<IUpdateableView>().To<TechView>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
+        Container.Bind<IUpdateableView>().To<EventLogView>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
+        Container.Bind<IUpdateableView>().To<CountryView>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
 
-        Container.Bind<EndGameView>().FromComponentsInHierarchy(includeInactive: true);
+        Container.Bind<EndGameView>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
 
-        Container.Bind<TargetSelectionView>().FromComponentsInHierarchy(includeInactive: true);
+        Container.Bind<TargetSelectionView>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
         Container.BindInstance<TabPanelView>(storyView).WithId("story").AsSingle();
 
         // canvases 
@@ -62,15 +71,13 @@ public class MainInstaller : MonoInstaller<MainInstaller>
         Container.BindInstance<Canvas>(endGameCanvas).WithId("endgame");
         Container.BindInstance<Canvas>(hangarCanvas).WithId("hangar");
 
-        // game states
-        Container.Bind<IUpdateableView>().To<CountryView>().FromComponentsInHierarchy(includeInactive: true);
-
 
         Container.Bind<ScreenManager>().FromComponentInHierarchy(true).AsSingle();
-        Container.Bind<CameraPositionController>().FromComponentsInHierarchy(includeInactive: true);
+        Container.Bind<CameraPositionController>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
 
         // factories
         Container.BindFactory<TabletView, TabletView.Factory>().FromComponentInNewPrefab(tabletPrefab);
+        Container.BindFactory<Object, BaseScreen, BaseScreen.Factory>().FromFactory<PrefabFactory<BaseScreen>>();
 
         Application.targetFrameRate = 60;
     }

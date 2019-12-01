@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2be610363b48d24cb3cfc3d30b540ec, type: 3}
-  m_Name: Finland
+  m_Name: Latvia
   m_EditorClassIdentifier: 
-  Name: Finland
-  Description: Frozen land of cold beers and hot saunas. They don't like personal
-    space invasion, we must proceed with caution
-  Population: 40
+  Name: Latvia
+  Description: Latvian urban legends say that people in neighbouring countries have
+    only five toes
+  Population: 10
   MilitaryStrength: 10
-  Friendliness: 1
-  Terror: 1
-  Money: 20
-  MoneyPerMonth: 2
+  Friendliness: 0
+  Terror: 0
+  Money: 10
+  MoneyPerMonth: 1
   PopulationPerMonth: 0.1

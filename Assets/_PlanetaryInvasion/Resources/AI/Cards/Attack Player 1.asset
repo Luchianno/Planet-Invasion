@@ -10,26 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e89af25935c74d44ac8e8f14f9f4f91, type: 3}
-  m_Name: Build Ships
+  m_Name: Attack Player 1
   m_EditorClassIdentifier: 
-  Active: 0
-  Name: Build Ships
-  Description: Build some ships from metal
+  Active: 1
+  Name: Attack Player
+  Description: 
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1
   ResourceRequirements:
     m_keys:
-    - {fileID: 11400000, guid: e04c70afb0580054791c4503f602f805, type: 2}
-    m_values: 0a000000
+    - {fileID: 11400000, guid: 0b270bcff724601429539f9df8c4b92c, type: 2}
+    m_values: 1e000000
   VarRequirements:
     m_keys: []
     m_values: 
   TechRequirements: []
   PlayerResourceChange:
-    m_keys: []
-    m_values: 
+    m_keys:
+    - {fileID: 11400000, guid: 855bc63b82679b342bbc9d3c6f4acd5b, type: 2}
+    m_values: 01000000
   AIResourceChange:
     m_keys: []
     m_values: 
-  CompletionText: '{amount} ships built'
+  CompletionText: We have ben hit by ballistic missile from the surface! -1 Ship

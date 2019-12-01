@@ -67,7 +67,8 @@ public class AllActionsView : MonoBehaviour, IUpdateableView
         foreach (var item in Card.AllPlayerCards)
         {
             if (!item.CheckIfUsable(gameState.Player).Allowed
-                || gameState.Player.SelectedCards.Exists(x => x.Card == item)) // TODO allowed only one card of same kind?
+                || gameState.Player.SelectedCards.Exists(x => x.Card == item)
+                || gameState.Player.Technologies.Contains(item)) // TODO allowed only one card of same kind?
             {
                 continue;
             }

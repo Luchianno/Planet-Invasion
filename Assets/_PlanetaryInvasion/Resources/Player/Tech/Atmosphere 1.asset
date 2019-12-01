@@ -21,8 +21,7 @@ MonoBehaviour:
   ResourceRequirements:
     m_keys:
     - {fileID: 11400000, guid: 370bb49a719ffd942bd161ef85214859, type: 2}
-    - {fileID: 11400000, guid: e04c70afb0580054791c4503f602f805, type: 2}
-    m_values: 0a0000000a000000
+    m_values: 0a000000
   VarRequirements:
     m_keys: []
     m_values: 

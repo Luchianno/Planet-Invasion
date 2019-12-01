@@ -523,17 +523,18 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
-    1: TextMeshPro
-    4: TextMeshPro
-    7: TextMeshPro
-    13: TextMeshPro
-    19: TextMeshPro
-    21: TextMeshPro
-    25: TextMeshPro
-    26: TextMeshPro
-    27: TextMeshPro
-    28: TextMeshPro
-    29: TextMeshPro
+    1: TextMeshPro;dUI_MANAGER
+    4: TextMeshPro;dUI_MANAGER
+    7: TextMeshPro;dUI_MANAGER
+    13: TextMeshPro;dUI_MANAGER
+    14: dUI_MANAGER
+    19: TextMeshPro;dUI_MANAGER
+    21: TextMeshPro;dUI_MANAGER
+    25: TextMeshPro;dUI_MANAGER
+    26: TextMeshPro;dUI_MANAGER
+    27: TextMeshPro;dUI_MANAGER
+    28: TextMeshPro;dUI_MANAGER
+    29: TextMeshPro;dUI_MANAGER
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}

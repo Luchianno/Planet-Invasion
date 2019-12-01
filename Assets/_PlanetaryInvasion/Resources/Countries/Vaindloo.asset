@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Vaindloo
   Description: Nobody knows where it is
   Population: 10
-  MilitaryStrength: 4
+  MilitaryStrength: 10
   Friendliness: 0
   Terror: 0
   Money: 10

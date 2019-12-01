@@ -46,17 +46,17 @@ public class ReportsViewItem : MonoBehaviour
         {
             case StoryLogEntryType.CardResult:
                 this.Description.text = log.Text;
-                this.SuccessType.text = log.SuccessType.ToString();
+                this.SuccessType.text = log.SuccessType.ToString() + "!";
                 Background.color = log.SuccessType == ActionResultType.Fail ? CardFail : CardSuccess;
                 break;
 
             case StoryLogEntryType.TechResult:
-                this.Description.text = $"\"{log.Card.Name}\" - Research Complete (Click for more info)";
+                this.Description.text = $"\"{log.Card.Name}\" - Research Complete"; // (Click for more info)
                 Button.interactable = true;
                 Background.color = TechColor;
                 break;
             case StoryLogEntryType.Story:
-                this.Description.text = "Story Entry Unlocked (Click for more info)";
+                this.Description.text = "Story Entry Unlocked"; // (Click for more info) 
                 Button.interactable = true;
                 Background.color = StoryColor;
                 break;

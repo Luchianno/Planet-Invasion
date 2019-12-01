@@ -29,6 +29,12 @@ public class HangarScreen : BaseScreen
     public override void OnAnimationIn()
     {
         cameraPositionController.ChangePos(CameraPositionController.CameraPosition.Hangar);
+        cameraPositionController.CameraMovementComplete.AddListener(OnComplete);
+    }
+
+    void OnComplete()
+    {
+        cameraPositionController.CameraMovementComplete.RemoveListener(OnComplete);
         OnAnimationInEnd();
     }
 }

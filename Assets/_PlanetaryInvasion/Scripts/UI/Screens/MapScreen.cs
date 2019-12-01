@@ -10,7 +10,7 @@ public class MapScreen : BaseScreen
     CameraPositionController cameraPositionController;
 
     public GameObject MapCanvasObject;
-    
+
 
     public override void OnShow()
     {
@@ -25,6 +25,12 @@ public class MapScreen : BaseScreen
     public override void OnAnimationIn()
     {
         cameraPositionController.ChangePos(CameraPositionController.CameraPosition.Map);
+        cameraPositionController.CameraMovementComplete.AddListener(OnComplete);
+    }
+
+    void OnComplete()
+    {
+        cameraPositionController.CameraMovementComplete.RemoveListener(OnComplete);
         OnAnimationInEnd();
     }
 }

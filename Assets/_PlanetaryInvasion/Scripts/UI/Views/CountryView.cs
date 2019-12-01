@@ -6,19 +6,34 @@ using TMPro;
 
 public class CountryView : MonoBehaviour, IUpdateableView
 {
-    public TextMeshProUGUI Label;
-    public TextMeshProUGUI Title;
-    public CountryState Country;
+    public string CountryName;
 
-    // [Inject]
-    // PlanetState state;
+    [SerializeField]
+    protected TextMeshProUGUI Label;
+    [SerializeField]
+    protected TextMeshProUGUI Title;
+    [SerializeField]
+    protected TextMeshProUGUI Description;
+
+    [Inject]
+    PlanetState state;
 
     public void UpdateView()
     {
-        this.Title.text = $"{Country.Name}";
+        var country = state.AI.CountryStates.Find(x => x.Name == CountryName);
 
-        this.Label.text = $"Strength: {Country.MilitaryStrength}\n";
-        this.Label.text += $"Population: {Country.Population}\n";
-        this.Label.text += $"Terror: {Country.Terror}\n";
+        if (country == null)
+        {
+            Debug.LogError("Set Country Name", this.gameObject);
+            Debug.Log(CountryName);
+            return;
+        }
+
+        this.Title.text = $"{country.Name}";
+
+        this.Label.text = $"Strength: {country.MilitaryStrength}\n";
+        this.Label.text += $"Population: {country.Population}\n";
+        this.Label.text += $"Terror: {country.Terror}\n";
+        this.Description.text = country.Description;
     }
 }

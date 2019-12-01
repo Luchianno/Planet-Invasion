@@ -27,11 +27,11 @@ public class EndGameScreen : BaseScreen
         });
     }
 
-    // public void Init(string title, string description, Sprite image)
-    // {
-    //     (string, string, Sprite) data = transitionData as (string, string, Sprite);
-    //     this.image.sprite = image;
-    //     this.title.text = title;
-    //     this.description.text = description;
-    // }
+    public void Init(string title, string description, Sprite image)
+    {
+        // (string, string, Sprite) data = transitionData as (string, string, Sprite);
+        // this.image.sprite = image;
+        this.title.text = title;
+        this.description.text = description;
+    }
 }

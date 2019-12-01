@@ -26,7 +26,7 @@ public class ReportsView : MonoBehaviour
     {
         Clear();
 
-        Debug.Log(results.Count());
+        // Debug.Log(results.Count());
 
         foreach (var resultItem in results)
         {
