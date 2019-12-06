@@ -15,6 +15,7 @@ MonoBehaviour:
   Active: 0
   Name: Build Ships
   Description: Build some ships from metal
+  Icon: {fileID: 21300000, guid: 65c9e59c825ab64408b81e76ae652b1b, type: 3}
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1

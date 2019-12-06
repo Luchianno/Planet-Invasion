@@ -10,8 +10,8 @@ public class TabletView : MonoBehaviour, IUpdateableView, ICardView
 {
     public TextMeshProUGUI Name;
     public TextMeshProUGUI Description;
-    public TextMeshProUGUI AP;
     public TextMeshProUGUI PopupDescription;
+    public Image Icon;
 
     public Color ResourceAvailableColor = Color.green, NoResourcesColor = Color.red;
 
@@ -47,7 +47,7 @@ public class TabletView : MonoBehaviour, IUpdateableView, ICardView
         }
 
         this.Name.text = Card.Name;
-        this.AP.text = Card.APCost.ToString();
+        this.Icon.sprite = Card.Icon;
 
         Description.text = "";
         PopupDescription.text = string.IsNullOrEmpty(this.Card.Description) ? "" : Card.Description + "\n";

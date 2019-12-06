@@ -24,8 +24,8 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
     TabletView.Factory tabletFactory;
 
     // TODO change to the state change, this should not communicate with other view directly
-    [Inject]
-    TargetSelectionView targetSelection;
+    // [Inject]
+    // TargetSelectionView targetSelection;
 
     [Inject]
     GameSettings settings;
@@ -96,8 +96,8 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
     {
         if (cardView.Card.RequiresTarget)
         {
-            targetSelection.GetComponent<CanvasGroupController>().RenderingEnabled = true;
-            this.targetSelection.OnCountrySelected.AddListener(x => SelectedParams[cardView.Card] = x);
+            // targetSelection.GetComponent<CanvasGroupController>().RenderingEnabled = true;
+            // this.targetSelection.OnCountrySelected.AddListener(x => SelectedParams[cardView.Card] = x);
         }
         stateManager.RemovePlayerAction(cardView.Card);
     }

@@ -17,6 +17,7 @@ MonoBehaviour:
   Description: We have gathered enough information to try studying local language/languages
     and culture. Gaining knowledge of local languages will open up many possibilities
     of understanding indigenous society
+  Icon: {fileID: 21300000, guid: f094ac2129548d742bbac14e47d944ff, type: 3}
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1

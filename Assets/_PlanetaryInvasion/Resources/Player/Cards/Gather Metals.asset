@@ -15,6 +15,7 @@ MonoBehaviour:
   Active: 1
   Name: Gather Metal
   Description: Gather metal
+  Icon: {fileID: 21300000, guid: f5814d7b569944a4ead80b21060aa563, type: 3}
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1

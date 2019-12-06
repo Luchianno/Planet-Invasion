@@ -26,8 +26,8 @@ public class AllActionsView : MonoBehaviour, IUpdateableView
     TabletView.Factory tabletFactory;
 
     // TODO change to the state change, this should not communicate with other view directly
-    [Inject]
-    TargetSelectionView targetSelection;
+    // [Inject]
+    // TargetSelectionView targetSelection;
 
     Dictionary<Card, GameObject> cache = new Dictionary<Card, GameObject>();
 
@@ -40,7 +40,7 @@ public class AllActionsView : MonoBehaviour, IUpdateableView
         selectedCard = cardView.Card;
         if (cardView.Card.RequiresTarget)
         {
-            StartCoroutine(targetSelection.OpenAndAwaitForSelection(countrySelected));
+            // StartCoroutine(targetSelection.OpenAndAwaitForSelection(countrySelected));
         }
         else
         {

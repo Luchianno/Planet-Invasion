@@ -15,6 +15,7 @@ MonoBehaviour:
   Active: 1
   Name: Geography 1
   Description: Perform flyover over the planet and create crude map of the terrain
+  Icon: {fileID: 21300000, guid: a64093e6ce4d4fc478018f37f4697644, type: 3}
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1

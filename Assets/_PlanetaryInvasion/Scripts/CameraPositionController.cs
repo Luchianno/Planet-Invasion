@@ -29,18 +29,22 @@ public class CameraPositionController : MonoBehaviour
         Hangar
     }
 
+
+    Coroutine current;
+
     public void ChangePos(CameraPosition pos)
     {
+        // if( current)
         switch (pos)
         {
             case CameraPosition.MissionControl:
-                StartCoroutine(InterpolateLerp(camera.position, missionControl.position, mapLerpTime));
+                current = StartCoroutine(InterpolateLerp(camera.position, missionControl.position, mapLerpTime));
                 break;
             case CameraPosition.Map:
-                StartCoroutine(InterpolateLerp(camera.position, map.position, mapLerpTime));
+                current = StartCoroutine(InterpolateLerp(camera.position, map.position, mapLerpTime));
                 break;
             case CameraPosition.Hangar:
-                StartCoroutine(InterpolateLerp(camera.position, hangar.position, mapLerpTime));
+                current = StartCoroutine(InterpolateLerp(camera.position, hangar.position, mapLerpTime));
                 break;
             default:
                 break;

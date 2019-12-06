@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ScreenMgr;
 using Zenject;
 using UnityEngine.UI;
 using System.Linq;
@@ -14,13 +13,6 @@ public class ReportsView : MonoBehaviour
 
 
     List<ReportsViewItem> items = new List<ReportsViewItem>();
-
-    [Inject]
-    ScreenManager screenManager;
-
-    void Start()
-    {
-    }
 
     public void Init(IEnumerable<StoryLogEntry> results)
     {

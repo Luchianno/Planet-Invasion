@@ -15,6 +15,7 @@ MonoBehaviour:
   Active: 1
   Name: Passive Observation
   Description: Passive Observation of the important military and civilian object
+  Icon: {fileID: 21300000, guid: 395afd27d43f99449b611532a58871d1, type: 3}
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1
@@ -25,7 +26,8 @@ MonoBehaviour:
   VarRequirements:
     m_keys: []
     m_values: 
-  TechRequirements: []
+  TechRequirements:
+  - {fileID: 11400000, guid: b3117501e554b5c4f85cfb99020ebdf0, type: 2}
   PlayerResourceChange:
     m_keys:
     - {fileID: 11400000, guid: ef618ef67780cdc40bf4f3df485172da, type: 2}

@@ -17,6 +17,7 @@ MonoBehaviour:
   Description: Our sensors have picked up multiple noisy signals on broad spectrum
     of radio frequencies. We should perform more detailed analysis to reveal what
     kind communication methods native population uses for civilian and military purposes
+  Icon: {fileID: 21300000, guid: 8ffa56f7f7fb0b047ae517ebeee508d6, type: 3}
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1

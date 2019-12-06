@@ -15,6 +15,7 @@ MonoBehaviour:
   Active: 1
   Name: Energy I
   Description: Research energy generation
+  Icon: {fileID: 21300000, guid: 0ebb59edc27b64448a21e54d36d9bc1f, type: 3}
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1

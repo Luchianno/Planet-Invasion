@@ -15,6 +15,7 @@ MonoBehaviour:
   Active: 1
   Name: Communications 2
   Description: Analyze encrypted communication channels of local population
+  Icon: {fileID: 21300000, guid: 99ad10688c6675642a889b3d7490e119, type: 3}
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1
@@ -22,8 +23,7 @@ MonoBehaviour:
     m_keys:
     - {fileID: 11400000, guid: 3d1b4f820bf6151438c8bf87e223cc0d, type: 2}
     - {fileID: 11400000, guid: 370bb49a719ffd942bd161ef85214859, type: 2}
-    - {fileID: 11400000, guid: e04c70afb0580054791c4503f602f805, type: 2}
-    m_values: 0a0000002800000014000000
+    m_values: 1400000028000000
   VarRequirements:
     m_keys: []
     m_values: 

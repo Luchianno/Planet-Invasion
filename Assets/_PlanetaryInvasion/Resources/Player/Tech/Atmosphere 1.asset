@@ -15,6 +15,7 @@ MonoBehaviour:
   Active: 1
   Name: Atmospheric Probing
   Description: We should examine constitution of local atmosphere as soon as possible
+  Icon: {fileID: 21300000, guid: be928b5f4edb15d439bb3b94f600d20c, type: 3}
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1

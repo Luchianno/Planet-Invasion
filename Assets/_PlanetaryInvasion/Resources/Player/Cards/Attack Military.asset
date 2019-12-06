@@ -15,6 +15,7 @@ MonoBehaviour:
   Active: 1
   Name: Attack All Countries
   Description: Attack planets military installations. Does damage all the countries
+  Icon: {fileID: 21300000, guid: 8cbbb2a724981544e916af80dc20c002, type: 3}
   RequiresTarget: 0
   TurnsRequired: 1
   APCost: 1
