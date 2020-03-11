@@ -490,7 +490,7 @@ MonoBehaviour:
   m_textAlignment: 257
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -632,8 +632,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: {fileID: 114171413911510784}
   Description: {fileID: 114362500256323152}
-  AP: {fileID: 114313709549557348}
   PopupDescription: {fileID: 565335512179710349}
+  Icon: {fileID: 0}
   ResourceAvailableColor: {r: 0, g: 1, b: 0, a: 1}
   NoResourcesColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &114919437236476462
@@ -1253,7 +1253,7 @@ MonoBehaviour:
   m_textAlignment: 257
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

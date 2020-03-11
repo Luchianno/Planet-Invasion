@@ -9,14 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f42f06ff6cc543ea942180e019f0fc8d, type: 3}
-  m_Name: UIView_General
+  m_Script: {fileID: 11500000, guid: 5c8b486ad13d0d64489caaaa893a4337, type: 3}
+  m_Name: Fail
   m_EditorClassIdentifier: 
-  CategoryName: General
-  DatabaseType: 2
-  Names:
-  - Unnamed
-  - ControlPanel
-  - Hangar
-  - MapOverview
-  - StartGame
+  Title: You Failed
+  Description: You lost all your motherships. Without their support your Invasion
+    is doomed
+  Background: {fileID: 0}

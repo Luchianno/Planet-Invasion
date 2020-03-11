@@ -11,10 +11,10 @@ public class GameRulesInstaller : MonoInstaller<GameRulesInstaller>
     {
         var temp1 = Container.InstantiateScriptableObjectResource<ScriptableGameRule>(@"Rules/EnGame Strength");
         var temp2 = Container.InstantiateScriptableObjectResource<ScriptableGameRule>(@"Rules/EndGame Population");
-        Debug.Log(temp1);
-        Debug.Log(temp2);
+        var temp3 = Container.InstantiateScriptableObjectResource<ScriptableGameRule>(@"Rules/Fail");
         Container.BindInstance<IGameRule>(temp1);
         Container.BindInstance<IGameRule>(temp2);
+        Container.BindInstance<IGameRule>(temp3);
         // foreach (var item in gameRules)
         // {
         //     Container.BindInstance<IGameRule>(temp);

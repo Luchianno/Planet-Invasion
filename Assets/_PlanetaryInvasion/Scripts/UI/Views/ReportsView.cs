@@ -14,6 +14,16 @@ public class ReportsView : MonoBehaviour
 
     List<ReportsViewItem> items = new List<ReportsViewItem>();
 
+    [Inject]
+    protected PlanetState state;
+
+
+    public void Start()
+    {
+        Init(state.EventLog.Entries.Where(x => state.Turn == x.Turn + 1 && (x.IsPlayerAction || x.Card.Name == "Attack Player")));
+        // Init(state.EventLog.Entries);
+    }
+
     public void Init(IEnumerable<StoryLogEntry> results)
     {
         Clear();

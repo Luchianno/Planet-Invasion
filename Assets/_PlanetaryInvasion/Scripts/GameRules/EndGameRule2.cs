@@ -19,8 +19,8 @@ public class EndGameRule2 : ScriptableGameRule
         if (result)
         {
             var popup = UIPopup.GetPopup("EndGame");
-            // popup.
-            // view.Init("You Won", this.Description, this.EndGameImage);
+            popup.Data.SetLabelsTexts(this.Title, this.Description);
+            popup.Show();
         }
         return result;
     }

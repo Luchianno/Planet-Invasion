@@ -20,3 +20,5 @@ MonoBehaviour:
   - Hangar
   - ControlPanel
   - Launch
+  - RestartGame
+  - MapOverview

@@ -23,6 +23,7 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
     [Inject]
     TabletView.Factory tabletFactory;
 
+
     // TODO change to the state change, this should not communicate with other view directly
     // [Inject]
     // TargetSelectionView targetSelection;
@@ -62,13 +63,14 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
                 placeholders.Add(temp);
             }
         }
+
     }
 
     public void AddCard(Card card)
     {
         if (SelectedParams.Count >= settings.CardSelectionLimit)
             return;
-            
+
         var cardView = tabletFactory.Create();
         cardView.Init(card, parent);
         // get outline and change color
@@ -90,6 +92,8 @@ public class SelectedActionsView : MonoBehaviour, IUpdateableView
             var temp = Instantiate(PlaceHolderPrefab, Vector3.zero, Quaternion.identity, parent);
             placeholders.Add(temp);
         }
+
+
     }
 
     void CardClicked(ICardView cardView)

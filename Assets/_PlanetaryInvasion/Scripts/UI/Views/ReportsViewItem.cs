@@ -42,28 +42,37 @@ public class ReportsViewItem : MonoBehaviour
         Button.interactable = false;
         this.SuccessType.text = "";
 
-        switch (log.Type)
+        if (!log.IsPlayerAction)
         {
-            case StoryLogEntryType.CardResult:
-                this.Description.text = log.Text;
-                this.SuccessType.text = log.SuccessType.ToString() + "!";
-                Background.color = log.SuccessType == ActionResultType.Fail ? CardFail : CardSuccess;
-                break;
+            this.Description.text = log.Text;
+            this.SuccessType.text = "Planet Action";
+            Background.color = CardFail;
+        }
+        else
+        {
+            switch (log.Type)
+            {
+                case StoryLogEntryType.CardResult:
+                    this.Description.text = log.Text;
+                    this.SuccessType.text = log.SuccessType.ToString() + "!";
+                    Background.color = log.SuccessType == ActionResultType.Fail ? CardFail : CardSuccess;
+                    break;
 
-            case StoryLogEntryType.TechResult:
-                this.Description.text = $"\"{log.Card.Name}\" - Research Complete"; // (Click for more info)
-                Button.interactable = true;
-                Background.color = TechColor;
-                break;
-            case StoryLogEntryType.Story:
-                this.Description.text = "Story Entry Unlocked"; // (Click for more info) 
-                Button.interactable = true;
-                Background.color = StoryColor;
-                break;
-            case StoryLogEntryType.RandomNews:
-                break;
-            default:
-                break;
+                case StoryLogEntryType.TechResult:
+                    this.Description.text = $"\"{log.Card.Name}\" - Research Complete"; // (Click for more info)
+                    Button.interactable = true;
+                    Background.color = TechColor;
+                    break;
+                case StoryLogEntryType.Story:
+                    this.Description.text = "Story Entry Unlocked"; // (Click for more info) 
+                    Button.interactable = true;
+                    Background.color = StoryColor;
+                    break;
+                case StoryLogEntryType.RandomNews:
+                    break;
+                default:
+                    break;
+            }
         }
 
     }

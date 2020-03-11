@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a543f81d5cb1d54d9e7f917e2549e24, type: 3}
   m_Name: EnGame Strength
   m_EditorClassIdentifier: 
+  Title: You Won
   Description: The Planet stands in ruins. You dominate the orbit, land and the sea.
     Every remaining government has sworn loyalty to you. Some pockets of resistance
     still exist but their resources are dwindling and will is broken. They might still
     live, but YOU are the real ruler of this world.
+  Background: {fileID: 0}
   EndGameImage: {fileID: 21300000, guid: 66c7050a04aa3fa4db848a91cc568116, type: 3}
   MinStrength: 1

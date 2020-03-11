@@ -32,6 +32,11 @@ public class CameraPositionController : MonoBehaviour
 
     Coroutine current;
 
+    void Start()
+    {
+        camera.position = map.position;
+    }
+
     public void ChangePos(CameraPosition pos)
     {
         // if( current)

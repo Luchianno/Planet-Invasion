@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32a9b1f5a8d70f40857e2b24e47928c, type: 3}
   m_Name: EndGame Population
   m_EditorClassIdentifier: 
+  Title: You Won
   Description: You have purged the cities. Destroyed the villages and families. Hunted
     remains of once mighty civilization are dispersed and disorganized in farthest
     polar and mountainous regions. They will not be able to recover. This is Planet
     of your species.
+  Background: {fileID: 0}
   EndGameImage: {fileID: 21300000, guid: 66c7050a04aa3fa4db848a91cc568116, type: 3}
   MinPopulation: 2

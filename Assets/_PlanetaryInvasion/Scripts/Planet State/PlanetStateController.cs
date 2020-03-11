@@ -21,6 +21,7 @@ public class PlanetStateController : MonoBehaviour
     [Inject]
     StoryController storyController;
     [Inject]
+    [SerializeField]
     PlanetState state;
     [Inject]
     UpdateableViewManager viewsManager;
@@ -58,6 +59,11 @@ public class PlanetStateController : MonoBehaviour
 
     public void AddAIAction(SelectedAction selectedAction)
     {
+        if (!state.AI.Resources.RemoveResources(selectedAction.Card.ResourceRequirements))
+        {
+            Debug.LogWarning("Not enough AI Resources");
+            return;
+        }
         state.AI.SelectedCards.Add(selectedAction);
         viewsManager.UpdateViews();
     }
@@ -138,6 +144,7 @@ public class PlanetStateController : MonoBehaviour
                 storyController.AddStory(item);
         }
 
+        // process game rules
         gameRules.ForEach(x => x.Check(state));
 
         state.Player.SelectedCards.Clear();
@@ -147,9 +154,6 @@ public class PlanetStateController : MonoBehaviour
         StepProcessCompleted?.Invoke();
         viewsManager.UpdateViews();
 
-        var popup = UIPopup.GetPopup("Reports");
-
-        popup.Show();
     }
 
 }

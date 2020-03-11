@@ -5,14 +5,13 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerState
 {
-    public ResourceDictionary Resources = new ResourceDictionary();
+    public ResourceDictionary Resources;
 
-    public StringDictionary Vars = new StringDictionary();
+    public StringDictionary Vars;
 
-    public List<Tech> Technologies = new List<Tech>();
+    public List<Tech> Technologies;
 
     public List<SelectedAction> SelectedCards = new List<SelectedAction>();
 
     public int CardSlots = 3;
-
 }

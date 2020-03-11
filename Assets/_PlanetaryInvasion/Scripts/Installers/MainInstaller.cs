@@ -15,7 +15,7 @@ public class MainInstaller : MonoInstaller<MainInstaller>
     TabPanelView storyView;
 
     [SerializeField]
-    PlanetState startingState;
+    string startingStatePath;
 
     [Space]
     [Header("Prefabs to factories")]
@@ -29,11 +29,12 @@ public class MainInstaller : MonoInstaller<MainInstaller>
     {
         Container.BindInstance<GameSettings>(settings);
 
-        var PlanetState = Instantiate(startingState);
-        PlanetState.AI.CountryStates.Clear();
-        PlanetState.AI.CountryStates.AddRange(Countries.Select(x => Instantiate(x)));
+        var planetState = Container.InstantiateScriptableObjectResource<PlanetState>($@"Starting Parameters/{startingStatePath}");
+        planetState.AI.CountryStates.Clear();
+        planetState.AI.CountryStates.AddRange(Countries.Select(x => Instantiate(x)));
 
-        Container.BindInterfacesAndSelfTo<PlanetState>().FromInstance(PlanetState).AsSingle();
+
+        Container.BindInstance<PlanetState>(planetState).AsSingle();
 
 
         Container.BindInterfacesAndSelfTo<StoryController>().AsSingle();
@@ -49,7 +50,7 @@ public class MainInstaller : MonoInstaller<MainInstaller>
         Container.Bind<IUpdateableView>().To<EventLogView>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
         Container.Bind<IUpdateableView>().To<CountryView>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
 
-        Container.Bind<EndGameView>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
+        Container.Bind<IUpdateableView>().To<LaunchButtonView>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
 
         Container.BindInstance<TabPanelView>(storyView).WithId("story").AsSingle();
 
@@ -59,6 +60,8 @@ public class MainInstaller : MonoInstaller<MainInstaller>
         // factories
         Container.BindFactory<TabletView, TabletView.Factory>().FromComponentInNewPrefab(tabletPrefab);
         // Container.BindFactory<Object, BaseScreen, BaseScreen.Factory>().FromFactory<PrefabFactory<BaseScreen>>();
+
+        Container.Bind<AIPlayer>().FromComponentInHierarchy().AsSingle();
 
         Application.targetFrameRate = 60;
     }

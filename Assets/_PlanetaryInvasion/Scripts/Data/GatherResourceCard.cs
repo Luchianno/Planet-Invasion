@@ -30,8 +30,6 @@ public class GatherResourceCard : Card
 
     public override ActionResult Process(TurnState turn, PlanetState state)
     {
-        var temp = turn == TurnState.PlayerTurn ? state.Player : state.AI;
-
         state.AI.Resources.AddResources(AIResourceChange);
         state.Player.Resources.AddResources(PlayerResourceChange);
         state.EventLog.Entries.Add(new StoryLogEntry()
@@ -40,7 +38,8 @@ public class GatherResourceCard : Card
             SuccessType = ActionResultType.Success,
             Turn = state.Turn,
             Text = GetCompletionText(),
-            Type = StoryLogEntryType.CardResult
+            Type = StoryLogEntryType.CardResult,
+            IsPlayerAction = turn == TurnState.PlayerTurn
         });
 
         // TODO Failsafe?..

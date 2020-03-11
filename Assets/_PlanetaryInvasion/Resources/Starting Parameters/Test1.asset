@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50677b00ad681694497e602d54d2cb09, type: 3}
-  m_Name: Starting Params 1
+  m_Name: Test1
   m_EditorClassIdentifier: 
-  Turn: 1
   Player:
     Resources:
       m_keys:
       - {fileID: 11400000, guid: 370bb49a719ffd942bd161ef85214859, type: 2}
-      - {fileID: 11400000, guid: e04c70afb0580054791c4503f602f805, type: 2}
-      m_values: 0a00000014000000
+      - {fileID: 11400000, guid: 855bc63b82679b342bbc9d3c6f4acd5b, type: 2}
+      m_values: 0500000005000000
     Vars:
       m_keys: []
       m_values: 
@@ -28,7 +27,7 @@ MonoBehaviour:
     Resources:
       m_keys:
       - {fileID: 11400000, guid: 0b270bcff724601429539f9df8c4b92c, type: 2}
-      m_values: 0a000000
+      m_values: 05000000
     Vars:
       m_keys: []
       m_values: 

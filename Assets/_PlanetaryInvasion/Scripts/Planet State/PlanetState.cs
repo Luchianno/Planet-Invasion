@@ -29,7 +29,7 @@ public class PlanetState : ScriptableObject
         // }
     }
 
-    [Header("Careful, don't mess this up")]
+    [NonSerialized]
     public int Turn = 0;
 
     public PlayerState Player = new PlayerState();

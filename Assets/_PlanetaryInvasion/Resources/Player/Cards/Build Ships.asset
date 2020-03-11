@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e89af25935c74d44ac8e8f14f9f4f91, type: 3}
   m_Name: Build Ships
   m_EditorClassIdentifier: 
-  Active: 0
+  Active: 1
   Name: Build Ships
   Description: Build some ships from metal
   Icon: {fileID: 21300000, guid: 65c9e59c825ab64408b81e76ae652b1b, type: 3}

@@ -16,7 +16,7 @@ public class ChangeCameraPosition : MonoBehaviour
 
         view.ShowBehavior.OnStart.Event.AddListener(() =>
         {
-             Debug.Log($"moving to {Position} ", this.gameObject);
+            //  Debug.Log($"moving to {Position} ", this.gameObject);
             cameraPositionController.ChangePos(Position);
         });
 

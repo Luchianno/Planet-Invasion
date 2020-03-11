@@ -9,6 +9,8 @@ public class StoryLogEntry
     public string Text;
     public int Turn;
 
+    public bool IsPlayerAction;
+
     public ActionResultType SuccessType;
     
     public StoryLogEntryType Type;

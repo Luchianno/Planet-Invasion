@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using System.Linq;
 using Zenject;
+using Doozy.Engine.UI;
 
 [CreateAssetMenu(menuName = "PI/Rules/Win Game by Genocide")]
 public class EndGameRule1 : ScriptableGameRule
@@ -18,8 +19,9 @@ public class EndGameRule1 : ScriptableGameRule
         var result = ai.CountryStates.TrueForAll(x => x.Population <= MinPopulation);
         if (result)
         {
-            // screenManager.ShowPopup<EndGameScreen>("EndgameScreen").Init(Title, Description, null);
-            // view.Init("You Won", this.Description, this.EndGameImage);
+            var popup = UIPopup.GetPopup("EndGame");
+            popup.Data.SetLabelsTexts(this.Title, this.Description);
+            popup.Show();
         }
         return result;
     }

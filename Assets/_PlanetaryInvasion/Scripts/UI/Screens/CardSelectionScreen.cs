@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Doozy.Engine.UI;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -14,6 +15,9 @@ public class CardSelectionScreen : MonoBehaviour
     [Inject]
     PlanetStateController planetStateController;
 
+    [Inject]
+    AIPlayer AIPlayer;
+
     void Start()
     {
         Launch.onClick.AddListener(OnLaunch);
@@ -22,7 +26,11 @@ public class CardSelectionScreen : MonoBehaviour
 
     void OnLaunch()
     {
+        AIPlayer.Think();
         planetStateController.Step();
+        
+        var popup = UIPopup.GetPopup("Reports");
+        popup.Show();
         // screenManager.ShowPopup<ReportsScreen>("ReportsScreen");
         // screenManager.HideAllAndShow("MapScreen");
     }

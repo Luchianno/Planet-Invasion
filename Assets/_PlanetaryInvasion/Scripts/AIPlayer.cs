@@ -9,10 +9,13 @@ public class AIPlayer : MonoBehaviour
     [Inject]
     protected PlanetStateController planetStateController;
 
+    [Inject]
+    protected PlanetState state;
+
     public Card AttackCard;
     public Card GenerateMoney;
 
-    public void Think(PlanetState state)
+    public void Think()
     {
         /*
         if enough resources
