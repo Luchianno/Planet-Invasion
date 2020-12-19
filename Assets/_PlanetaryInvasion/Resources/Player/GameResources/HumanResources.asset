@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Abducted Specimen
   Description: Abducted specimen. Great for experiments and Interrogations
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 30c01f5e7ed9270468fc225532e87966, type: 3}

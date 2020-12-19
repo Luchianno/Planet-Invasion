@@ -11,6 +11,7 @@ public class Resource : ScriptableObject
 
     [TextArea(3, 10)]
     public string Description;
+    [PreviewSprite]
     public Sprite Icon;
 
     static ReadOnlyDictionary<string, Resource> allResources;

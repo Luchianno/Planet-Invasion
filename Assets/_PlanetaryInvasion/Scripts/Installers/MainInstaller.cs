@@ -6,9 +6,6 @@ using Zenject;
 public class MainInstaller : MonoInstaller<MainInstaller>
 {
     [SerializeField]
-    PlanetStateController stateController;
-
-    [SerializeField]
     GameSettings settings;
 
     [SerializeField]
@@ -39,7 +36,7 @@ public class MainInstaller : MonoInstaller<MainInstaller>
 
         Container.BindInterfacesAndSelfTo<StoryController>().AsSingle();
 
-        Container.BindInstance<PlanetStateController>(stateController).AsSingle();
+        Container.Bind<PlanetStateController>().FromComponentInHierarchy().AsSingle();
         Container.Bind<UpdateableViewManager>().AsSingle();
 
         // views
@@ -55,7 +52,7 @@ public class MainInstaller : MonoInstaller<MainInstaller>
         Container.BindInstance<TabPanelView>(storyView).WithId("story").AsSingle();
 
         // Container.Bind<ScreenManager>().FromComponentInHierarchy(true).AsSingle();
-        Container.Bind<CameraPositionController>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
+        // Container.Bind<CameraPositionController>().FromComponentsInHierarchy(includeInactive: true).AsSingle();
 
         // factories
         Container.BindFactory<TabletView, TabletView.Factory>().FromComponentInNewPrefab(tabletPrefab);

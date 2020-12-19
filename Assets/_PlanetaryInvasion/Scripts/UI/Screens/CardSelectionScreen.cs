@@ -10,9 +10,6 @@ public class CardSelectionScreen : MonoBehaviour
     public Button Launch;
 
     [Inject]
-    CameraPositionController cameraPositionController;
-
-    [Inject]
     PlanetStateController planetStateController;
 
     [Inject]

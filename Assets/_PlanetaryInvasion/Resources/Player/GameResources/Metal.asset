@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Metal
   Description: Metal for building stuff
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 56ce39bb2376cdb4384a21e3658d344c, type: 3}

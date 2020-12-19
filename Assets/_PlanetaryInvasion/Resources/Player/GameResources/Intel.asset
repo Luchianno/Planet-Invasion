@@ -15,4 +15,4 @@ MonoBehaviour:
   Name: Intel
   Description: Intel is a strategic resource. It is identified as classified transmitions,
     coordinates, and other information that can benefit our operations
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: ef62f96d852a3aa478c7f2b7040bac4f, type: 3}

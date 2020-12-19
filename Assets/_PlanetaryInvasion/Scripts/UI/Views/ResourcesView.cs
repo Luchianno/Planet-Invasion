@@ -7,11 +7,13 @@ using Zenject;
 
 public class ResourcesView : MonoBehaviour, IUpdateableView
 {
-    [SerializeField]
-    TMPro.TextMeshProUGUI label;
-
     [Inject]
     PlanetState gameState;
+
+    [SerializeField]
+    RectTransform parent;
+    [SerializeField]
+    GameObject itemPrefab;
 
     void Start()
     {
@@ -20,11 +22,15 @@ public class ResourcesView : MonoBehaviour, IUpdateableView
 
     public void UpdateView()
     {
-        StringBuilder builder = new StringBuilder();
+        foreach (Transform item in parent)
+        {
+            Destroy(item.gameObject);
+        }
+
         foreach (var item in gameState.Player.Resources)
         {
-            builder.AppendLine($"{item.Key.Name}: {item.Value}");
+            var temp = Instantiate(itemPrefab, parent);
+            temp.GetComponent<ResourceListItem>().UpdateView(item.Key.Icon, $"{item.Key.Name} {item.Value}");
         }
-        label.text = builder.ToString();
     }
 }
