@@ -570,8 +570,9 @@ PlayerSettings:
     28: TextMeshPro;dUI_MANAGER
     29: TextMeshPro;dUI_MANAGER
     30: TextMeshPro;dUI_MANAGER
-    32: TextMeshPro
-    33: TextMeshPro
+    31: dUI_MANAGER
+    32: TextMeshPro;dUI_MANAGER
+    33: TextMeshPro;dUI_MANAGER
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
