@@ -123,7 +123,7 @@ namespace kode80.PixelRender
 							newPixels, newSize - copySize, 
 							copySize);
 
-				palette.Resize( palette.width, slider.value);
+				palette.Reinitialize( palette.width, slider.value);
 				palette.SetPixels32( newPixels);
 				palette.Apply();
 				_paletteDirty = true;
