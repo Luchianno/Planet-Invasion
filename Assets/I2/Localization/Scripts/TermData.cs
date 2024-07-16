@@ -1,8 +1,6 @@
 using System;
-using UnityEngine;
-using System.Linq;
 using System.Collections.Generic;
-using Object = UnityEngine.Object;
+using UnityEngine;
 
 namespace I2.Loc
 {
@@ -21,13 +19,14 @@ namespace I2.Loc
 		#if SVG
 			SVGAsset,
 		#endif
-		Object 
+		Object,
+		Video
 	}
 
 	public enum TranslationFlag : byte
 	{
 		Normal = 1,
-		AutoTranslated = 2,
+		AutoTranslated = 2
 	}
 
 
@@ -42,10 +41,10 @@ namespace I2.Loc
 		#endif
 		public string 			Description;
 		
-        public string[]         Languages = new string[0];
-        public byte[]			Flags 			= new byte[0];  // flags for each translation
+        public string[]         Languages = Array.Empty<string>();
+        public byte[]			Flags 	  = Array.Empty<byte>();  // flags for each translation
 
-        [SerializeField] private string[] Languages_Touch = null;      // TO BE REMOVED IN A FUTURE RELEASE
+        [SerializeField] private string[] Languages_Touch;      // TO BE REMOVED IN A FUTURE RELEASE
 
         public string GetTranslation ( int idx, string specialization=null, bool editMode=false )
 		{
@@ -137,13 +136,13 @@ namespace I2.Loc
                 SpecializationManager.AppendSpecializations(Languages[i], values);
             return values;
         }
-    };
+    }
 
     public class TermsPopup : PropertyAttribute
     {
         public TermsPopup(string filter = "")
         {
-            this.Filter = filter;
+            Filter = filter;
         }
 
         public string Filter { get; private set; }

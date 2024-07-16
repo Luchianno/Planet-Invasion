@@ -11,3 +11,10 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 14884
+  packageName: I2 Localization
+  packageVersion: 2.8.22 f3
+  assetPath: Assets/I2/Localization/Scripts/Utils/I2Utils.cs
+  uploadId: 636155
