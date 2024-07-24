@@ -725,7 +725,7 @@ PlayerSettings:
     QNX: TextMeshPro;dUI_MANAGER
     ReservedCFE: TextMeshPro;dUI_MANAGER
     Stadia: TextMeshPro;dUI_MANAGER
-    Standalone: TextMeshPro;dUI_MANAGER
+    Standalone: TextMeshPro;dUI_MANAGER;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3
     VisionOS: TextMeshPro;dUI_MANAGER
     WebGL: TextMeshPro;dUI_MANAGER
     Windows Store Apps: dUI_MANAGER;TextMeshPro
