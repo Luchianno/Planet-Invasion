@@ -22,15 +22,6 @@
         "com.unity.modules.uielements": "1.0.0"
       }
     },
-    "com.unity.ai.navigation": {
-      "version": "2.0.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.ai": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.analytics": {
       "version": "3.8.1",
       "depth": 0,
@@ -184,7 +175,7 @@
     },
     "com.unity.test-framework": {
       "version": "1.4.4",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.ext.nunit": "2.0.3",

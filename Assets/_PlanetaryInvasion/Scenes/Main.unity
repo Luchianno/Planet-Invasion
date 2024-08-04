@@ -495,6 +495,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -110.015
       objectReference: {fileID: 0}
+    - target: {fileID: 3355043453314736759, guid: c14ea9d87f73ee649863aaa2855441f3,
+        type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 823
+      objectReference: {fileID: 0}
     - target: {fileID: 5222507368841198591, guid: c14ea9d87f73ee649863aaa2855441f3,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -864,7 +869,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 823
 --- !u!114 &559677585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1243,6 +1248,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7173426759851616568, guid: d50d08778b3a77e42bc23983b9a6cded,
+        type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 823
+      objectReference: {fileID: 0}
     - target: {fileID: 7173426759851616569, guid: d50d08778b3a77e42bc23983b9a6cded,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1386,7 +1396,7 @@ PrefabInstance:
     - target: {fileID: 7173426760008538669, guid: d50d08778b3a77e42bc23983b9a6cded,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.00012207031
+      value: -0.00048828125
       objectReference: {fileID: 0}
     - target: {fileID: 7173426760332583305, guid: d50d08778b3a77e42bc23983b9a6cded,
         type: 3}
@@ -2475,6 +2485,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: View - StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952897118465614067, guid: 56131ebe328a06d4f81301bcd86d745f,
+        type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 823
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -14,9 +14,9 @@ public class PlanetStateController : MonoBehaviour
     public event Action StepProcessStarted;
     public event Action StepProcessCompleted;
 
-    public ReadOnlyCollection<SelectedAction> PlayerSelectedCards { get { return state.Player.SelectedCards.AsReadOnly(); } }
+    public ReadOnlyCollection<SelectedAction> PlayerSelectedCards => state.Player.SelectedCards.AsReadOnly();
 
-    public ReadOnlyCollection<SelectedAction> AISelectedCards { get { return state.AI.SelectedCards.AsReadOnly(); } }
+    public ReadOnlyCollection<SelectedAction> AISelectedCards => state.AI.SelectedCards.AsReadOnly();
 
     [Inject]
     StoryController storyController;
