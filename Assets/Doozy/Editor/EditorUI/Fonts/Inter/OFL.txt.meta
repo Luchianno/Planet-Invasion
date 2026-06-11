@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 07dc4a9bb26b20e499c6a74a57022fe4
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Editor/EditorUI/Fonts/Inter/OFL.txt
+  uploadId: 570376

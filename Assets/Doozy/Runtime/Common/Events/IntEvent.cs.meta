@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: a07d302b70844e649588d79352729902
+timeCreated: 1620993251
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Common/Events/IntEvent.cs
+  uploadId: 570376

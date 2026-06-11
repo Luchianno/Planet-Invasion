@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f03df8537ff390e47b058cf7a61d76c5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/Vector4 display xyz rounded.asset
+  uploadId: 570376

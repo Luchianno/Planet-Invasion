@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using System.Linq;
 using Zenject;
-using Doozy.Engine.UI;
+using Doozy.Runtime.UIManager.Containers;
 
 [CreateAssetMenu(menuName = "PI/Rules/Win Game by Destruction")]
 public class EndGameRule2 : ScriptableGameRule
@@ -18,8 +18,9 @@ public class EndGameRule2 : ScriptableGameRule
         var result = ai.CountryStates.TrueForAll(x => x.MilitaryStrength <= MinStrength);
         if (result)
         {
-            var popup = UIPopup.GetPopup("EndGame");
-            popup.Data.SetLabelsTexts(this.Title, this.Description);
+            var popup = UIPopup.Get("EndGame")
+                .SetTexts(this.Title, this.Description);
+                
             popup.Show();
         }
         return result;

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fc73c510a7d96f34593f6f12089efd16
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/FloatToVector3 set xyz.asset
+  uploadId: 570376

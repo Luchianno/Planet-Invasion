@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: e3d549aa96204961960c7758ca572d9d
+timeCreated: 1665939643
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Editor/UIManager/ScriptableObjects/UIStepperIdRoamingDatabase.cs
+  uploadId: 570376

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7e6b975e31c41734eb11d6bb6b1af89f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/Text Trim.asset
+  uploadId: 570376

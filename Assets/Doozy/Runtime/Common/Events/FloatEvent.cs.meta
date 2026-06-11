@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: d785dfe39f6c42bda2be067983677e28
+timeCreated: 1620993204
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Common/Events/FloatEvent.cs
+  uploadId: 570376

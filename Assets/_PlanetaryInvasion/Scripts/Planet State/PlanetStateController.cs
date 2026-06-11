@@ -6,8 +6,6 @@ using Zenject;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System;
-using Doozy.Engine;
-using Doozy.Engine.UI;
 
 public class PlanetStateController : MonoBehaviour
 {
@@ -31,7 +29,8 @@ public class PlanetStateController : MonoBehaviour
     void Start()
     {
         viewsManager.UpdateViews();
-        GameEventMessage.AddListener("LaunchClicked", Step);
+        // TODO fix 
+        // GameEventMessage.AddListener("LaunchClicked", Step);
     }
 
     public void AddPlayerAction(SelectedAction selectedAction)

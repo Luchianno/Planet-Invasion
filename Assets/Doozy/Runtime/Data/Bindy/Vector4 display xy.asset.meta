@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1689fb1e76507fd4a982f80038eaa4f7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/Vector4 display xy.asset
+  uploadId: 570376

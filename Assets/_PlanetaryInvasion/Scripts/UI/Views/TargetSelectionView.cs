@@ -65,9 +65,6 @@ public class TargetSelectionView : MonoBehaviour
     public class CountrySelectedEvent : UnityEvent<CountryState> { }
 
     [Serializable]
-    public class Dict : SerializableDictionary<Button, CountryState> { }
-
-    [Serializable]
     public class Pair
     {
         public Button Button;

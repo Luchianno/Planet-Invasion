@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d7e68d12bfc12ad4695c62c67816e9fa
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/UIAnimationPresets/Button_Organic_23.asset
+  uploadId: 570376

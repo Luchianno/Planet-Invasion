@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cffe15d391fe2354ea2704c02a4b3760
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/Text Invert case.asset
+  uploadId: 570376

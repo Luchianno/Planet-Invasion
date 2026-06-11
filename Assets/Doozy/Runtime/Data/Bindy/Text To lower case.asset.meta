@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 44485d1c8af06c04ea6bd54969fc6445
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/Text To lower case.asset
+  uploadId: 570376

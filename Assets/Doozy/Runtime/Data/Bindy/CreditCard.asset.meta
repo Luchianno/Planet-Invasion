@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 415abf51a2c185440bc0c31013f7f2bb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/CreditCard.asset
+  uploadId: 570376

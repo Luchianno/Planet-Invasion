@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fbf1bc92e26a3e445969c9f51cb1f7a6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/Text To UPPER CASE.asset
+  uploadId: 570376

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4e7a7bf37f571614c8bde8389fe9c2d7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/UIAnimationPresets/Hide_Bounce_09.asset
+  uploadId: 570376

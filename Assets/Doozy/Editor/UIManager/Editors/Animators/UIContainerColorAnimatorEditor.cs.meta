@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 32044c20861940f491c8f587bab50735
+timeCreated: 1630169924
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Editor/UIManager/Editors/Animators/UIContainerColorAnimatorEditor.cs
+  uploadId: 570376

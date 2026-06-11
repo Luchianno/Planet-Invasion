@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bb91ac91a1f9c004a82842cbc1926168
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/Percent ValueToPercent Symbol Clamp
+    0-100.asset
+  uploadId: 570376

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 587c8c59ae564d2b8dca6e983c6821e8
+timeCreated: 1665569906
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Editor/UIManager/Editors/Animators/Internal/BaseUIToggleAnimatorEditor.cs
+  uploadId: 570376

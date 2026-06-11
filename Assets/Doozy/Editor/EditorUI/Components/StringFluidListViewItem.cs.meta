@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 33ad04ce148a4f75bf149a012720e57a
+timeCreated: 1676910468
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Editor/EditorUI/Components/StringFluidListViewItem.cs
+  uploadId: 570376

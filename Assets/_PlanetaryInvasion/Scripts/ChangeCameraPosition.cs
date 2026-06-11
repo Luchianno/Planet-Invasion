@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Doozy.Runtime.UIManager.Containers;
 using UnityEngine;
-using Doozy.Engine.UI;
 
 public class ChangeCameraPosition : MonoBehaviour
 {
@@ -14,12 +14,11 @@ public class ChangeCameraPosition : MonoBehaviour
     {
         var view = GetComponent<UIView>();
 
-        view.ShowBehavior.OnStart.Event.AddListener(() =>
-        {
-            //  Debug.Log($"moving to {Position} ", this.gameObject);
-            cameraPositionController.ChangePos(Position);
-        });
-
-        // view.HideBehavior.OnStart.Event.AddListener(() => cameraPositionController.ChangePos(Position));
+        // TODO fix
+        // view.ShowBehavior.OnStart.Event.AddListener(() =>
+        // {
+        //     //  Debug.Log($"moving to {Position} ", this.gameObject);
+        //     cameraPositionController.ChangePos(Position);
+        // });
     }
 }

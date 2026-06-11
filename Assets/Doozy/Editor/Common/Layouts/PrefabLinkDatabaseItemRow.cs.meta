@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: f0b150e8cd5c49debad47b66a6056e8b
+timeCreated: 1654690237
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Editor/Common/Layouts/PrefabLinkDatabaseItemRow.cs
+  uploadId: 570376

@@ -6,7 +6,7 @@ using UnityEngine;
 using System.Linq;
 
 [Serializable]
-public class ResourceDictionary : SerializableSortedDictionary<Resource, int>
+public class ResourceDictionary : SortedDictionary<Resource, int>
 {
     public ResourceDictionary() : base(new ResourceComparer()) { }
 
@@ -57,7 +57,7 @@ public class ResourceDictionary : SerializableSortedDictionary<Resource, int>
 }
 
 [Serializable]
-public class StringDictionary : SerializableDictionary<string, int> { }
+public class StringDictionary : Dictionary<string, int> { }
 
 [Serializable]
-public class TechDictionary : SerializableDictionary<Tech, int> { }
+public class TechDictionary : Dictionary<Tech, int> { }

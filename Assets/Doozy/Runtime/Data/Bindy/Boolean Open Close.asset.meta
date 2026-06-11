@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7456a102e5d97cf4ca5ff47e55ff78f6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/Boolean Open Close.asset
+  uploadId: 570376

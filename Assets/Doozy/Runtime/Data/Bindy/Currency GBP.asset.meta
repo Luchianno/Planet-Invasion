@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 60f3172240e8aeb48a2b8c40dcc1d60b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/Currency GBP.asset
+  uploadId: 570376

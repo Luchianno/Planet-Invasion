@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Doozy.Engine.UI;
 using UnityEngine;
 using Zenject;
 using System.Linq;
+using Doozy.Runtime.UIManager.Containers;
 
 [CreateAssetMenu(menuName = "PI/Rules/Fail By Ships")]
 public class EndGameRuleFail : ScriptableGameRule
@@ -20,9 +20,10 @@ public class EndGameRuleFail : ScriptableGameRule
             Debug.Log(this.Title);
             Debug.Log(this.Description);
 
-            var popup = UIPopup.GetPopup("EndGame");
-            popup.Data.SetLabelsTexts(this.Title, this.Description);
-            popup.Data.Labels[0].GetComponent<TMPro.TextMeshProUGUI>().color = Color.red;
+            var popup = UIPopup.Get("EndGame");
+            popup.SetTexts(this.Title, this.Description);
+            // TODO fix
+            popup.Labels[0].GetComponent<TMPro.TextMeshProUGUI>().color = Color.red;
             popup.Show();
             return true;
         }

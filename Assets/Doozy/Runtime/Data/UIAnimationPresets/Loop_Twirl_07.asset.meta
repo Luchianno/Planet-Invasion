@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c5f93256f75285b4d9e8d764a81ff46e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/UIAnimationPresets/Loop_Twirl_07.asset
+  uploadId: 570376

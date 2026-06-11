@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4eda8f81bc0e4c44c83afd26e16e4d39
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/Percent ValueToPercent Symbol Negative.asset
+  uploadId: 570376

@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Doozy.Engine.UI;
 using Zenject;
 using System.Linq;
+using Doozy.Runtime.UIManager.Containers;
 
 [RequireComponent(typeof(Button))]
 public class OpenPopupOnClick : MonoBehaviour
@@ -25,7 +25,7 @@ public class OpenPopupOnClick : MonoBehaviour
 
     private void OnClick()
     {
-        var popup = UIPopup.GetPopup(PopupName);
+        var popup = UIPopup.Get(PopupName);
 
         // var info = state.EventLog.Entries.Where(x => x.Turn == state.Turn);
 

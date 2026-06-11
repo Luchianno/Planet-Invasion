@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b08a40f665a8a48418bdc36e01fec42b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/_Extras/Prefabs/Components/Toggle/Tab Basic/Flex Icon Tab.prefab
+  uploadId: 570376

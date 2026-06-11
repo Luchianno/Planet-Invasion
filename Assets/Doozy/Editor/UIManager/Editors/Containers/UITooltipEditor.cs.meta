@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 0db442b1d159420f9d9393d2e6ed845a
+timeCreated: 1654611362
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Editor/UIManager/Editors/Containers/UITooltipEditor.cs
+  uploadId: 570376

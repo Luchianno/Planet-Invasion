@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 1d23207e08f4464780966896e183a29b
+timeCreated: 1640106759
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Editor/Reactor/Editors/Targets/UnityEventProgressTargetEditor.cs
+  uploadId: 570376

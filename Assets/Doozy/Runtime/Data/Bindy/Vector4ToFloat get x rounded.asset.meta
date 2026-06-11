@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a607d8364a5ebdc40904326dd3cfb488
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/Vector4ToFloat get x rounded.asset
+  uploadId: 570376

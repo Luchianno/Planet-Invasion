@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e403f0bb9997a1f4d8050803c9668739
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/Text PascalCase.asset
+  uploadId: 570376

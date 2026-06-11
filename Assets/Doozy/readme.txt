@@ -1,41 +1,55 @@
-﻿Copyright (c) 2015 - 2019 Doozy Entertainment. All Rights Reserved.
-This code can only be used under the standard Unity Asset Store End User License Agreement
-A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
+﻿Welcome to Doozy UI Manager!
+Thank you for choosing Doozy UI Manager for your Unity project. 
+This documentation will help you install and start using Doozy UI Manager in your project.
+
+Doozy UI Manager is a powerful set of tools that allows you to easily create, manage, 
+and animate modern user interfaces in Unity. With a range of professional tools, 
+including Nody for visual flow graph UI navigation, Reactor for value animator engine animation, 
+and Signals for universal messaging and data binding, you have 
+everything you need to create the user interface you want.
 
 
-IMPORTANT
----
-DoozyUI version 3 is not compatible with version 2. They may seem similar, but the code base is quite different. 
-Basically version 3 is an entirely new software that was inspired by version 2. Thus they cannot be compatible.
+Join our community!
+We invite you to join our community on Discord! 
+Here you can connect with other developers, get help with any questions you may have, 
+and stay up-to-date with the latest news and updates.
+
+Discord: http://discord.doozyui.com/
 
 
-REQUIREMENTS
----
-DOTween is required to be installed and its initial setup performed before installing DoozyUI.
-DOTween minimum required version v1.2.235
-DOTween download link: https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676
+License Identification
+When you acquire Doozy UI Manager, you are subject to either the Unity Asset Store End User License Agreement (UAS EULA) 
+or one of the Doozy Store End User License Agreements (DS EULA), depending on how you acquired the product.
+
+-- Doozy Subscription EULA -- https://www.doozyui.com/doozy-subscription-licenses/
+If you purchased a subscription to Doozy UI Manager PRO from the Doozy Store,
+the Doozy Subscription End User License Agreement governs your usage of the product.
+Product link: https://www.doozyui.com/product/doozy-ui-manager/
+
+-- Unity Asset Store EULA -- http://unity3d.com/company/legal/as_terms
+If you purchased Doozy UI Manager from the Unity Asset Store, 
+the Unity Asset Store End User License Agreement (EULA) governs your usage of the product.
+Product link: http://bit.ly/DoozyUIManager (version 2022 aka v4)
+Product link: http://bit.ly/DoozyUIManager2023 (version 2023 aka v5)
 
 
-GETTING STARTED
----
-After importing DoozyUI, it will perform its initial setup and you'll be ready to start using it.
-DoozyUI's Control Panel can be opened from Tools > Doozy > Control Panel (or by using the Alt+D shortcut)
-DoozyUI's Nody Window can be opened from Tools > Doozy > Nody
+Installation Guide
+To install Bindy, simply import the package into your Unity project. 
+After importing, you can start using it without doing anything else. 
+For more information, check out the online documentation at https://docs.doozyui.com/
 
+If you encounter any errors, we recommend running a Global Refresh before doing anything else. 
+To do so, navigate to Tools > Doozy > Global Refresh in the Unity Editor. 
+This will regenerate all databases, re-write all custom classes, and perform an integrity check.
 
-LINKS
----
-DoozyUI Website (documentation, examples, etc): http://doozyui.com/
-DoozyUI Documentation: http://doozyui.com/learn/documentation/
-YouTube Channel (video tutorials): http://www.youtube.com/c/DoozyEntertainment
-Facebook Page: https://www.facebook.com/doozyentertainment
-Twitter: https://twitter.com/doozyplay
-Discord (invite): https://discord.gg/y9Axq7b
+Helpful Links
+Scripting API: https://api.doozyui.com/
+Knowledge Base: https://docs.doozyui.com/
+YouTube Tutorials: http://youtube.doozyui.com/
+Facebook: http://facebook.doozyui.com/
+Twitter: http://twitter.doozyui.com/
 
-
-OTHER LINKS
----
-Unity Manual: https://docs.unity3d.com/Manual/index.html
-Unity Scripting API: https://docs.unity3d.com/ScriptReference/index.html
-.NET API Browser: https://docs.microsoft.com/en-us/dotnet/api/
-DOTween Website: http://dotween.demigiant.com
+We hope this documentation helps you get started with Doozy UI Manager. 
+If you have any questions or concerns, 
+please don't hesitate to reach out to us on Discord 
+or via our support channel at http://support.doozyui.com/.

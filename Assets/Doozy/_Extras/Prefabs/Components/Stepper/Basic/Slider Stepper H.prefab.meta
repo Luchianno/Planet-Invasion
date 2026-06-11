@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fce0bcd0515f2294e870889d6226d328
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/_Extras/Prefabs/Components/Stepper/Basic/Slider Stepper
+    H.prefab
+  uploadId: 570376

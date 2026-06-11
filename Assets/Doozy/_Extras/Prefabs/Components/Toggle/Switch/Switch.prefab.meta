@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b0056b8cabf8b534e946fdc50dd6fe17
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/_Extras/Prefabs/Components/Toggle/Switch/Switch.prefab
+  uploadId: 570376

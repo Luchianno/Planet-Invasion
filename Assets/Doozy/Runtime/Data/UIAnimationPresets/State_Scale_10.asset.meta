@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 29fadd38d34037844a1febc70f8c4adb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/UIAnimationPresets/State_Scale_10.asset
+  uploadId: 570376

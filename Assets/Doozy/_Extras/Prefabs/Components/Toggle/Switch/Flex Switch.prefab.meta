@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a96f48ed6d2f9b74cb91ac77919e4d08
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/_Extras/Prefabs/Components/Toggle/Switch/Flex Switch.prefab
+  uploadId: 570376

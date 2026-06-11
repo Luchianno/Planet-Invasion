@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: dc960e1248aa4252a57893a6e3e86e2a
+timeCreated: 1643031523
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/SceneManagement/ScriptableObjects/SceneManagementSettings.cs
+  uploadId: 570376

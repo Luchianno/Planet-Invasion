@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0ae1127fc64d35441a46981a86297361
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/UIAnimationPresets/Show_Basic_02.asset
+  uploadId: 570376

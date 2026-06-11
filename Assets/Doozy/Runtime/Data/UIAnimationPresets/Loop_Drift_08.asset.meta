@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c7cb561132392f241bc225a8665f5978
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/UIAnimationPresets/Loop_Drift_08.asset
+  uploadId: 570376

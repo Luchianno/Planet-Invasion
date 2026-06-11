@@ -52,5 +52,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Planet-Invasion.sln"
+    "dotnet.defaultSolution": "Planet-Invasion2.slnx",
+    "diffEditor.codeLens": true
 }

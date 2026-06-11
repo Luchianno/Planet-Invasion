@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 621217cc59574913b64373daeee14b40
+timeCreated: 1617907665
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Reactor/Easings/Eases/BounceEaseInOutEasing.cs
+  uploadId: 570376

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f1b485a74fee1ab4687a47b164a9753f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/Currency AUD.asset
+  uploadId: 570376

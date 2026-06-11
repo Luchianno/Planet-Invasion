@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 05d19a77c26f45f481ad1515a10e5bcf
+timeCreated: 1616490057
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Editor/EditorUI/ScriptableObjects/Styles/EditorDataStyleDatabase.cs
+  uploadId: 570376

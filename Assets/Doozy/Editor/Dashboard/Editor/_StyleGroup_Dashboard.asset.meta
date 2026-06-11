@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 751018d48d1f249429e10c5cd923ce22
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Editor/Dashboard/Editor/_StyleGroup_Dashboard.asset
+  uploadId: 570376

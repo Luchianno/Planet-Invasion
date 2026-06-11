@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dc478bcf14ffb1e4aa017997660f73e4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/DateTime Month Day.asset
+  uploadId: 570376

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 510d5deb712149409f975d0eb0003b6f
+timeCreated: 1617897761
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Reactor/Easings/Eases/QuarticEaseInOutEasing.cs
+  uploadId: 570376

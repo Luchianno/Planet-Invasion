@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8d1daf71ae6281b4ea51426dfa3fa405
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/UIAnimationPresets/State_Rotate_17.asset
+  uploadId: 570376

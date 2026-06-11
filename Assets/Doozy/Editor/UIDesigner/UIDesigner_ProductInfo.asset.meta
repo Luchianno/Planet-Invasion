@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d121b1be7b09ec649ab793a616a1221b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Editor/UIDesigner/UIDesigner_ProductInfo.asset
+  uploadId: 570376

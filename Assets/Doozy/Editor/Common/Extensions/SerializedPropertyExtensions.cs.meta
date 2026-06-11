@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: ad015e9d053d4b8ea4e63f2695fc47cf
+timeCreated: 1616154483
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Editor/Common/Extensions/SerializedPropertyExtensions.cs
+  uploadId: 570376

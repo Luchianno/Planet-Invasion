@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0c6d89018d60e1f4d8e82c31dbd4e149
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/Bindy/Text lower case words.asset
+  uploadId: 570376

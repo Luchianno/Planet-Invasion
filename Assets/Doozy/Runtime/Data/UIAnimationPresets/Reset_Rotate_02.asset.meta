@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e93c934bf27fd424194bffa74885324c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203601
+  packageName: Doozy UI Manager 2022
+  packageVersion: 4.9.2
+  assetPath: Assets/Doozy/Runtime/Data/UIAnimationPresets/Reset_Rotate_02.asset
+  uploadId: 570376
